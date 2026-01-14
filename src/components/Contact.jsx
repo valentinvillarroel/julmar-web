@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, Send, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { formatWhatsAppMessage, generateWhatsAppLink } from '../utils/whatsapp';
 
 const Contact = ({ preselectedMachine }) => {
     const [formData, setFormData] = React.useState({
@@ -35,18 +36,10 @@ const Contact = ({ preselectedMachine }) => {
             return;
         }
 
-        const message = `*SOLICITUD DE COTIZACIÓN WEB*%0A%0A` +
-            `👤 *Cliente:* ${formData.name}%0A` +
-            `🆔 *RUT:* ${formData.rut || 'No especificado'}%0A` +
-            `🚜 *Equipo:* ${formData.equipment || 'No especificado'}%0A` +
-            `📍 *Ubicación:* ${formData.location || 'No especificado'}%0A` +
-            `⏱ *Duración:* ${formData.duration || 'No especificado'}%0A` +
-            `📞 *Telétono:* ${formData.phone}%0A` +
-            `✉️ *Email:* ${formData.email || 'No especificado'}%0A` +
-            `📝 *Detalles:* ${formData.details || 'Sin detalles adicionales'}`;
+        const message = formatWhatsAppMessage(formData);
 
         // Number: +56 9 3105 2727 -> 56931052727
-        const whatsappUrl = `https://wa.me/56931052727?text=${message}`;
+        const whatsappUrl = generateWhatsAppLink('56931052727', message);
         window.open(whatsappUrl, '_blank');
     };
 
