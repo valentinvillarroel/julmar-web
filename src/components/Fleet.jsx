@@ -77,7 +77,7 @@ const machines = [
         category: "Excavadoras",
         capacity: "Peso ~22 Ton | Potencia 159 hp",
         description: "Excavación pesada y construcción.",
-        image: "/machinery/jd-210g/main.jpg",
+        image: "/machinery/jd-210g/main-v2.jpg",
         gallery: [
             "/machinery/jd-210g/detail-1.jpg"
         ],
@@ -90,7 +90,7 @@ const machines = [
         category: "Camiones Aljibe",
         capacity: "Estanque 20.000 L | Potencia 440 HP",
         description: "Distribución de agua potable o industrial.",
-        image: "/machinery/renault-c440/main-user.png",
+        image: "/machinery/renault-c440/main-v2.png",
         specs: { "Potencia": "440 hp", "Capacidad Tanque": "20,000 L" }
     },
     {
@@ -183,7 +183,7 @@ const Fleet = ({ onQuote = () => { } }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                     <div className="mb-6 md:mb-0">
-                        <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Catálogo 2024-2025</span>
+                        <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Catálogo 2026</span>
                         <h2 className="text-4xl md:text-5xl font-black text-julmar-dark">NUESTRA FLOTA</h2>
                     </div>
                 </div>
