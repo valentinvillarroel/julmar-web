@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section id="hero" className="h-screen bg-gray-900 text-white flex items-center justify-center relative overflow-hidden">
             {/* Imagen de fondo a todo color */}
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/hero-bg-final.jpg")' }}></div>
+            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/hero-bg-final.png")' }}></div>
 
             {/* Overlay oscuro para contraste (Gradiente profesional) */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80"></div>
