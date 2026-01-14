@@ -20,7 +20,7 @@ export const machines = [
         category: "Retroexcavadoras",
         capacity: "Peso 7.100 kg | Potencia 99 hp",
         description: "Mayor potencia y precisión para trabajos exigentes.",
-        image: "/machinery/jd-310p/main-new.jpg",
+        image: "/machinery/jd-310p/main-site-v2.jpg",
         gallery: [
             "/machinery/jd-310p/detail-1-new.jpg"
         ],
