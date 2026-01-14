@@ -5,7 +5,7 @@ export const machines = [
         category: "Retroexcavadoras",
         capacity: "Peso 6.770 kg | Potencia 87 hp",
         description: "Versatilidad máxima para excavación y zanjas en obras urbanas.",
-        image: "/machinery/jd-310l/main.jpg",
+        image: "/machinery/jd-310l/main-site-v2.jpg",
         gallery: [
             "/machinery/jd-310l/detail-1.jpg",
             "/machinery/jd-310l/detail-2.jpg",
@@ -46,7 +46,7 @@ export const machines = [
         category: "Camiones Aljibe",
         capacity: "Estanque 20.000 L | Potencia 460 HP",
         description: "Eficiencia y versatilidad para distribución de agua en faena.",
-        image: "/machinery/renault-k460/main-user.jpg",
+        image: "/machinery/renault-k460/main-site-v2.jpg",
         gallery: [
             "/machinery/renault-k460/detail-1-user.jpg"
         ],
@@ -59,7 +59,7 @@ export const machines = [
         category: "Excavadoras",
         capacity: "Balde 1.2 m³ | Peso 22 Ton",
         description: "Excavación de alto rendimiento y estabilidad en terreno.",
-        image: "/machinery/komatsu-pc210lc/main-new.jpg",
+        image: "/machinery/komatsu-pc210lc/main-site-v2.jpg",
         gallery: [
             "/machinery/komatsu-pc210lc/detail-1-new.jpg"
         ],
