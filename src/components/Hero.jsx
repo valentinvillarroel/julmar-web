@@ -7,6 +7,7 @@ const Hero = () => {
             {/* Imagen de fondo optimizada: JPG ligero para móvil, PNG alta calidad para PC */}
             <div className="absolute inset-0">
                 <picture>
+                    <source media="(max-width: 767px)" srcSet="/hero-movil.webp" type="image/webp" />
                     <source srcSet="/hero-bg-final.webp" type="image/webp" />
                     <img
                         src="/hero-bg-final.png"
