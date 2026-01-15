@@ -33,7 +33,13 @@ const Navbar = () => {
                         {['Inicio', 'Flota', 'Servicios', 'Nosotros'].map((item) => (
                             <a
                                 key={item}
-                                href={`#${item.toLowerCase()}`}
+                                href={item === 'Inicio' ? '#' : `#${item.toLowerCase()}`}
+                                onClick={(e) => {
+                                    if (item === 'Inicio') {
+                                        e.preventDefault();
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }
+                                }}
                                 className="text-gray-300 hover:text-white text-sm font-medium uppercase tracking-wider transition-colors relative group"
                             >
                                 {item}
@@ -73,8 +79,14 @@ const Navbar = () => {
                             {['Inicio', 'Flota', 'Servicios', 'Nosotros', 'Contacto'].map((item) => (
                                 <a
                                     key={item}
-                                    href={`#${item.toLowerCase()}`}
-                                    onClick={() => setMobileMenuOpen(false)}
+                                    href={item === 'Inicio' ? '#' : `#${item.toLowerCase()}`}
+                                    onClick={(e) => {
+                                        setMobileMenuOpen(false);
+                                        if (item === 'Inicio') {
+                                            e.preventDefault();
+                                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                                        }
+                                    }}
                                     className="block text-white text-lg font-bold py-2 border-b border-gray-800 hover:text-julmar-green transition-colors"
                                 >
                                     {item}
