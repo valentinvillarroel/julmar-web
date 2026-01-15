@@ -45,7 +45,7 @@ const Trust = () => {
                             <li>• <strong>Compromiso:</strong> Situamos al cliente en el centro.</li>
                             <li>• <strong>Agilidad:</strong> Atención rápida y cumplimiento de plazos.</li>
                             <li>• <strong>Calidad:</strong> Equipos que satisfacen altos estándares.</li>
-                            <li>• <strong>Cercanía:</strong> Atención personalizada y familiar.</li>
+                            <li>• <strong>Cercanía:</strong> Atención personalizada.</li>
                         </ul>
                     </div>
                 </div>
