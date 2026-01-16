@@ -77,7 +77,7 @@ export const machines = [
         category: "Excavadoras",
         capacity: "Peso ~22 Ton | Potencia 159 hp",
         description: "Excavación pesada y construcción.",
-        image: "/machinery/jd-210g/main-v2.webp",
+        image: "/machinery/jd-210g/main-v3.webp",
         gallery: [
             "/machinery/jd-210g/detail-site-v3.webp",
             "/machinery/jd-210g/gallery-1.webp",
