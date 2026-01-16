@@ -203,17 +203,31 @@ const Fleet = ({ onQuote = () => { } }) => {
                                     </div>
 
                                     {/* Tabs */}
-                                    <div className="flex bg-gray-100 p-1 rounded-lg mt-4 md:mt-0">
+                                    <div className="flex bg-gray-100 p-1 rounded-lg mt-4 md:mt-0 relative z-0">
                                         <button
                                             onClick={() => setActiveTab('summary')}
-                                            className={`px-4 py-2 rounded-md text-sm font-bold transition-all ${activeTab === 'summary' ? 'bg-white shadow-sm text-julmar-dark' : 'text-gray-500 hover:text-gray-700'}`}
+                                            className={`relative z-10 px-4 py-2 rounded-md text-sm font-bold transition-colors duration-300 ${activeTab === 'summary' ? 'text-julmar-dark' : 'text-gray-500 hover:text-gray-700'}`}
                                         >
+                                            {activeTab === 'summary' && (
+                                                <motion.div
+                                                    layoutId="tab-pill"
+                                                    className="absolute inset-0 bg-white rounded-md shadow-sm -z-10"
+                                                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                                />
+                                            )}
                                             Resumen
                                         </button>
                                         <button
                                             onClick={() => setActiveTab('specs')}
-                                            className={`px-4 py-2 rounded-md text-sm font-bold transition-all ${activeTab === 'specs' ? 'bg-white shadow-sm text-julmar-dark' : 'text-gray-500 hover:text-gray-700'}`}
+                                            className={`relative z-10 px-4 py-2 rounded-md text-sm font-bold transition-colors duration-300 ${activeTab === 'specs' ? 'text-julmar-dark' : 'text-gray-500 hover:text-gray-700'}`}
                                         >
+                                            {activeTab === 'specs' && (
+                                                <motion.div
+                                                    layoutId="tab-pill"
+                                                    className="absolute inset-0 bg-white rounded-md shadow-sm -z-10"
+                                                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                                />
+                                            )}
                                             Ficha Técnica
                                         </button>
                                     </div>
