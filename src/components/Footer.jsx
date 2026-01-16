@@ -31,11 +31,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-start">
                                 <span className="text-white font-bold min-w-[80px]">Email:</span>
-                                <a href="mailto:contacto@maquinariasjulmar.cl" className="hover:text-julmar-green transition-colors">contacto@maquinariasjulmar.cl</a>
+                                <a href="mailto:jgalvez@julmarspa.com" className="hover:text-julmar-green transition-colors">jgalvez@julmarspa.com</a>
                             </li>
                             <li className="flex items-start">
                                 <span className="text-white font-bold min-w-[80px]">Teléfono:</span>
-                                <a href="tel:+56966240252" className="hover:text-julmar-green transition-colors">+56 9 6624 0252</a>
+                                <a href="tel:+56931052727" className="hover:text-julmar-green transition-colors">+56 9 3105 2727</a>
                             </li>
                         </ul>
                     </div>
