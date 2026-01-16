@@ -79,7 +79,6 @@ export const machines = [
         description: "Excavación pesada y construcción.",
         image: "/machinery/jd-210g/main-v3.webp",
         gallery: [
-            "/machinery/jd-210g/detail-site-v3.webp",
             "/machinery/jd-210g/gallery-1-new.webp",
             "/machinery/jd-210g/gallery-2.webp"
         ],
