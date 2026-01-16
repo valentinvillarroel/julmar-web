@@ -53,51 +53,51 @@ const Quality = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Trust Ribbon / Standards Strip */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 }}
+                    className="mt-20 border-t border-gray-200 pt-12"
+                >
+                    <p className="text-center text-gray-400 text-sm uppercase tracking-widest font-bold mb-8">Operamos bajo estándares de</p>
+                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                        {/* Placeholder "Logos" using stylized text/icons */}
+                        <div className="flex items-center space-x-2 group cursor-default">
+                            <span className="text-3xl font-black text-gray-800">ISO</span>
+                            <div className="flex flex-col leading-none">
+                                <span className="text-xs font-bold text-gray-500">GESTIÓN DE</span>
+                                <span className="font-bold text-gray-700">CALIDAD 9001</span>
+                            </div>
+                        </div>
+
+                        <div className="h-8 w-px bg-gray-300 hidden md:block"></div>
+
+                        <div className="flex items-center space-x-2 group cursor-default">
+                            <span className="text-3xl font-black text-gray-800">HSE</span>
+                            <div className="flex flex-col leading-none">
+                                <span className="text-xs font-bold text-gray-500">SEGURIDAD Y</span>
+                                <span className="font-bold text-gray-700">MEDIO AMBIENTE</span>
+                            </div>
+                        </div>
+
+                        <div className="h-8 w-px bg-gray-300 hidden md:block"></div>
+
+                        <div className="flex items-center space-x-2 group cursor-default">
+                            <span className="text-3xl font-black text-gray-800">SICEP</span>
+                            <div className="flex flex-col leading-none">
+                                <span className="text-xs font-bold text-gray-500">ESTÁNDAR</span>
+                                <span className="font-bold text-gray-700">PROVEEDORES</span>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
-
-            {/* Trust Ribbon / Standards Strip */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
-                className="mt-20 border-t border-gray-200 pt-12"
-            >
-                <p className="text-center text-gray-400 text-sm uppercase tracking-widest font-bold mb-8">Operamos bajo estándares de</p>
-                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                    {/* Placeholder "Logos" using stylized text/icons */}
-                    <div className="flex items-center space-x-2 group cursor-default">
-                        <span className="text-3xl font-black text-gray-800">ISO</span>
-                        <div className="flex flex-col leading-none">
-                            <span className="text-xs font-bold text-gray-500">GESTIÓN DE</span>
-                            <span className="font-bold text-gray-700">CALIDAD 9001</span>
-                        </div>
-                    </div>
-
-                    <div className="h-8 w-px bg-gray-300 hidden md:block"></div>
-
-                    <div className="flex items-center space-x-2 group cursor-default">
-                        <span className="text-3xl font-black text-gray-800">HSE</span>
-                        <div className="flex flex-col leading-none">
-                            <span className="text-xs font-bold text-gray-500">SEGURIDAD Y</span>
-                            <span className="font-bold text-gray-700">MEDIO AMBIENTE</span>
-                        </div>
-                    </div>
-
-                    <div className="h-8 w-px bg-gray-300 hidden md:block"></div>
-
-                    <div className="flex items-center space-x-2 group cursor-default">
-                        <span className="text-3xl font-black text-gray-800">SICEP</span>
-                        <div className="flex flex-col leading-none">
-                            <span className="text-xs font-bold text-gray-500">ESTÁNDAR</span>
-                            <span className="font-bold text-gray-700">PROVEEDORES</span>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-        </div>
-        </section >
+        </section>
     );
 };
 
 export default Quality;
+```
