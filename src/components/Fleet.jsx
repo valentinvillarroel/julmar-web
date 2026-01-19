@@ -143,14 +143,14 @@ const Fleet = ({ onQuote = () => { } }) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={closeModal}
-                        className="fixed inset-0 z-[110] flex items-center justify-center p-0 md:p-4 bg-julmar-dark/95 backdrop-blur-sm overflow-y-auto"
+                        className="fixed inset-0 z-[110] flex items-start md:items-center justify-center p-0 md:p-4 bg-julmar-dark/95 backdrop-blur-sm overflow-y-auto"
                     >
                         <motion.div
                             initial={{ scale: 0.95, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.95, opacity: 0 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="bg-white rounded-none md:rounded-3xl overflow-hidden w-full max-w-4xl min-h-screen md:min-h-0 md:max-h-[90vh] flex flex-col shadow-2xl relative"
+                            className="bg-white rounded-t-3xl md:rounded-3xl overflow-hidden w-full max-w-4xl min-h-full md:min-h-0 md:max-h-[90vh] flex flex-col shadow-2xl relative mt-auto md:mt-0"
                         >
                             {/* Close Button */}
                             <button
