@@ -33,7 +33,7 @@ const Hero = () => {
                     transition={{ delay: 0.2 }}
                     className="text-5xl md:text-7xl font-black mb-6 leading-tight"
                 >
-                    CONTINUIDAD <span className="text-julmar-green">OPERACIONAL</span>
+                    <span className="text-white">JULMAR</span>
                 </motion.h2>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}

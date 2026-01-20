@@ -49,9 +49,9 @@ export const machines = [
         category: "Camiones Aljibe",
         capacity: "Estanque 20.000 L | Potencia 460 HP",
         description: "Eficiencia y versatilidad para distribución de agua en faena.",
-        image: "/machinery/renault-k460/main-site-v2.webp",
+        image: "/machinery/renault-k460/main-user-new.webp",
         gallery: [
-            "/machinery/renault-k460/detail-1-user.webp"
+            "/machinery/renault-k460/main-user-new.webp"
         ],
         features: ["Tracción 6x4", "Barras de riego traseras"],
         specs: { "Potencia": "460 hp", "Capacidad Tanque": "20,000 L" }
