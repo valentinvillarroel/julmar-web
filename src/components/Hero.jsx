@@ -11,7 +11,7 @@ const Hero = () => {
                     <source srcSet="/hero-bg-final.webp" type="image/webp" />
                     <img
                         src="/hero-bg-final.webp"
-                        alt="Fondo Maquinaria"
+                        alt="Arriendo de Maquinaria Pesada en Coquimbo"
                         className="w-full h-full object-cover"
                     />
                 </picture>
@@ -27,21 +27,21 @@ const Hero = () => {
                 >
                     SOCIO ESTRATÉGICO EN TERRENO
                 </motion.span>
-                <motion.h2
+                <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     className="text-5xl md:text-7xl font-black mb-6 leading-tight"
                 >
                     <span className="text-white">JULMAR</span>
-                </motion.h2>
+                </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                     className="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-300 font-light"
                 >
-                    Gestión de activos y arriendo de maquinaria con estándares de la Gran Minería.
+                    Arriendo de maquinaria pesada y gestión de activos para la Gran Minería en Coquimbo y Atacama.
                 </motion.p>
             </div>
         </section>

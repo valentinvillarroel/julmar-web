@@ -52,6 +52,11 @@ const Fleet = ({ onQuote = () => { } }) => {
         }
     };
 
+    const swipeConfidenceThreshold = 10000;
+    const swipePower = (offset, velocity) => {
+        return Math.abs(offset) * velocity;
+    };
+
     return (
         <section id="flota" className="py-24 bg-white relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,19 +68,21 @@ const Fleet = ({ onQuote = () => { } }) => {
 
                 </div>
 
-                {/* Filter Tabs */}
-                <div className="flex flex-wrap gap-2 mb-12">
-                    {categories.map(cat => (
-                        <button
-                            key={cat}
-                            onClick={() => setFilter(cat)}
-                            className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${filter === cat
-                                ? 'bg-julmar-green text-julmar-dark shadow-lg scale-105'
-                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
-                        >
-                            {cat}
-                        </button>
-                    ))}
+                {/* Filter Tabs - Sticky on Mobile */}
+                <div className="sticky top-20 z-30 py-2 bg-white/80 backdrop-blur-md -mx-4 px-4 md:mx-0 md:bg-transparent md:static mb-8 md:mb-12 transition-all">
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                        {categories.map(cat => (
+                            <button
+                                key={cat}
+                                onClick={() => setFilter(cat)}
+                                className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${filter === cat
+                                    ? 'bg-julmar-green text-julmar-dark shadow-lg scale-105'
+                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
                 <motion.div
@@ -106,7 +113,7 @@ const Fleet = ({ onQuote = () => { } }) => {
                                 <div className="p-6">
                                     <div className="text-xs text-julmar-green-dark font-bold uppercase mb-2 tracking-wide bg-gray-50 inline-block px-2 py-1 rounded">{machine.category}</div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{machine.name}</h3>
-                                    <p className="text-xs text-gray-500 mb-4 h-10 overflow-hidden">{machine.description}</p>
+                                    <p className="text-xs text-gray-500 mb-4 line-clamp-2 min-h-[2.5em]">{machine.description}</p>
 
                                     <a
                                         href={`https://wa.me/56931052727?text=${encodeURIComponent(`Hola, me gustaría arrendar ${machine.name}`)}`}
@@ -161,11 +168,23 @@ const Fleet = ({ onQuote = () => { } }) => {
                                         key={selectedMachine.gallery ? selectedMachine.gallery[currentImageIndex] : selectedMachine.image}
                                         src={selectedMachine.gallery ? selectedMachine.gallery[currentImageIndex] : selectedMachine.image}
                                         alt={selectedMachine.name}
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: -20 }}
                                         transition={{ duration: 0.3 }}
-                                        className="w-full h-full object-contain"
+                                        drag="x"
+                                        dragConstraints={{ left: 0, right: 0 }}
+                                        dragElastic={1}
+                                        onDragEnd={(e, { offset, velocity }) => {
+                                            const swipe = swipePower(offset.x, velocity.x);
+
+                                            if (swipe < -swipeConfidenceThreshold) {
+                                                nextImage(e);
+                                            } else if (swipe > swipeConfidenceThreshold) {
+                                                prevImage(e);
+                                            }
+                                        }}
+                                        className="w-full h-full object-contain cursor-grab active:cursor-grabbing"
                                     />
                                 </AnimatePresence>
 
@@ -174,16 +193,24 @@ const Fleet = ({ onQuote = () => { } }) => {
                                     <>
                                         <button
                                             onClick={prevImage}
-                                            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 md:p-3 rounded-full backdrop-blur-md transition-all"
+                                            className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 md:p-3 rounded-full backdrop-blur-md transition-all"
                                         >
                                             <ChevronLeft size={24} />
                                         </button>
                                         <button
                                             onClick={nextImage}
-                                            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 md:p-3 rounded-full backdrop-blur-md transition-all"
+                                            className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 md:p-3 rounded-full backdrop-blur-md transition-all"
                                         >
                                             <ChevronRight size={24} />
                                         </button>
+                                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 md:hidden">
+                                            {selectedMachine.gallery.map((_, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className={`w-2 h-2 rounded-full transition-colors ${idx === currentImageIndex ? 'bg-julmar-green' : 'bg-white/50'}`}
+                                                />
+                                            ))}
+                                        </div>
                                     </>
                                 )}
                             </div>

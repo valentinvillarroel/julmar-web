@@ -5,11 +5,29 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('Inicio');
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
+
+            // Scroll Spy Logic
+            const sections = ['hero', 'flota', 'servicios', 'nosotros', 'contacto'];
+            const scrollPosition = window.scrollY + 200; // Offset for better detection
+
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element && element.offsetTop <= scrollPosition && (element.offsetTop + element.offsetHeight) > scrollPosition) {
+                    // Map IDs back to Menu Items
+                    if (section === 'hero') setActiveSection('Inicio');
+                    else if (section === 'flota') setActiveSection('Flota');
+                    else if (section === 'servicios') setActiveSection('Servicios');
+                    else if (section === 'nosotros') setActiveSection('Nosotros');
+                    else if (section === 'contacto') setActiveSection('Contacto');
+                }
+            }
         };
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -40,10 +58,10 @@ const Navbar = () => {
                                         window.scrollTo({ top: 0, behavior: 'smooth' });
                                     }
                                 }}
-                                className="text-gray-300 hover:text-white text-sm font-medium uppercase tracking-wider transition-colors relative group"
+                                className={`text-sm font-medium uppercase tracking-wider transition-colors relative group ${activeSection === item ? 'text-white' : 'text-gray-300 hover:text-white'}`}
                             >
                                 {item}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-julmar-green transition-all duration-300 group-hover:w-full"></span>
+                                <span className={`absolute -bottom-1 left-0 h-0.5 bg-julmar-green transition-all duration-300 ${activeSection === item ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                             </a>
                         ))}
 
@@ -91,7 +109,7 @@ const Navbar = () => {
                                             setMobileMenuOpen(false);
                                         }
                                     }}
-                                    className="block text-white text-lg font-bold py-2 border-b border-gray-800 hover:text-julmar-green transition-colors"
+                                    className={`block text-lg font-bold py-2 border-b border-gray-800 transition-colors ${activeSection === item ? 'text-julmar-green pl-2' : 'text-white hover:text-julmar-green'}`}
                                 >
                                     {item}
                                 </a>

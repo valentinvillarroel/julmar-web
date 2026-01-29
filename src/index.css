@@ -7,3 +7,22 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B2427;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f4748;
+  border-radius: 5px;
+  border: 2px solid #0B2427;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A3E635;
+}
