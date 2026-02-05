@@ -1,4 +1,5 @@
 import React from 'react';
+import { ShieldCheck, Wrench, Clock, Leaf } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -42,26 +43,33 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold text-white mb-6 flex items-center">
                             <span className="w-1 h-6 bg-julmar-green mr-3 rounded-full"></span>
-                            Estándares
+                            Compromiso y Seguridad
                         </h4>
-                        <ul className="space-y-2 text-sm text-gray-400">
-                            <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                Cultura Cero Daño (HSE)
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                Mantenimiento Preventivo Programado
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                Disponibilidad 24/7
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                Gestión Ambiental Responsable
-                            </li>
-                        </ul>
+                        <div className="grid grid-cols-2 gap-4">
+                            {/* Badge 1: Seguridad */}
+                            <div className="bg-gray-900 border border-gray-800 p-3 rounded-xl flex flex-col items-center justify-center text-center group hover:border-julmar-green/50 transition-colors">
+                                <ShieldCheck className="text-julmar-green mb-2 group-hover:scale-110 transition-transform" size={28} />
+                                <span className="text-xs font-bold text-gray-300">Cultura Cero Daño</span>
+                            </div>
+
+                            {/* Badge 2: Mantención */}
+                            <div className="bg-gray-900 border border-gray-800 p-3 rounded-xl flex flex-col items-center justify-center text-center group hover:border-julmar-green/50 transition-colors">
+                                <Wrench className="text-julmar-green mb-2 group-hover:scale-110 transition-transform" size={28} />
+                                <span className="text-xs font-bold text-gray-300">Mantención Proactiva</span>
+                            </div>
+
+                            {/* Badge 3: Disponibilidad */}
+                            <div className="bg-gray-900 border border-gray-800 p-3 rounded-xl flex flex-col items-center justify-center text-center group hover:border-julmar-green/50 transition-colors">
+                                <Clock className="text-julmar-green mb-2 group-hover:scale-110 transition-transform" size={28} />
+                                <span className="text-xs font-bold text-gray-300">Soporte 24/7</span>
+                            </div>
+
+                            {/* Badge 4: Medio Ambiente */}
+                            <div className="bg-gray-900 border border-gray-800 p-3 rounded-xl flex flex-col items-center justify-center text-center group hover:border-julmar-green/50 transition-colors">
+                                <Leaf className="text-julmar-green mb-2 group-hover:scale-110 transition-transform" size={28} />
+                                <span className="text-xs font-bold text-gray-300">Sello Verde</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

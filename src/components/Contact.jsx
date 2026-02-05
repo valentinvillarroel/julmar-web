@@ -164,6 +164,9 @@ const Contact = ({ preselectedMachine }) => {
                                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-julmar-green focus:border-transparent outline-none transition-all appearance-none cursor-pointer"
                                     >
                                         <option value="">Seleccionar Equipo...</option>
+                                        {preselectedMachine && (
+                                            <option value={preselectedMachine}>{preselectedMachine}</option>
+                                        )}
                                         <option value="Excavadora">Excavadora</option>
                                         <option value="Retroexcavadora">Retroexcavadora</option>
                                         <option value="Cargador Frontal">Cargador Frontal</option>
@@ -209,10 +212,43 @@ const Contact = ({ preselectedMachine }) => {
                                 ></textarea>
                             </div>
 
-                            <button type="submit" className="w-full bg-julmar-green hover:bg-julmar-green-light text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl mt-4">
-                                SOLICITAR COTIZACIÓN
-                                <Send size={18} />
-                            </button>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <button
+                                    type="submit"
+                                    onClick={handleSubmit}
+                                    className="w-full bg-julmar-green hover:bg-julmar-green-light text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl"
+                                >
+                                    COTIZAR POR WHATSAPP
+                                    <Send size={18} />
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        if (!formData.name || !formData.phone) {
+                                            alert('Por favor completa al menos tu nombre y teléfono.');
+                                            return;
+                                        }
+                                        const subject = `Solicitud de Cotización: ${formData.equipment || 'Maquinaria'}`;
+                                        const body = `Hola, me gustaría solicitar una cotización formal.%0D%0A%0D%0A` +
+                                            `*Cliente/Empresa:* ${formData.name}%0D%0A` +
+                                            `*RUT:* ${formData.rut || 'No indicado'}%0D%0A` +
+                                            `*Teléfono:* ${formData.phone}%0D%0A` +
+                                            `*Email:* ${formData.email || 'No indicado'}%0D%0A` +
+                                            `*Equipo:* ${formData.equipment || 'No especificado'}%0D%0A` +
+                                            `*Duración:* ${formData.duration || 'No especificada'}%0D%0A` +
+                                            `*Ubicación:* ${formData.location || 'No indicada'}%0D%0A` +
+                                            `*Detalles:* ${formData.details || 'Sin detalles adicionales'}%0D%0A%0D%0A` +
+                                            `Quedo atento a su respuesta.`;
+
+                                        window.location.href = `mailto:jgalvez@julmarspa.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                                    }}
+                                    className="w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl border border-gray-600"
+                                >
+                                    COTIZAR POR CORREO
+                                    <Mail size={18} />
+                                </button>
+                            </div>
                         </form>
                     </motion.div>
                 </div>

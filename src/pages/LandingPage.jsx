@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -13,6 +14,21 @@ import Footer from '../components/Footer';
 
 const LandingPage = () => {
     const [selectedMachineForQuote, setSelectedMachineForQuote] = useState('');
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const sectionId = location.hash.replace('#', '');
+            const element = document.getElementById(sectionId);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [location]);
 
     return (
         <>

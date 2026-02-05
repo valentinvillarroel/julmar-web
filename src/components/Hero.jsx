@@ -9,7 +9,10 @@ const Hero = () => {
                 <picture>
                     <source media="(max-width: 767px)" srcSet="/hero-movil.webp" type="image/webp" />
                     <source srcSet="/hero-bg-final.webp" type="image/webp" />
-                    <img
+                    <motion.img
+                        initial={{ scale: 1 }}
+                        animate={{ scale: 1.1 }}
+                        transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
                         src="/hero-bg-final.webp"
                         alt="Arriendo de Maquinaria Pesada en Coquimbo"
                         className="w-full h-full object-cover"

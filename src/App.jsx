@@ -1,11 +1,17 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
+import MachineDetail from './pages/MachineDetail';
 
 function App() {
   return (
     <div className="relative">
-      <LandingPage />
-      {/* Floating WhatsApp Button */}
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/flota/:slug" element={<MachineDetail />} />
+      </Routes>
+
+      {/* Floating WhatsApp Button - Global */}
       <a
         href="https://wa.me/56931052727"
         target="_blank"

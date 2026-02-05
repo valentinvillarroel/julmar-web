@@ -37,7 +37,7 @@ const Quality = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group"
+                            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-[0_20px_40px_-15px_rgba(163,230,53,0.3)] hover:border-julmar-green/50 transition-all duration-300 group hover:-translate-y-1"
                         >
                             <div className="w-16 h-16 bg-julmar-green/10 rounded-2xl flex items-center justify-center mb-6 text-julmar-green group-hover:bg-julmar-green group-hover:text-white transition-all duration-300">
                                 {feature.icon}

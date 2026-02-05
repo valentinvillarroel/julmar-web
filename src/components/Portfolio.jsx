@@ -6,22 +6,22 @@ const projects = [
         id: 1,
         title: "Movimiento de Tierras",
         location: "Minera del Norte",
-        description: "Apoyo en faena con maquinaria pesada (Cargadores y Excavadoras).",
-        image: "/machinery/jd-744l/main-v2.jpg"
+        description: "Apoyo en faena con maquinaria pesada de alta capacidad.",
+        image: "/machinery/jd-744l/main-v2.webp"
     },
     {
         id: 2,
         title: "Mejoramiento Vial",
         location: "Ruta D-43",
-        description: "Perfilado y compactación de caminos rurales.",
-        image: "/machinery/jd-724k/main-new.jpg"
+        description: "Perfilado y compactación de caminos con equipos John Deere.",
+        image: "/machinery/jd-310l/main-site-v3.webp"
     },
     {
         id: 3,
         title: "Demolición Industrial",
-        location: "Coquimbo, Sector Barrio Industrial",
+        location: "Barrio Industrial, Coquimbo",
         description: "Demolición controlada de estructuras de concreto.",
-        image: "/machinery/attachments/martillo-user-2.png"
+        image: "/machinery/attachments/martillo-user-2.webp"
     }
 ];
 
