@@ -73,6 +73,41 @@ const MachineDetail = () => {
             <Helmet>
                 <title>{`${machine.name} | Arriendo en Coquimbo - Julmar SpA`}</title>
                 <meta name="description" content={`Arriendo de ${machine.name} en Coquimbo y La Serena. ${machine.capacity}. ${machine.description}`} />
+                <link rel="canonical" href={`https://julmar.cl/flota/${slug}`} />
+
+                {/* Open Graph */}
+                <meta property="og:type" content="product" />
+                <meta property="og:url" content={`https://julmar.cl/flota/${slug}`} />
+                <meta property="og:title" content={`${machine.name} | Maquinarias Julmar`} />
+                <meta property="og:description" content={`${machine.capacity}. Disponible para arriendo inmediato en IV Región.`} />
+                <meta property="og:image" content={`https://julmar.cl${machine.image}`} />
+
+                {/* Schema.org Product Data */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org/",
+                            "@type": "Product",
+                            "name": "${machine.name}",
+                            "image": [
+                                "https://julmar.cl${machine.image}"
+                                ${machine.gallery ? machine.gallery.map(img => `,"https://julmar.cl${img}"`).join('') : ''}
+                            ],
+                            "description": "${machine.description}",
+                            "brand": {
+                                "@type": "Brand",
+                                "name": "${machine.category}" 
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "url": "https://julmar.cl/flota/${slug}",
+                                "priceCurrency": "CLP",
+                                "availability": "https://schema.org/InStock",
+                                "price": "0" 
+                            }
+                        }
+                    `}
+                </script>
             </Helmet>
 
             <Navbar />

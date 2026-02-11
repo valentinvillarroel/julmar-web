@@ -36,9 +36,42 @@ const LandingPage = () => {
                 <title>Maquinarias Julmar SpA | Arriendo de Maquinaria Pesada IV Región</title>
                 <meta name="description" content="Especialistas en arriendo de maquinaria pesada, transporte de agua y servicios para minería, vialidad y agropecuario en la IV Región (Coquimbo, La Serena)." />
                 <meta name="keywords" content="maquinaria pesada, arriendo retroexcavadora, camiones aljibe, movimiento de tierra, minería, vialidad, agropecuario, la serena, coquimbo, julmar" />
+                <link rel="canonical" href="https://julmar.cl/" />
+
+                {/* Open Graph / Facebook / WhatsApp */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://julmar.cl/" />
                 <meta property="og:title" content="Maquinarias Julmar SpA - Soluciones Integrales en IV Región" />
                 <meta property="og:description" content="Flota moderna y servicio experto para faenas mineras, viales y agrícolas. Cotiza con nosotros." />
-                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://julmar.cl/hero-bg-final.webp" />
+
+                {/* Schema.org Structured Data */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "LocalBusiness",
+                            "name": "Maquinarias Julmar SpA",
+                            "image": "https://julmar.cl/logo-julmar.webp",
+                            "telephone": "+56931052727",
+                            "email": "jgalvez@julmarspa.com",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Coquimbo",
+                                "addressRegion": "Coquimbo",
+                                "addressCountry": "CL"
+                            },
+                            "url": "https://julmar.cl",
+                            "priceRange": "$$$",
+                            "openingHoursSpecification": {
+                                "@type": "OpeningHoursSpecification",
+                                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                                "opens": "08:00",
+                                "closes": "18:00"
+                            }
+                        }
+                    `}
+                </script>
             </Helmet>
 
             <div className="min-h-screen bg-white font-sans selection:bg-julmar-green selection:text-julmar-dark">
