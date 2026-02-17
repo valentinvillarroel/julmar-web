@@ -216,6 +216,7 @@ const Contact = ({ preselectedMachine }) => {
                                 <button
                                     type="submit"
                                     onClick={handleSubmit}
+                                    aria-label="Cotizar por WhatsApp"
                                     className="w-full bg-julmar-green hover:bg-julmar-green-light text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl"
                                 >
                                     COTIZAR POR WHATSAPP
@@ -243,6 +244,7 @@ const Contact = ({ preselectedMachine }) => {
 
                                         window.location.href = `mailto:jgalvez@julmarspa.com?subject=${encodeURIComponent(subject)}&body=${body}`;
                                     }}
+                                    aria-label="Cotizar por Correo Electrónico"
                                     className="w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl border border-gray-600"
                                 >
                                     COTIZAR POR CORREO

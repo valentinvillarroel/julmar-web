@@ -42,8 +42,8 @@ const Fleet = ({ onQuote = () => { } }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-8 md:mb-12">
                     <div className="mb-6 md:mb-0 text-center md:text-left">
-                        <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-xs md:text-sm">Catálogo 2026</span>
-                        <h2 className="text-3xl md:text-5xl font-black text-julmar-dark">NUESTRA FLOTA</h2>
+                        <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-xs md:text-sm">Catálogo de Equipos</span>
+                        <h2 className="text-3xl md:text-5xl font-black text-julmar-dark uppercase">Arriendo de Maquinaria en Coquimbo</h2>
                     </div>
                 </div>
 

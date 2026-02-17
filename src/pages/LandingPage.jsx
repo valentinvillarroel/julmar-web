@@ -63,12 +63,17 @@ const LandingPage = () => {
                             },
                             "url": "https://julmar.cl",
                             "priceRange": "$$$",
+                            "areaServed": ["Coquimbo", "La Serena", "Vicuña", "Ovalle", "Andacollo", "Copiapó", "Vallenar"],
+                            "knowsAbout": ["Arriendo de Maquinaria", "Servicios Mineros", "Movimiento de Tierras"],
                             "openingHoursSpecification": {
                                 "@type": "OpeningHoursSpecification",
                                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                                 "opens": "08:00",
                                 "closes": "18:00"
-                            }
+                            },
+                            "sameAs": [
+                                "https://www.linkedin.com/company/maquinarias-julmar/"
+                            ]
                         }
                     `}
                 </script>

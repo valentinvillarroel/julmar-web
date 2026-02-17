@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white py-16 border-t border-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand */}
                     <div>
                         <div className="mb-6">
@@ -13,8 +13,21 @@ const Footer = () => {
                             <p className="text-julmar-green text-sm font-bold uppercase tracking-widest mt-1">Socio Estratégico en Terreno</p>
                         </div>
                         <p className="text-gray-400 leading-relaxed text-sm">
-                            Soluciones integrales en maquinaria pesada para la Gran Minería, construcción y obras viales. Comprometidos con la continuidad operacional y la seguridad.
+                            Soluciones integrales en maquinaria pesada para la Gran Minería, construcción y obras viales en Coquimbo y Atacama.
                         </p>
+                    </div>
+
+                    {/* Navigation */}
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-6 flex items-center">
+                            <span className="w-1 h-6 bg-julmar-green mr-3 rounded-full"></span>
+                            Navegación Rápida
+                        </h4>
+                        <ul className="space-y-3 text-gray-400 text-sm">
+                            <li><a href="#flota" className="hover:text-julmar-green transition-colors">Arriendo de Maquinaria</a></li>
+                            <li><a href="#servicios" className="hover:text-julmar-green transition-colors">Servicios Mineros y Viales</a></li>
+                            <li><a href="#contacto" className="hover:text-julmar-green transition-colors">Cotizar Equipos</a></li>
+                        </ul>
                     </div>
 
                     {/* Contact */}
@@ -26,7 +39,7 @@ const Footer = () => {
                         <ul className="space-y-4 text-gray-400 text-sm">
                             <li className="flex items-start">
                                 <span className="text-white font-bold min-w-[80px]">Ubicación:</span>
-                                <span>Coquimbo / IV Región, Chile</span>
+                                <span>Coquimbo, IV Región, Chile</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="text-white font-bold min-w-[80px]">Email:</span>
@@ -43,28 +56,21 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold text-white mb-6 flex items-center">
                             <span className="w-1 h-6 bg-julmar-green mr-3 rounded-full"></span>
-                            Compromiso y Seguridad
+                            Seguridad
                         </h4>
                         <div className="grid grid-cols-2 gap-4">
-                            {/* Badge 1: Seguridad */}
                             <div className="bg-gray-900 border border-gray-800 p-3 rounded-xl flex flex-col items-center justify-center text-center group hover:border-julmar-green/50 transition-colors">
                                 <ShieldCheck className="text-julmar-green mb-2 group-hover:scale-110 transition-transform" size={28} />
-                                <span className="text-xs font-bold text-gray-300">Cultura Cero Daño</span>
+                                <span className="text-xs font-bold text-gray-300">Cero Daño</span>
                             </div>
-
-                            {/* Badge 2: Mantención */}
                             <div className="bg-gray-900 border border-gray-800 p-3 rounded-xl flex flex-col items-center justify-center text-center group hover:border-julmar-green/50 transition-colors">
                                 <Wrench className="text-julmar-green mb-2 group-hover:scale-110 transition-transform" size={28} />
-                                <span className="text-xs font-bold text-gray-300">Mantención Proactiva</span>
+                                <span className="text-xs font-bold text-gray-300">Mantención</span>
                             </div>
-
-                            {/* Badge 3: Disponibilidad */}
                             <div className="bg-gray-900 border border-gray-800 p-3 rounded-xl flex flex-col items-center justify-center text-center group hover:border-julmar-green/50 transition-colors">
                                 <Clock className="text-julmar-green mb-2 group-hover:scale-110 transition-transform" size={28} />
                                 <span className="text-xs font-bold text-gray-300">Soporte 24/7</span>
                             </div>
-
-                            {/* Badge 4: Medio Ambiente */}
                             <div className="bg-gray-900 border border-gray-800 p-3 rounded-xl flex flex-col items-center justify-center text-center group hover:border-julmar-green/50 transition-colors">
                                 <Leaf className="text-julmar-green mb-2 group-hover:scale-110 transition-transform" size={28} />
                                 <span className="text-xs font-bold text-gray-300">Sello Verde</span>

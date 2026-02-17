@@ -37,6 +37,7 @@ const Hero = () => {
                     className="text-5xl md:text-7xl font-black mb-6 leading-tight"
                 >
                     <span className="text-white">JULMAR</span>
+                    <span className="block text-2xl md:text-3xl mt-2 text-gray-300 font-bold uppercase tracking-widest">Arriendo de Maquinaria Pesada</span>
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -44,7 +45,7 @@ const Hero = () => {
                     transition={{ delay: 0.4 }}
                     className="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-300 font-light"
                 >
-                    Arriendo de maquinaria pesada y gestión de activos para la Gran Minería en Coquimbo y Atacama.
+                    Arriendo de maquinaria pesada, excavadoras y camiones aljibe para la Gran Minería en Coquimbo, La Serena y Atacama.
                 </motion.p>
             </div>
         </section>
