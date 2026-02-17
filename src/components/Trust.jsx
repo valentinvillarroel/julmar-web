@@ -13,12 +13,12 @@ const Trust = () => {
                 <div className="text-center mb-16">
                     <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Nuestra Esencia</span>
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS SU SOCIO ESTRATÉGICO EN LA REGIÓN</h2>
-                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10">
-                        <p className="mb-4">
-                            JulMar SPA es una empresa especializada ubicada en la cuarta región, dedicada al alquiler de camiones y maquinaria para empresas en los sectores de vialidad, minería y agropecuario.
+                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10 space-y-6">
+                        <p>
+                            JulMar SpA se posiciona como el socio estratégico definitivo para la industria en la Región de Coquimbo. Especialistas en el arriendo de maquinaria pesada de alto tonelaje y soluciones de transporte de agua, ofrecemos una flota moderna respaldada por un mantenimiento riguroso y certificación garantizada.
                         </p>
                         <p>
-                            Con una trayectoria de 5 años en el rubro, nuestro compromiso radica en situar al cliente en el centro de nuestras operaciones, brindándole una atención ágil y personalizada. Nos esforzamos por proporcionar equipos de calidad que satisfagan las necesidades de nuestros clientes, manteniendo un enfoque ágil tanto en el cumplimiento de plazos como en la gestión de costos.
+                            Entendemos la criticidad de sus operaciones. Por ello, combinamos la agilidad de una gestión local con los estándares de seguridad y eficiencia exigidos por la Gran Minería y Obras Civiles. Nuestro compromiso es absoluto: asegurar la continuidad operacional de sus proyectos mediante equipos confiables y un soporte técnico 24/7 de respuesta inmediata.
                         </p>
                     </div>
 
