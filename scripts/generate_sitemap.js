@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { machines } from './src/data/machines.js';
+import { machines } from '../src/data/machines.js';
 
 // Utility for slug matching (copied from stringUtils to avoid import issues in pure node script if not using modules)
 const slugify = (text) => {

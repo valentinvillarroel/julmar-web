@@ -6,7 +6,7 @@ from PIL import Image
 import unicodedata
 
 # Configuración
-SOURCE_DIR = "NUEVAS_FOTOS_AQUI"
+SOURCE_DIR = os.path.join("assets_y_datos", "NUEVAS_FOTOS_AQUI")
 TARGET_PUBLIC_DIR = os.path.join("public", "machinery")
 DATA_FILE = os.path.join("src", "data", "machines.js")
 

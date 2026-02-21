@@ -45,24 +45,27 @@ const Navbar = () => {
     const handleNavClick = (sectionId, mobile = false) => {
         if (mobile) setMobileMenuOpen(false);
 
-        if (isHome) {
-            // If on home, smooth scroll
-            if (sectionId === 'hero') {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Allow menu layout to update/close before scrolling on mobile
+        setTimeout(() => {
+            if (isHome) {
+                // If on home, smooth scroll
+                if (sectionId === 'hero') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    const element = document.getElementById(sectionId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
             } else {
-                const element = document.getElementById(sectionId);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                // If not on home, navigate to home with hash
+                if (sectionId === 'hero') {
+                    navigate('/');
+                } else {
+                    navigate(`/#${sectionId}`);
                 }
             }
-        } else {
-            // If not on home, navigate to home with hash
-            if (sectionId === 'hero') {
-                navigate('/');
-            } else {
-                navigate(`/#${sectionId}`);
-            }
-        }
+        }, mobile ? 300 : 0);
     };
 
     const navItems = [
@@ -82,7 +85,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-julmar-dark/95 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5'
+            className={`fixed w-full z-[100] transition-all duration-300 ${scrolled || mobileMenuOpen ? 'bg-julmar-dark/95 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,7 +129,8 @@ const Navbar = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="md:hidden text-white p-2 hover:text-julmar-green transition-colors"
+                        className="md:hidden text-white p-2 hover:text-julmar-green transition-colors relative z-50"
+                        aria-label="Toggle Mobile Menu"
                     >
                         {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -140,7 +144,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-julmar-dark/95 backdrop-blur-xl border-t border-gray-800"
+                        className="md:hidden bg-julmar-dark/95 backdrop-blur-xl border-t border-gray-800 overflow-hidden"
                     >
                         <div className="px-4 py-8 space-y-4">
                             {['Inicio', 'Flota', 'Servicios', 'Nosotros', 'Contacto'].map((item) => {
