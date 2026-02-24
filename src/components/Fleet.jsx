@@ -47,8 +47,8 @@ const Fleet = ({ onQuote = () => { } }) => {
                     </div>
                 </div>
 
-                {/* Filter Tabs - Sticky on Mobile */}
-                <div className="sticky top-20 z-30 py-2 bg-white/80 backdrop-blur-md -mx-4 px-4 md:mx-0 md:bg-transparent md:static mb-8 md:mb-12 transition-all">
+                {/* Filter Tabs */}
+                <div className="mb-8 md:mb-12">
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                         {categories.map(cat => (
                             <button
