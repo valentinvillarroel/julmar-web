@@ -235,28 +235,9 @@ const MixerFleet = () => {
                             >
                                 <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.3em] mb-4 block">Experiencia en Terreno</span>
                                 <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight leading-tight">Capacidad Logística sin Precedentes</h2>
-                                <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed mb-12">
+                                <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed">
                                     Operamos con flota propia de camiones FAW J6 Jiefang equipados con betoneras de 8m³ y 10m³, garantizando el suministro constante en proyectos de gran envergadura.
                                 </p>
-
-                                <div className="grid grid-cols-2 gap-8">
-                                    <div className="border-l-2 border-[#4CAF50] pl-6 py-2">
-                                        <p className="text-3xl font-black text-white leading-none mb-2">12+</p>
-                                        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Equipos Mixer</p>
-                                    </div>
-                                    <div className="border-l-2 border-[#4CAF50] pl-6 py-2">
-                                        <p className="text-3xl font-black text-white leading-none mb-2">24/7</p>
-                                        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Soporte Taller</p>
-                                    </div>
-                                    <div className="border-l-2 border-[#4CAF50] pl-6 py-2">
-                                        <p className="text-3xl font-black text-white leading-none mb-2">CLP 1.2B</p>
-                                        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Venta Anual Proyectada</p>
-                                    </div>
-                                    <div className="border-l-2 border-[#4CAF50] pl-6 py-2">
-                                        <p className="text-3xl font-black text-white leading-none mb-2">100%</p>
-                                        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Sello SICEP</p>
-                                    </div>
-                                </div>
                             </motion.div>
                         </div>
                     </div>
@@ -330,87 +311,6 @@ const MixerFleet = () => {
                 </div>
             </section>
 
-            {/* KPIs Reales - Disponibilidad Mecánica */}
-            <section className="py-32 bg-slate-900 overflow-hidden relative">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#4CAF50]/10 via-transparent to-transparent"></div>
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        {/* Left: Text */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.4em] mb-6 block">Métricas de Rendimiento</span>
-                            <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter leading-none mb-8">
-                                Su flota opera al<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4CAF50] to-emerald-300">98% de Uptime</span>
-                            </h2>
-                            <p className="text-slate-400 text-lg leading-relaxed mb-12">
-                                Nuestro programa de mantenimiento predictivo, stock crítico de repuestos certificados y personal especializado garantizan una disponibilidad mecánica superior, reduciendo las detenciones no programadas a menos del 2%.
-                            </p>
-                            <div className="grid grid-cols-2 gap-6">
-                                {[
-                                    { value: '98%', label: 'Disponibilidad', color: 'text-[#4CAF50]' },
-                                    { value: '1H', label: 'Tiempo de Respuesta', color: 'text-emerald-300' },
-                                ].map((kpi, i) => (
-                                    <div key={i} className="bg-white/5 border border-white/10 rounded-[24px] p-6 text-center">
-                                        <p className={`text-3xl font-black leading-none mb-2 ${kpi.color}`}>{kpi.value}</p>
-                                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest leading-tight">{kpi.label}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
-
-                        {/* Right: Chart */}
-                        <div className="bg-white/5 border border-white/10 rounded-[48px] p-10">
-                            <h3 className="text-center font-black text-white text-lg uppercase tracking-widest mb-8">
-                                Disponibilidad Mecánica (%)
-                            </h3>
-                            <div className="h-[380px]">
-                                <Bar
-                                    data={{
-                                        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
-                                        datasets: [
-                                            {
-                                                label: 'Sin Mantención JulMar',
-                                                data: [78, 81, 74, 83, 76, 79],
-                                                backgroundColor: 'rgba(148,163,184,0.5)',
-                                                borderRadius: 8,
-                                            },
-                                            {
-                                                label: 'Con Mantención JulMar',
-                                                data: [96, 97, 98, 97, 99, 98],
-                                                backgroundColor: '#4CAF50',
-                                                borderRadius: 8,
-                                            }
-                                        ]
-                                    }}
-                                    options={{
-                                        responsive: true,
-                                        maintainAspectRatio: false,
-                                        plugins: {
-                                            legend: {
-                                                position: 'bottom',
-                                                labels: { usePointStyle: true, color: '#94a3b8', padding: 20, font: { family: 'Inter, sans-serif' } }
-                                            }
-                                        },
-                                        scales: {
-                                            y: {
-                                                min: 60,
-                                                max: 100,
-                                                grid: { color: 'rgba(255,255,255,0.05)' },
-                                                ticks: { color: '#64748b', callback: (v) => `${v}%` }
-                                            },
-                                            x: { grid: { display: false }, ticks: { color: '#64748b' } }
-                                        }
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Representación de Marca - Servicio Técnico Autorizado */}
             <section className="py-32 bg-white">
