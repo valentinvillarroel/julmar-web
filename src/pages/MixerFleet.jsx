@@ -502,8 +502,108 @@ const MixerFleet = () => {
                 </div>
             </section>
 
-            {/* Reuse standard Contact Component for consistency, passing current machine */}
-            <Contact preselectedMachine={selectedMachineForQuote} />
+            {/* Contacto exclusivo Mixer */}
+            <section id="contacto" className="py-24 bg-julmar-dark relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform origin-top translate-x-1/2 pointer-events-none"></div>
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                        {/* Left: info */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="text-white flex flex-col justify-center"
+                        >
+                            <span className="text-julmar-green font-bold uppercase tracking-widest mb-4 block">Hablemos de una Alianza</span>
+                            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">
+                                ¿LISTO PARA <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green-light to-julmar-green">CONVERSAR?</span>
+                            </h2>
+
+                            <div className="space-y-6">
+                                {/* Juan Luis */}
+                                <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-julmar-green/40 transition-colors">
+                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Juan Luis Gálvez Fuica — Gerencia</p>
+                                    <div className="flex items-center gap-4 mb-3">
+                                        <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <Mail size={18} className="text-julmar-green" />
+                                        </div>
+                                        <a href="mailto:jgalvez@julmarspa.com" className="text-gray-400 hover:text-white transition-colors text-sm">jgalvez@julmarspa.com</a>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <Phone size={18} className="text-julmar-green" />
+                                        </div>
+                                        <a href="https://wa.me/56931052727" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">+56 9 3105 2727</a>
+                                    </div>
+                                </div>
+
+                                {/* Rodolfo */}
+                                <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-julmar-green/40 transition-colors">
+                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Rodolfo Serrano San Martín — Ingeniería</p>
+                                    <div className="flex items-center gap-4 mb-3">
+                                        <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <Mail size={18} className="text-julmar-green" />
+                                        </div>
+                                        <a href="mailto:Rodolfo@ingenieriaserrano.cl" className="text-gray-400 hover:text-white transition-colors text-sm">Rodolfo@ingenieriaserrano.cl</a>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <Phone size={18} className="text-julmar-green" />
+                                        </div>
+                                        <a href="https://wa.me/56998793145" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">+56 9 9879 3145</a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4 pt-2">
+                                    <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <MapPin size={18} className="text-julmar-green" />
+                                    </div>
+                                    <div>
+                                        <p className="text-white font-bold text-sm mb-1">Ubicación</p>
+                                        <p className="text-gray-400 text-sm">Coquimbo / La Serena, IV Región, Chile</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Right: CTA banner */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="flex flex-col justify-center gap-6"
+                        >
+                            <div className="bg-[#4CAF50]/10 border border-[#4CAF50]/30 rounded-3xl p-10 text-white">
+                                <h3 className="text-2xl font-black mb-4 text-white">Solicitar Reunión Técnica</h3>
+                                <p className="text-slate-400 text-base leading-relaxed mb-8">
+                                    Coordinamos una reunión para presentar nuestra capacidad operativa, certificaciones y la propuesta de alianza formal. Sin compromiso.
+                                </p>
+                                <a
+                                    href="https://wa.me/56998793145?text=Hola%20Rodolfo%2C%20me%20interesa%20conocer%20la%20propuesta%20de%20alianza%20JulMar%20para%20flota%20Mixer."
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full bg-[#4CAF50] hover:bg-white text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-[#4CAF50]/20 text-sm uppercase tracking-widest"
+                                >
+                                    Iniciar Conversación por WhatsApp
+                                    <ArrowRight size={18} />
+                                </a>
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 text-white">
+                                <p className="text-slate-400 text-sm leading-relaxed">
+                                    También puedes escribirnos directamente a{' '}
+                                    <a href="mailto:jgalvez@julmarspa.com" className="text-julmar-green hover:underline">jgalvez@julmarspa.com</a>
+                                    {' '}o a{' '}
+                                    <a href="mailto:Rodolfo@ingenieriaserrano.cl" className="text-julmar-green hover:underline">Rodolfo@ingenieriaserrano.cl</a>
+                                    {' '}para coordinar una visita técnica o presentación formal.
+                                </p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
 
             <Footer />
         </div>
