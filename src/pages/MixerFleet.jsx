@@ -154,32 +154,7 @@ const MixerFleet = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-julmar-dark via-julmar-dark/90 to-julmar-green/10"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-3xl inline-flex flex-col gap-3 shadow-2xl"
-                        >
-                            <img src="/logo-julmar.webp" alt="JulMar Logo" className="h-10 w-auto bg-white rounded-lg p-1.5 object-contain" />
-                            <div>
-                                <p className="text-[10px] font-black uppercase tracking-widest text-white leading-none mb-1">Maquinarias JulMar SPA</p>
-                                <p className="text-[9px] font-bold text-julmar-green uppercase tracking-wider leading-none">RUT: 77.198.296-4</p>
-                            </div>
-                        </motion.div>
 
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className="flex flex-col items-end gap-3"
-                        >
-                            <div className="bg-white p-3 rounded-2xl shadow-xl w-36 flex justify-center">
-                                <p className="text-julmar-dark font-black text-xl italic tracking-tighter leading-none">SICEP</p>
-                            </div>
-                            <span className="bg-julmar-green/20 text-julmar-green text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-full border border-julmar-green/30 shadow-lg backdrop-blur-sm">
-                                Proveedor Clase A
-                            </span>
-                        </motion.div>
-                    </div>
 
                     <div className="mt-16 max-w-4xl">
                         <motion.div
@@ -200,7 +175,7 @@ const MixerFleet = () => {
                                 Especialistas en instalación, reparación y mantenimiento de alta precisión para mixers. Soporte técnico garantizado en la Región Metropolitana y la IV Región (Coquimbo).
                             </p>
 
-                            <div className="mt-12 flex flex-wrap gap-6">
+                            <div className="mt-12 flex flex-wrap gap-4 items-center">
                                 <button
                                     onClick={() => handleQuote('Servicio Mixer')}
                                     className="bg-julmar-green hover:bg-white text-julmar-dark px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all shadow-xl shadow-julmar-green/20 flex items-center gap-3"
@@ -216,6 +191,13 @@ const MixerFleet = () => {
                                     Ver Portafolio PDF
                                     <Download size={20} />
                                 </a>
+                                <div className="flex items-center gap-3 bg-white/5 border border-white/15 backdrop-blur-md px-5 py-5 rounded-2xl h-full">
+                                    <img src="/sicep.png" alt="Certificado SICEP" className="h-8 w-auto object-contain" />
+                                    <div>
+                                        <p className="text-white font-black text-xs uppercase tracking-widest leading-none">Proveedor Certificado</p>
+                                        <p className="text-julmar-green font-black text-xs uppercase tracking-widest leading-none mt-1">SICEP</p>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
