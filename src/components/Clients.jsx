@@ -2,13 +2,15 @@ import React from 'react';
 
 const clients = [
     { name: "UNITED", id: 1 },
-    { name: "HY TECH DRILLING", id: 2 },
-    { name: "VIVELO LTDA.", id: 3 },
-    { name: "ISASER SpA", id: 4 },
-    { name: "TOLEDO GIANZO", id: 5 },
-    { name: "COMERCIAL TRAGAL", id: 6 },
-    { name: "CMP", id: 7 },
-    { name: "WOLF DRILLING", id: 8 }
+    { name: "MELÓN", id: 2 },
+    { name: "POLPAICO", id: 3 },
+    { name: "CBB", id: 4 },
+    { name: "UNICON", id: 5 },
+    { name: "HY TECH DRILLING", id: 6 },
+    { name: "VIVELO LTDA.", id: 7 },
+    { name: "ISASER SpA", id: 8 },
+    { name: "CMP", id: 9 },
+    { name: "WOLF DRILLING", id: 10 }
 ];
 
 const LogoPlaceholder = ({ name }) => (

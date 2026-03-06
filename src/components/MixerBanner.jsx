@@ -30,7 +30,7 @@ const MixerBanner = () => {
                         </h2>
 
                         <p className="text-gray-400 text-lg md:text-xl font-light mb-10 max-w-xl">
-                            Expandimos nuestra capacidad operativa con servicios exclusivos de mantenimiento integral y arriendo de equipos hormigoneros para la Región de Coquimbo.
+                            Expandimos nuestra capacidad operativa con servicios exclusivos de mantenimiento, reparación e instalación de equipos hormigoneros para la Región Metropolitana y la IV Región (Coquimbo).
                         </p>
 
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start">

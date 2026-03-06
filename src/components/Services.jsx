@@ -16,6 +16,11 @@ const services = [
         icon: <Tractor size={40} />,
         title: "Proyectos Hídricos",
         description: "Desarrollo de infraestructura hídrica eficiente. Transporte de agua industrial, limpieza de canales y preparación de terrenos productivos."
+    },
+    {
+        icon: <Truck size={40} />,
+        title: "Unidad de Concreto",
+        description: "Instalación, mantenimiento y reparación especializada de betoneras para camiones mixer en la Región Metropolitana y la IV Región (Coquimbo)."
     }
 ];
 
@@ -31,7 +36,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
                         <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
                             <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-julmar-dark group-hover:scale-110 transition-all duration-300">

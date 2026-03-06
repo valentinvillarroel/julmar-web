@@ -12,10 +12,8 @@ import {
     ShieldCheck,
     Zap,
     Lightbulb,
-    Users,
     ChevronLeft,
     ChevronRight,
-    Search,
     Download
 } from 'lucide-react';
 import {
@@ -34,7 +32,6 @@ import {
 import { Bar, Pie, Line } from 'react-chartjs-2';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Contact from '../components/Contact';
 import { Helmet } from 'react-helmet-async';
 
 // Register ChartJS modules
@@ -56,21 +53,23 @@ const MixerFleet = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 
     const galleryImages = [
-        { src: "/machinery/attachments/machinery2/image copy 14.png", title: "Flota FAW J6" },
-        { src: "/machinery/attachments/machinery2/image copy 4.png", title: "Servicio en Terreno" },
+        { src: "/machinery/mixer-8m3.jpg", title: "Servicio Mixer 8m³" },
+        { src: "/machinery/mixer-10m3.jpg", title: "Asistencia Técnica" },
+        { src: "/machinery/betonera.jpg", title: "Reemplazo de Betoneras" },
+        { src: "/machinery/mantencion.jpg", title: "Soporte Técnico Terreno" }
     ];
 
     const nextImage = () => setActiveImageIndex((prev) => (prev + 1) % galleryImages.length);
     const prevImage = () => setActiveImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
 
-    // Chart configurations (Keep original commercial data)
+    // Chart configurations
     const betonerasData = {
         labels: ['2018', '2019', '2020', '2021'],
         datasets: [
             {
                 label: 'JulMar',
                 data: [52, 49, 19, 32],
-                backgroundColor: '#4472c4',
+                backgroundColor: '#A3E635',
                 borderRadius: 4,
             },
             {
@@ -84,12 +83,6 @@ const MixerFleet = () => {
                 data: [7, 14, 4, 5],
                 backgroundColor: '#a5a5a5',
                 borderRadius: 4,
-            },
-            {
-                label: 'Total',
-                data: [76, 81, 37, 46],
-                backgroundColor: '#ffc000',
-                borderRadius: 4,
             }
         ]
     };
@@ -98,7 +91,7 @@ const MixerFleet = () => {
         labels: ['JulMar (60%)', 'Otros (40%)'],
         datasets: [{
             data: [60, 40],
-            backgroundColor: ['#70ad47', '#5b9bd5'],
+            backgroundColor: ['#A3E635', '#0B2427'],
             borderWidth: 2,
             borderColor: '#ffffff'
         }]
@@ -109,16 +102,13 @@ const MixerFleet = () => {
         datasets: [{
             label: 'Ventas (CLP)',
             data: [873045273, 1218170137, 788967670, 727750721],
-            borderColor: '#4472c4',
-            backgroundColor: 'rgba(68, 114, 196, 0.1)',
+            borderColor: '#A3E635',
+            backgroundColor: 'rgba(163, 230, 53, 0.1)',
             borderWidth: 3,
-            pointBackgroundColor: '#4472c4',
-            pointBorderColor: '#fff',
-            pointBorderWidth: 2,
-            pointRadius: 6,
-            pointHoverRadius: 8,
             fill: true,
-            tension: 0.1
+            tension: 0.1,
+            pointRadius: 4,
+            pointBackgroundColor: '#A3E635'
         }]
     };
 
@@ -132,7 +122,7 @@ const MixerFleet = () => {
                     usePointStyle: true,
                     boxWidth: 8,
                     padding: 20,
-                    font: { family: 'Inter, sans-serif' }
+                    font: { family: 'Barlow, sans-serif' }
                 }
             }
         }
@@ -143,21 +133,53 @@ const MixerFleet = () => {
         document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <div className="min-h-screen bg-slate-50 font-sans selection:bg-[#4CAF50] selection:text-white">
+        <div className="min-h-screen bg-slate-50 font-sans selection:bg-julmar-green selection:text-julmar-dark">
             <Helmet>
                 <title>Flota Mixer & Betoneras | Maquinarias JulMar SPA</title>
-                <meta name="description" content="Servicios de instalación y reparación de betoneras para camiones mixer en la IV Región. Soporte técnico certificado directamente en faena." />
+                <meta name="description" content="Especialistas en instalación, reparación y mantenimiento de betoneras para camiones mixer en la Región Metropolitana y IV Región." />
             </Helmet>
 
             <Navbar />
 
-            {/* Hero Section with Diagonal Effect */}
-            <header className="relative bg-slate-900 text-white overflow-hidden pt-36 pb-48 md:pt-48 md:pb-60">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%234caf50\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-[#4CAF50]/10"></div>
+            {/* Hero Section */}
+            <header className="relative bg-julmar-dark text-white overflow-hidden pt-36 pb-48 md:pt-48 md:pb-60">
+                <div className="absolute inset-0 opacity-20">
+                    <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23A3E635\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-julmar-dark via-julmar-dark/90 to-julmar-green/10"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
+                    <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            className="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-3xl inline-flex flex-col gap-3 shadow-2xl"
+                        >
+                            <img src="/logo-julmar.webp" alt="JulMar Logo" className="h-10 w-auto bg-white rounded-lg p-1.5 object-contain" />
+                            <div>
+                                <p className="text-[10px] font-black uppercase tracking-widest text-white leading-none mb-1">Maquinarias JulMar SPA</p>
+                                <p className="text-[9px] font-bold text-julmar-green uppercase tracking-wider leading-none">RUT: 77.198.296-4</p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            className="flex flex-col items-end gap-3"
+                        >
+                            <div className="bg-white p-3 rounded-2xl shadow-xl w-36 flex justify-center">
+                                <p className="text-julmar-dark font-black text-xl italic tracking-tighter leading-none">SICEP</p>
+                            </div>
+                            <span className="bg-julmar-green/20 text-julmar-green text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-full border border-julmar-green/30 shadow-lg backdrop-blur-sm">
+                                Proveedor Clase A
+                            </span>
+                        </motion.div>
+                    </div>
 
                     <div className="mt-16 max-w-4xl">
                         <motion.div
@@ -165,31 +187,35 @@ const MixerFleet = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
                         >
-
+                            <div className="flex items-center gap-4 mb-8">
+                                <span className="w-16 h-1 bg-julmar-green rounded-full"></span>
+                                <p className="text-julmar-green font-black uppercase tracking-[0.4em] text-xs">Unidad Concreto 2026</p>
+                            </div>
                             <h1 className="text-5xl md:text-8xl font-black text-white leading-[0.9] mb-10 tracking-tighter uppercase">
-                                Potenciando la <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4CAF50] to-emerald-300">Continuidad</span><br />
-                                Operacional
+                                TU SOCIO <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green to-emerald-300">ESTRATÉGICO</span><br />
+                                EN TERRENO
                             </h1>
-                            <p className="text-slate-300 text-xl md:text-2xl font-light border-l-4 border-[#4CAF50] pl-8 leading-relaxed max-w-2xl">
-                                Especialistas en instalación y reparación de betoneras para camiones mixer. Servicio técnico certificado directamente en faena, sin necesidad de traslado.
+                            <p className="text-slate-300 text-xl md:text-2xl font-light border-l-4 border-julmar-green pl-8 leading-relaxed max-w-2xl">
+                                Especialistas en instalación, reparación y mantenimiento de alta precisión para mixers. Soporte técnico garantizado en la Región Metropolitana y la IV Región (Coquimbo).
                             </p>
 
-                            <div className="mt-10 flex flex-wrap gap-4 items-center">
+                            <div className="mt-12 flex flex-wrap gap-6">
                                 <button
-                                    onClick={() => handleQuote('Reunión Técnica Alianza')}
-                                    className="bg-[#4CAF50] hover:bg-white text-julmar-dark px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all shadow-xl shadow-[#4CAF50]/20 flex items-center gap-3"
+                                    onClick={() => handleQuote('Servicio Mixer')}
+                                    className="bg-julmar-green hover:bg-white text-julmar-dark px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all shadow-xl shadow-julmar-green/20 flex items-center gap-3"
                                 >
-                                    Solicitar Reunión Técnica
+                                    Cotizar Servicio
                                     <ArrowRight size={20} />
                                 </button>
-                                <div className="flex items-center gap-3 bg-white/5 border border-white/15 backdrop-blur-md px-5 py-3 rounded-2xl">
-                                    <img src="/sicep.png" alt="Certificado SICEP" className="h-8 w-auto object-contain" />
-                                    <div>
-                                        <p className="text-white font-black text-xs uppercase tracking-widest leading-none">Proveedor Certificado</p>
-                                        <p className="text-[#4CAF50] font-black text-xs uppercase tracking-widest leading-none mt-0.5">SICEP</p>
-                                    </div>
-                                </div>
+                                <a
+                                    href="/Brochure_julmar2024.pdf"
+                                    download
+                                    className="bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all flex items-center gap-3"
+                                >
+                                    Ver Portafolio PDF
+                                    <Download size={20} />
+                                </a>
                             </div>
                         </motion.div>
                     </div>
@@ -198,9 +224,9 @@ const MixerFleet = () => {
                 <div className="absolute bottom-0 left-0 w-full h-40 bg-slate-50" style={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 0)' }}></div>
             </header>
 
-            {/* Gallery Slider - NEW SECTION from provided images */}
+            {/* Gallery Slider */}
             <section className="container mx-auto px-6 -mt-24 relative z-20 mb-32">
-                <div className="bg-slate-900 rounded-[48px] overflow-hidden shadow-3xl border border-white/10">
+                <div className="bg-julmar-dark rounded-[48px] overflow-hidden shadow-3xl border border-white/10">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         <div className="relative aspect-[4/3] md:aspect-video lg:aspect-square overflow-hidden bg-black group">
                             <AnimatePresence mode="wait">
@@ -218,10 +244,10 @@ const MixerFleet = () => {
 
                             {/* Slider Controls */}
                             <div className="absolute bottom-10 left-10 flex gap-4 z-40">
-                                <button onClick={prevImage} className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] text-white backdrop-blur-md flex items-center justify-center transition-all">
+                                <button onClick={prevImage} className="w-12 h-12 rounded-full bg-white/10 hover:bg-julmar-green text-white backdrop-blur-md flex items-center justify-center transition-all">
                                     <ChevronLeft size={24} />
                                 </button>
-                                <button onClick={nextImage} className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] text-white backdrop-blur-md flex items-center justify-center transition-all">
+                                <button onClick={nextImage} className="w-12 h-12 rounded-full bg-white/10 hover:bg-julmar-green text-white backdrop-blur-md flex items-center justify-center transition-all">
                                     <ChevronRight size={24} />
                                 </button>
                             </div>
@@ -236,25 +262,36 @@ const MixerFleet = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                             >
-                                <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.3em] mb-4 block">Servicio Técnico Especializado</span>
-                                <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight leading-tight">Instalación y Reparación de Betoneras</h2>
-                                <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed">
-                                    Prestamos servicio especializado de instalación y reparación de betoneras directamente en terreno, para toda la flota de camiones mixer que opera en la Región de Coquimbo.
+                                <span className="text-julmar-green font-black uppercase text-xs tracking-[0.3em] mb-4 block">Experiencia en Terreno</span>
+                                <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight leading-tight uppercase">Capacidad Operativa de Vanguardia</h2>
+                                <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed mb-12">
+                                    Prestamos servicio especializado de instalación y reparación de betoneras directamente en terreno, asegurando la máxima fiabilidad.
                                 </p>
+
+                                <div className="grid grid-cols-2 gap-8">
+                                    <div className="border-l-2 border-julmar-green pl-6 py-2">
+                                        <p className="text-3xl font-black text-white leading-none mb-2">60%</p>
+                                        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Market Share</p>
+                                    </div>
+                                    <div className="border-l-2 border-julmar-green pl-6 py-2">
+                                        <p className="text-3xl font-black text-white leading-none mb-2">SICEP</p>
+                                        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Certificación Clase A</p>
+                                    </div>
+                                </div>
                             </motion.div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Pillars Section with Icons from original brochure */}
+            {/* Pillars Section */}
             <section className="container mx-auto px-6 mb-32">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { title: 'Reemplazo Betoneras', icon: <Zap />, desc: 'Especialistas en sustitución de betoneras y accesorios funcionales de Mixer.', border: 'border-[#4CAF50]' },
-                        { title: 'Overhaul Mixers', icon: <Truck />, desc: 'Reacondicionamiento integral de sistemas hidráulicos y motores de giro para toda la flota.', border: 'border-slate-300' },
-                        { title: 'Soporte Técnico', icon: <ShieldCheck />, desc: 'Soporte oficial de componentes y repuestos montados sobre chasis de alta capacidad.', border: 'border-[#4CAF50]' },
-                        { title: 'Renovación de Flota', icon: <Settings />, desc: 'Alternativas de ensamble y renovación para extender la vida útil de su inversión.', border: 'border-slate-300' },
+                        { title: 'Reemplazo Betoneras', icon: <Zap />, desc: 'Sustitución y montaje de tambores para camiones mixer en faena.', border: 'border-julmar-green' },
+                        { title: 'Overhaul Técnico', icon: <Truck />, desc: 'Mantenimiento integral de sistemas hidráulicos y motores de giro.', border: 'border-slate-300' },
+                        { title: 'Soporte Especializado', icon: <Lightbulb />, desc: 'Soporte técnico y reparación para componentes de alta capacidad.', border: 'border-julmar-green' },
+                        { title: 'Servicio 24/7', icon: <Settings />, desc: 'Taller móvil acreditado para asegurar la continuidad en faena.', border: 'border-slate-300' },
                     ].map((pillar, idx) => (
                         <motion.div
                             key={idx}
@@ -264,7 +301,7 @@ const MixerFleet = () => {
                             transition={{ delay: idx * 0.1 }}
                             className={`bg-white rounded-[32px] shadow-2xl p-10 border-b-8 ${pillar.border} hover:-translate-y-4 transition-all duration-500 group`}
                         >
-                            <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center mb-8 text-[#4CAF50] group-hover:bg-[#4CAF50] group-hover:text-white transition-all duration-300 shadow-inner">
+                            <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center mb-8 text-julmar-green group-hover:bg-julmar-green group-hover:text-julmar-dark transition-all duration-300 shadow-inner">
                                 {pillar.icon}
                             </div>
                             <h3 className="text-lg font-black text-slate-800 uppercase tracking-wider mb-4 leading-tight">{pillar.title}</h3>
@@ -274,142 +311,104 @@ const MixerFleet = () => {
                 </div>
             </section>
 
-            {/* Vision & Values - Replaced with Alianza de Alto Estándar */}
-            <section className="container mx-auto px-6 mb-32">
-                <div className="relative bg-slate-900 rounded-[64px] p-12 md:p-24 text-white shadow-3xl overflow-hidden border-t-8 border-[#4CAF50]">
-                    <div className="absolute top-0 right-0 w-1/3 h-full bg-[#4CAF50]/10 skew-x-[-20deg] translate-x-1/2"></div>
-
-                    <div className="relative z-10 max-w-5xl">
-                        <h4 className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.4em] mb-6">Alianza de Alto Estándar</h4>
-                        <h2 className="text-5xl md:text-7xl font-black mb-12 tracking-tighter leading-none">Uniendo Tecnología y Terreno</h2>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 text-slate-400 font-light text-xl leading-relaxed">
-                            <p>Esta propuesta busca alinear las capacidades tecnológicas de su flota con la potencia operativa de JulMar SpA. Juntos, ofrecemos al cliente final no solo un camión, sino una solución de bombeo y transporte con respaldo técnico garantizado.</p>
-                            <p>Nuestra infraestructura está lista para absorber la gestión post-venta, el mantenimiento predictivo y la representación de marca ante las principales mineras y constructoras del norte de Chile.</p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                            {[
-                                {
-                                    title: 'Compromiso de Uptime',
-                                    icon: <ShieldCheck />,
-                                    desc: 'Minimizamos los tiempos de detención mediante un stock crítico de repuestos y soporte técnico 24/7 en faena.'
-                                },
-                                {
-                                    title: 'Sello de Seguridad HSE',
-                                    icon: <Settings />,
-                                    desc: 'Operamos bajo rigurosos protocolos de seguridad clase A, cumpliendo con las exigencias de SICEP y auditorías mineras.'
-                                }
-                            ].map((box, i) => (
-                                <div key={i} className="bg-white/5 backdrop-blur-xl p-10 rounded-[40px] border border-white/10 group hover:bg-white/10 transition-all">
-                                    <div className="text-[#4CAF50] mb-6 group-hover:scale-110 transition-transform">
-                                        {React.cloneElement(box.icon, { size: 40 })}
-                                    </div>
-                                    <h3 className="font-black text-2xl mb-4 text-white uppercase tracking-tight">{box.title}</h3>
-                                    <p className="text-sm text-slate-400 leading-relaxed font-medium">{box.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            {/* Representación de Marca - Servicio Técnico Autorizado */}
-            <section className="py-32 bg-white">
+            {/* Analytics Section */}
+            <section className="bg-white py-32 border-y border-slate-200 overflow-hidden">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-6xl mx-auto">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                        <div className="max-w-3xl">
+                            <div className="bg-julmar-green text-julmar-dark p-4 rounded-3xl w-fit mb-8 shadow-2xl shadow-julmar-green/20">
+                                <BarChart3 size={32} />
+                            </div>
+                            <h2 className="text-5xl md:text-6xl font-black text-slate-800 tracking-tighter leading-none mb-6 uppercase">Analíticas del Mercado</h2>
+                            <p className="text-slate-500 font-medium text-lg italic">Liderazgo indiscutido en la industria de mixers.</p>
+                        </div>
+                        <div className="text-right">
+                            <div className="bg-slate-100 px-8 py-4 rounded-3xl border border-slate-200">
+                                <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Informe Comercial</p>
+                                <p className="text-julmar-dark font-black">Periodo 2018 - 2026</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-center mb-20"
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            className="bg-white border border-slate-100 rounded-[48px] p-10 shadow-2xl"
                         >
-                            <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.4em] mb-4 block">Propuesta de Valor Exclusiva</span>
-                            <h2 className="text-5xl md:text-7xl font-black text-slate-800 tracking-tighter leading-none mb-8">
-                                Servicio Técnico<br />
-                                <span className="text-[#4CAF50]">Autorizado Regional</span>
-                            </h2>
-                            <p className="text-slate-500 text-xl font-light max-w-3xl mx-auto leading-relaxed">
-                                Nuestro equipo puede certificarse oficialmente en su marca, actuando como representantes técnicos autorizados en la IV y III Región. <strong className="text-slate-700">Sin necesidad de enviar técnicos desde Santiago.</strong>
-                            </p>
+                            <h3 className="text-center font-black text-julmar-dark text-xl uppercase tracking-widest mb-10">Betoneras Vendidas Oficiales</h3>
+                            <div className="h-[400px]">
+                                <Bar data={betonerasData} options={chartOptions} />
+                            </div>
                         </motion.div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                            {[
-                                {
-                                    step: '01',
-                                    title: 'Certificación Oficial',
-                                    desc: 'Nuestros técnicos se forman en sus instalaciones o de manera remota bajo sus estándares de marca, adquiriendo la acreditación necesaria para operar con garantía.'
-                                },
-                                {
-                                    step: '02',
-                                    title: 'Representación Local',
-                                    desc: 'Una vez certificados, JulMar actúa como su brazo técnico en la zona minera, brindando soporte de primera línea a sus clientes finales de forma inmediata.'
-                                },
-                                {
-                                    step: '03',
-                                    title: 'Expansión sin Costo Logístico',
-                                    desc: 'Usted expande su presencia regional sin incurrir en costos de desplazamiento ni riesgo operativo. Nosotros ponemos la infraestructura, el taller y el personal.'
-                                }
-                            ].map((item, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: idx * 0.12 }}
-                                    className="relative bg-slate-50 border border-slate-200 rounded-[40px] p-10 group hover:border-[#4CAF50]/50 hover:shadow-2xl transition-all duration-500"
-                                >
-                                    <span className="text-[100px] font-black text-slate-100 leading-none absolute -top-4 -right-2 select-none group-hover:text-[#4CAF50]/10 transition-colors z-0">
-                                        {item.step}
-                                    </span>
-                                    <div className="relative z-10">
-                                        <div className="w-12 h-1 bg-[#4CAF50] rounded-full mb-8"></div>
-                                        <h3 className="text-2xl font-black text-slate-800 mb-4 tracking-tight">{item.title}</h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed font-medium">{item.desc}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                        {/* CTA Banner */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="bg-slate-900 rounded-[48px] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 border-l-8 border-[#4CAF50] shadow-3xl"
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            className="bg-white border border-slate-100 rounded-[48px] p-10 shadow-2xl"
                         >
-                            <div>
-                                <p className="text-[#4CAF50] font-black uppercase text-xs tracking-widest mb-3">¿Listo para aliarse?</p>
-                                <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
-                                    Un socio técnico en terreno<br />vale más que diez visitas al año
-                                </h3>
+                            <h3 className="text-center font-black text-julmar-dark text-xl uppercase tracking-widest mb-10">Participación de Mercado</h3>
+                            <div className="h-[400px] flex justify-center">
+                                <Pie
+                                    data={participacionData}
+                                    options={{
+                                        ...chartOptions,
+                                        plugins: {
+                                            ...chartOptions.plugins,
+                                            legend: { position: 'bottom', labels: { usePointStyle: true, padding: 30 } }
+                                        }
+                                    }}
+                                />
                             </div>
-                            <button
-                                onClick={() => handleQuote('Certificación Técnica Autorizada')}
-                                className="bg-[#4CAF50] hover:bg-white text-julmar-dark px-10 py-6 rounded-2xl font-black text-sm uppercase tracking-widest transition-all shadow-xl whitespace-nowrap flex items-center gap-3"
-                            >
-                                Iniciar Conversación
-                                <ArrowRight size={20} />
-                            </button>
                         </motion.div>
                     </div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="bg-julmar-dark border border-slate-800 rounded-[48px] p-12 shadow-3xl overflow-hidden relative"
+                    >
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-julmar-green/10 blur-[100px]"></div>
+                        <h3 className="text-center font-black text-white text-xl uppercase tracking-widest mb-10">Inversión y Crecimiento (CLP)</h3>
+                        <div className="h-[350px]">
+                            <Line
+                                data={ventasData}
+                                options={{
+                                    ...chartOptions,
+                                    plugins: {
+                                        ...chartOptions.plugins,
+                                        legend: { display: false },
+                                        tooltip: {
+                                            callbacks: { label: (context) => `$ ${context.parsed.y.toLocaleString('es-CL')}` }
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            grid: { color: 'rgba(255,255,255,0.05)' },
+                                            ticks: { color: '#64748b', callback: (value) => `$${(value / 1000000).toFixed(0)}M` }
+                                        },
+                                        x: { grid: { display: false }, ticks: { color: '#64748b' } }
+                                    }
+                                }}
+                            />
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
-            {/* Fleet Section - Premium Cards */}
+            {/* Services Cards */}
             <section className="py-32 bg-slate-50">
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
                         <div className="max-w-3xl">
-                            <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.4em] mb-4 block">Lo que ofrecemos</span>
-                            <h2 className="text-5xl md:text-7xl font-black text-slate-800 tracking-tighter leading-none mb-8">Nuestros Servicios</h2>
+                            <span className="text-julmar-green font-black uppercase text-xs tracking-[0.4em] mb-4 block">Especialización Mixer</span>
+                            <h2 className="text-5xl md:text-7xl font-black text-slate-800 tracking-tighter leading-none mb-8 uppercase">Nuestra Oferta</h2>
                         </div>
                         <div className="bg-white border border-slate-200 px-8 py-5 rounded-[32px] shadow-sm flex items-center gap-6">
-                            <img src="/logo-julmar.webp" className="h-10 grayscale opacity-30" />
-                            <div className="w-px h-10 bg-slate-200"></div>
-                            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Polpaico / Melon / Cbb</p>
+                            <div className="flex -space-x-3">
+                                {[1, 2, 3].map(i => <div key={i} className="w-8 h-8 rounded-full bg-slate-200 border-2 border-white"></div>)}
+                            </div>
+                            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Alianzas: Melón / Polpaico / CBB</p>
                         </div>
                     </div>
 
@@ -417,17 +416,17 @@ const MixerFleet = () => {
                         {[
                             {
                                 title: 'Servicio de Overhaul',
-                                subtitle: 'Mantenimiento en Terreno',
-                                image: '/machinery/attachments/machinery2/image copy 14.png',
-                                features: ['Técnicos certificados y acreditados', 'Repuestos industriales originales', 'Intervención en faena sin traslado'],
-                                badge: 'Soporte 24/7'
+                                subtitle: 'Reparación de Betoneras',
+                                image: '/machinery/betonera.jpg',
+                                features: ['Intervención mecánica integral', 'Sustitución de tambores y aspas', 'Certificación de operatividad post-arreglo'],
+                                badge: 'Taller Faena'
                             },
                             {
                                 title: 'Ingeniería de Betonera',
-                                subtitle: 'Intercambio y Reemplazo',
-                                image: '/machinery/attachments/machinery2/image copy 6.png',
-                                features: ['Compatibilidad con chasis de distintas marcas', 'Reemplazo de tambor y sistema hidráulico', 'Diagnóstico técnico especializado'],
-                                badge: 'Certificado'
+                                subtitle: 'Fabricación y Montaje',
+                                image: '/machinery/mixer-10m3.jpg',
+                                features: ['Sustitución e instalación de cuerpos', 'Reparación de sistemas hidráulicos', 'Pruebas de rotación y calibración'],
+                                badge: 'Certificación'
                             }
                         ].map((card, idx) => (
                             <motion.div
@@ -442,19 +441,19 @@ const MixerFleet = () => {
                                         alt={card.title}
                                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
                                     />
-                                    <span className="absolute top-8 left-8 bg-[#4CAF50] text-julmar-dark text-[10px] font-black px-5 py-2 rounded-full uppercase tracking-widest z-20 shadow-xl">
+                                    <span className="absolute top-8 left-8 bg-julmar-green text-julmar-dark text-[10px] font-black px-5 py-2 rounded-full uppercase tracking-widest z-20 shadow-xl">
                                         {card.badge}
                                     </span>
                                 </div>
                                 <div className="p-10 md:w-1/2 flex flex-col justify-between">
                                     <div>
-                                        <p className="text-[10px] font-black text-[#4CAF50] uppercase tracking-widest mb-3 leading-none">{card.subtitle}</p>
-                                        <h3 className="text-3xl font-black text-slate-800 mb-8 tracking-tight leading-none group-hover:text-[#4CAF50] transition-colors">{card.title}</h3>
+                                        <p className="text-[10px] font-black text-julmar-green uppercase tracking-widest mb-3 leading-none">{card.subtitle}</p>
+                                        <h3 className="text-3xl font-black text-slate-800 mb-8 tracking-tight leading-none group-hover:text-julmar-green transition-colors">{card.title}</h3>
 
                                         <ul className="space-y-4 mb-10">
                                             {card.features.map((f, i) => (
                                                 <li key={i} className="flex items-center gap-4 text-sm text-slate-500 font-bold">
-                                                    <div className="w-6 h-6 rounded-lg bg-emerald-50 text-[#4CAF50] flex items-center justify-center flex-shrink-0 shadow-sm">
+                                                    <div className="w-6 h-6 rounded-lg bg-emerald-50 text-julmar-green flex items-center justify-center flex-shrink-0 shadow-sm">
                                                         <CheckCircle2 size={14} />
                                                     </div>
                                                     {f}
@@ -465,9 +464,9 @@ const MixerFleet = () => {
 
                                     <button
                                         onClick={() => handleQuote(card.title)}
-                                        className="w-full bg-slate-900 group-hover:bg-[#4CAF50] text-white group-hover:text-julmar-dark py-5 rounded-[24px] font-black text-xs uppercase tracking-widest transition-all shadow-xl flex items-center justify-center gap-4"
+                                        className="w-full bg-slate-900 group-hover:bg-julmar-green text-white group-hover:text-julmar-dark py-5 rounded-[24px] font-black text-xs uppercase tracking-widest transition-all shadow-xl flex items-center justify-center gap-4"
                                     >
-                                        Solicitar Factibilidad
+                                        Solicitar Cotización
                                         <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                                     </button>
                                 </div>
@@ -477,26 +476,11 @@ const MixerFleet = () => {
                 </div>
             </section>
 
-            {/* Clients Bar with unified industry names */}
-            <section className="py-24 bg-white border-t border-slate-100 overflow-hidden">
-                <div className="container mx-auto px-6 text-center">
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-16">Estratégicamente posicionados con</p>
-                    <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-                        {['UNITED', 'MELÓN', 'POLPAICO', 'CBB', 'UNICON', 'HY TECH', 'VIVELO'].map((client, idx) => (
-                            <span key={idx} className="font-black text-3xl md:text-4xl text-slate-900 tracking-tighter hover:text-[#4CAF50] transition-colors cursor-default">
-                                {client}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Contacto exclusivo Mixer */}
+            {/* Contact Section */}
             <section id="contacto" className="py-24 bg-julmar-dark relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform origin-top translate-x-1/2 pointer-events-none"></div>
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-                        {/* Left: info */}
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -504,101 +488,56 @@ const MixerFleet = () => {
                             transition={{ duration: 0.6 }}
                             className="text-white flex flex-col justify-center"
                         >
-                            <span className="text-julmar-green font-bold uppercase tracking-widest mb-4 block">Hablemos de una Alianza</span>
-                            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">
-                                ¿LISTO PARA <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green-light to-julmar-green">CONVERSAR?</span>
+                            <span className="text-julmar-green font-bold uppercase tracking-widest mb-4 block">Canal de Ventas Exclusivo</span>
+                            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight uppercase">
+                                Hablemos de su <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green-light to-julmar-green">PRÓXIMO PROYECTO</span>
                             </h2>
 
                             <div className="space-y-6">
                                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-julmar-green/40 transition-colors">
-                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Juan Luis Gálvez Fuica</p>
+                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Gerencia Comercial</p>
                                     <div className="flex items-center gap-4 mb-3">
-                                        <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <Mail size={18} className="text-julmar-green" />
-                                        </div>
-                                        <a href="mailto:jgalvez@julmarspa.com" className="text-gray-400 hover:text-white transition-colors text-sm">jgalvez@julmarspa.com</a>
+                                        <Mail size={18} className="text-julmar-green" />
+                                        <a href="mailto:jgalvez@julmarspa.com" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">jgalvez@julmarspa.com</a>
                                     </div>
                                     <div className="flex items-center gap-4">
-                                        <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <Phone size={18} className="text-julmar-green" />
-                                        </div>
-                                        <a href="https://wa.me/56931052727" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">+56 9 3105 2727</a>
+                                        <Phone size={18} className="text-julmar-green" />
+                                        <a href="https://wa.me/56931052727" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">+56 9 3105 2727</a>
                                     </div>
                                 </div>
 
-                                {/* Rodolfo */}
-                                <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-julmar-green/40 transition-colors">
-                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Rodolfo Serrano San Martín</p>
-                                    <div className="flex items-center gap-4 mb-3">
-                                        <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <Mail size={18} className="text-julmar-green" />
-                                        </div>
-                                        <a href="mailto:Rodolfo@ingenieriaserrano.cl" className="text-gray-400 hover:text-white transition-colors text-sm">Rodolfo@ingenieriaserrano.cl</a>
-                                    </div>
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <Phone size={18} className="text-julmar-green" />
-                                        </div>
-                                        <a href="https://wa.me/56998793145" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">+56 9 9879 3145</a>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start gap-4 pt-2">
-                                    <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <MapPin size={18} className="text-julmar-green" />
-                                    </div>
+                                <div className="flex items-start gap-4 pt-4 opacity-60">
+                                    <MapPin size={20} className="text-julmar-green shrink-0" />
                                     <div>
-                                        <p className="text-white font-bold text-sm mb-1">Ubicación</p>
-                                        <p className="text-gray-400 text-sm">Coquimbo / La Serena, IV Región, Chile</p>
+                                        <p className="text-white font-bold text-sm">Operaciones Regionales</p>
+                                        <p className="text-gray-400 text-sm">Coquimbo / La Serena / Vallenar / Copiapó</p>
                                     </div>
                                 </div>
                             </div>
                         </motion.div>
 
-                        {/* Right: CTA banner */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            className="flex flex-col justify-center gap-6"
+                            className="bg-white rounded-[48px] p-10 md:p-16 shadow-3xl flex flex-col items-center text-center"
                         >
-                            <div className="bg-[#4CAF50]/10 border border-[#4CAF50]/30 rounded-3xl p-10 text-white">
-                                <h3 className="text-2xl font-black mb-4 text-white">Solicitar Reunión Técnica</h3>
-                                <p className="text-slate-400 text-base leading-relaxed mb-8">
-                                    Coordinamos una reunión para presentar nuestra capacidad operativa, certificaciones y la propuesta de alianza formal. Sin compromiso.
-                                </p>
-                                <div className="flex flex-col gap-4">
-                                    <a
-                                        href="https://wa.me/56931052727?text=Hola%20Juan%20Luis%2C%20me%20interesa%20conocer%20la%20propuesta%20de%20alianza%20JulMar%20para%20flota%20Mixer."
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full bg-[#4CAF50] hover:bg-white text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-[#4CAF50]/20 text-sm uppercase tracking-widest"
-                                    >
-                                        WhatsApp Juan Luis
-                                        <ArrowRight size={18} />
-                                    </a>
-                                    <a
-                                        href="https://wa.me/56998793145?text=Hola%20Rodolfo%2C%20me%20interesa%20conocer%20la%20propuesta%20de%20alianza%20JulMar%20para%20flota%20Mixer."
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full bg-white/10 hover:bg-white hover:text-julmar-dark text-white font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all border border-white/20 text-sm uppercase tracking-widest"
-                                    >
-                                        WhatsApp Rodolfo
-                                        <ArrowRight size={18} />
-                                    </a>
-                                </div>
+                            <div className="w-20 h-20 bg-emerald-50 text-julmar-green rounded-3xl flex items-center justify-center mb-8">
+                                <Phone size={40} />
                             </div>
-                            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 text-white">
-                                <p className="text-slate-400 text-sm leading-relaxed">
-                                    También puedes escribirnos directamente a{' '}
-                                    <a href="mailto:jgalvez@julmarspa.com" className="text-julmar-green hover:underline">jgalvez@julmarspa.com</a>
-                                    {' '}o a{' '}
-                                    <a href="mailto:Rodolfo@ingenieriaserrano.cl" className="text-julmar-green hover:underline">Rodolfo@ingenieriaserrano.cl</a>
-                                    {' '}para coordinar una visita técnica o presentación formal.
-                                </p>
-                            </div>
+                            <h3 className="text-slate-800 text-3xl font-black mb-4 uppercase tracking-tighter">Atención Inmediata</h3>
+                            <p className="text-slate-500 mb-10 font-medium">Contáctenos vía WhatsApp para una respuesta rápida sobre disponibilidad de flota y servicios de mantenimiento.</p>
+
+                            <a
+                                href={`https://wa.me/56931052727?text=Hola,%20me%20interesa%20una%20cotización%20para%20${selectedMachineForQuote || 'servicio%20Mixer'}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full bg-julmar-green hover:bg-julmar-dark text-julmar-dark hover:text-white py-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all shadow-xl shadow-julmar-green/20 flex items-center justify-center gap-4"
+                            >
+                                WhatsApp Comercial
+                                <ArrowRight size={20} />
+                            </a>
                         </motion.div>
                     </div>
                 </div>
