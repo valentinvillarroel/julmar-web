@@ -67,7 +67,7 @@ const MixerBanner = () => {
                                 <div className="w-24 h-24 bg-julmar-green rounded-3xl flex items-center justify-center text-julmar-dark shadow-2xl mb-6 mx-auto transform -rotate-6 group-hover:rotate-0 transition-transform duration-500">
                                     <Truck size={48} />
                                 </div>
-                                <p className="text-2xl font-black text-white italic tracking-tighter">MCNEILUS GLOBAL</p>
+                                <p className="text-2xl font-black text-white italic tracking-tighter">FLOTA MIXER</p>
                                 <p className="text-xs text-julmar-green font-bold uppercase tracking-widest mt-2">Tecnología de Punta</p>
                             </div>
 

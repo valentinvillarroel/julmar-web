@@ -136,22 +136,22 @@ export const machines = [
     },
     {
         id: 14,
-        name: "Camión Mixer 8m³ McNeilus",
+        name: "Camión Mixer 8m³",
         category: "Hormigón",
         capacity: "8 m³ | Chasis Reforzado",
         description: "Equipamiento premium para transporte de hormigón en faena.",
         image: "/machinery/mixer-8m3.jpg",
-        features: ["Chasis FAW Jiefang 420HP", "Betonera McNeilus 8m³"],
+        features: ["Chasis FAW Jiefang 420HP", "Betonera 8m³ de alta capacidad"],
         specs: { "Capacidad": "8 m³", "Potencia": "420 HP" }
     },
     {
         id: 15,
-        name: "Camión Mixer 10m³ McNeilus",
+        name: "Camión Mixer 10m³",
         category: "Hormigón",
         capacity: "10 m³ | Alta Capacidad",
-        description: "Mayor volumen de carga con la fiabilidad McNeilus.",
+        description: "Mayor volumen de carga con alta fiabilidad y rendimiento.",
         image: "/machinery/mixer-10m3.jpg",
-        features: ["Betonera McNeilus 10m³", "Tracción 8x4"],
+        features: ["Betonera 10m³ de alta capacidad", "Tracción 8x4"],
         specs: { "Capacidad": "10 m³", "Tracción": "8x4" }
     },
     {

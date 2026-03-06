@@ -56,10 +56,8 @@ const MixerFleet = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 
     const galleryImages = [
-        { src: "/machinery/attachments/machinery2/image copy 6.png", title: "McNeilus Global Details" },
         { src: "/machinery/attachments/machinery2/image copy 14.png", title: "Flota FAW J6" },
-        { src: "/machinery/attachments/machinery2/image copy 5.png", title: "Soporte Técnico Terreno" },
-        { src: "/machinery/attachments/machinery2/image copy 4.png", title: "Sistema de Tambor" },
+        { src: "/machinery/attachments/machinery2/image copy 4.png", title: "Servicio en Terreno" },
     ];
 
     const nextImage = () => setActiveImageIndex((prev) => (prev + 1) % galleryImages.length);
@@ -70,7 +68,7 @@ const MixerFleet = () => {
         labels: ['2018', '2019', '2020', '2021'],
         datasets: [
             {
-                label: 'McNeilus',
+                label: 'JulMar',
                 data: [52, 49, 19, 32],
                 backgroundColor: '#4472c4',
                 borderRadius: 4,
@@ -97,7 +95,7 @@ const MixerFleet = () => {
     };
 
     const participacionData = {
-        labels: ['McNeilus (60%)', 'Otros (40%)'],
+        labels: ['JulMar (60%)', 'Otros (40%)'],
         datasets: [{
             data: [60, 40],
             backgroundColor: ['#70ad47', '#5b9bd5'],
@@ -149,7 +147,7 @@ const MixerFleet = () => {
         <div className="min-h-screen bg-slate-50 font-sans selection:bg-[#4CAF50] selection:text-white">
             <Helmet>
                 <title>Flota Mixer & Betoneras | Maquinarias JulMar SPA</title>
-                <meta name="description" content="Propuesta Comercial: Flota de camiones mixer FAW y Freightliner, especialistas en betoneras McNeilus Global." />
+                <meta name="description" content="Servicios de instalación y reparación de betoneras para camiones mixer en la IV Región. Soporte técnico certificado directamente en faena." />
             </Helmet>
 
             <Navbar />
@@ -174,7 +172,7 @@ const MixerFleet = () => {
                                 Operacional
                             </h1>
                             <p className="text-slate-300 text-xl md:text-2xl font-light border-l-4 border-[#4CAF50] pl-8 leading-relaxed max-w-2xl">
-                                Brindamos la infraestructura logística y técnica necesaria para posicionar su flota en los proyectos más exigentes de la Región de Coquimbo.
+                                Especialistas en instalación y reparación de betoneras para camiones mixer. Servicio técnico certificado directamente en faena, sin necesidad de traslado.
                             </p>
 
                             <div className="mt-10 flex flex-wrap gap-4 items-center">
@@ -238,10 +236,10 @@ const MixerFleet = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                             >
-                                <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.3em] mb-4 block">Experiencia en Terreno</span>
-                                <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight leading-tight">Capacidad Logística sin Precedentes</h2>
+                                <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.3em] mb-4 block">Servicio Técnico Especializado</span>
+                                <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight leading-tight">Instalación y Reparación de Betoneras</h2>
                                 <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed">
-                                    Operamos con flota propia de camiones FAW J6 Jiefang con betoneras de alta capacidad, garantizando el suministro constante en proyectos de gran envergadura.
+                                    Prestamos servicio especializado de instalación y reparación de betoneras directamente en terreno, para toda la flota de camiones mixer que opera en la Región de Coquimbo.
                                 </p>
                             </motion.div>
                         </div>
