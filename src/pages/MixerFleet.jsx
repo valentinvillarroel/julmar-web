@@ -267,10 +267,10 @@ const MixerFleet = () => {
             <section className="container mx-auto px-6 mb-32">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { title: 'Reemplazo Betoneras', icon: <Zap />, desc: 'Especialistas en la sustitución y montaje de tambores para camiones mixer FAW y Freightliner.', border: 'border-[#4CAF50]' },
-                        { title: 'Overhaul Mixers', icon: <Truck />, desc: 'Reacondicionamiento integral de sistemas hidráulicos y motores de giro McNeilus.', border: 'border-slate-300' },
-                        { title: 'McNeilus Global', icon: <Lightbulb />, desc: 'Soporte oficial de componentes montados sobre chasis de alta capacidad.', border: 'border-[#4CAF50]' },
-                        { title: 'McNeilus Glider', icon: <Users />, desc: 'Alternativas de ensamble y renovación para extender la vida útil de su inversión.', border: 'border-slate-300' },
+                        { title: 'Reemplazo Betoneras', icon: <Zap />, desc: 'Especialistas en la sustitución y montaje de tambores y sistemas de revoltura para camiones mixer.', border: 'border-[#4CAF50]' },
+                        { title: 'Overhaul Mixers', icon: <Truck />, desc: 'Reacondicionamiento integral de sistemas hidráulicos y motores de giro para toda la flota.', border: 'border-slate-300' },
+                        { title: 'Soporte Técnico', icon: <ShieldCheck />, desc: 'Soporte oficial de componentes y repuestos montados sobre chasis de alta capacidad.', border: 'border-[#4CAF50]' },
+                        { title: 'Renovación de Flota', icon: <Settings />, desc: 'Alternativas de ensamble y renovación para extender la vida útil de su inversión.', border: 'border-slate-300' },
                     ].map((pillar, idx) => (
                         <motion.div
                             key={idx}
@@ -330,79 +330,6 @@ const MixerFleet = () => {
                 </div>
             </section>
 
-            {/* Analytics Section - Charts with original data */}
-            <section className="bg-white py-32 border-y border-slate-200 overflow-hidden">
-                <div className="container mx-auto px-6">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                        <div className="max-w-3xl">
-                            <div className="bg-[#4CAF50] text-white p-4 rounded-3xl w-fit mb-8 shadow-2xl shadow-[#4CAF50]/20">
-                                <BarChart3 size={32} />
-                            </div>
-                            <h2 className="text-5xl md:text-6xl font-black text-slate-800 tracking-tighter leading-none mb-6">Analíticas del Mercado</h2>
-                            <p className="text-slate-500 font-medium text-lg">Histórico de ventas y posicionamiento McNeilus - London - Continental.</p>
-                        </div>
-                        <div className="text-right">
-                            <div className="bg-slate-100 px-8 py-4 rounded-3xl border border-slate-200">
-                                <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Corte de Informe</p>
-                                <p className="text-slate-800 font-black">Periodo 2018 - 2026</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
-                        <div className="bg-white border border-slate-100 rounded-[48px] p-10 shadow-2xl">
-                            <h3 className="text-center font-black text-slate-800 text-xl uppercase tracking-widest mb-10">Betoneras Vendidas Oficiales</h3>
-                            <div className="h-[400px]">
-                                <Bar data={betonerasData} options={chartOptions} />
-                            </div>
-                        </div>
-
-                        <div className="bg-white border border-slate-100 rounded-[48px] p-10 shadow-2xl">
-                            <h3 className="text-center font-black text-slate-800 text-xl uppercase tracking-widest mb-10">Cuota de Mercado McNeilus</h3>
-                            <div className="h-[400px] flex justify-center">
-                                <Pie
-                                    data={participacionData}
-                                    options={{
-                                        ...chartOptions,
-                                        plugins: {
-                                            ...chartOptions.plugins,
-                                            legend: { position: 'bottom', labels: { usePointStyle: true, padding: 30 } }
-                                        }
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="bg-slate-900 border border-slate-800 rounded-[48px] p-12 shadow-3xl overflow-hidden relative">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#4CAF50]/10 blur-[100px]"></div>
-                        <h3 className="text-center font-black text-white text-xl uppercase tracking-widest mb-10">Ventas Proyectadas Unidad Concreto (CLP)</h3>
-                        <div className="h-[350px]">
-                            <Line
-                                data={ventasData}
-                                options={{
-                                    ...chartOptions,
-                                    plugins: {
-                                        ...chartOptions.plugins,
-                                        legend: { display: false },
-                                        tooltip: {
-                                            callbacks: { label: (context) => `$ ${context.parsed.y.toLocaleString('es-CL')}` }
-                                        }
-                                    },
-                                    scales: {
-                                        y: {
-                                            grid: { color: 'rgba(255,255,255,0.05)' },
-                                            ticks: { color: '#64748b', callback: (value) => `$${(value / 1000000).toFixed(0)}M` }
-                                        },
-                                        x: { grid: { display: false }, ticks: { color: '#64748b' } }
-                                    }
-                                }}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* KPIs Reales - Disponibilidad Mecánica */}
             <section className="py-32 bg-slate-900 overflow-hidden relative">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#4CAF50]/10 via-transparent to-transparent"></div>
@@ -420,7 +347,7 @@ const MixerFleet = () => {
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4CAF50] to-emerald-300">98% de Uptime</span>
                             </h2>
                             <p className="text-slate-400 text-lg leading-relaxed mb-12">
-                                Nuestro programa de mantenimiento predictivo, stock crítico de repuestos McNeilus y personal certificado garantizan una disponibilidad mecánica superior, reduciendo las detenciones no programadas a menos del 2%.
+                                Nuestro programa de mantenimiento predictivo, stock crítico de repuestos certificados y personal especializado garantizan una disponibilidad mecánica superior, reduciendo las detenciones no programadas a menos del 2%.
                             </p>
                             <div className="grid grid-cols-2 gap-6">
                                 {[
