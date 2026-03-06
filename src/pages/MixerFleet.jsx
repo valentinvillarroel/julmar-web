@@ -179,7 +179,7 @@ const MixerFleet = () => {
                                 Brindamos la infraestructura logística y técnica necesaria para posicionar su flota en los proyectos más exigentes de la Región de Coquimbo.
                             </p>
 
-                            <div className="mt-12 flex flex-wrap gap-6">
+                            <div className="mt-10 flex flex-wrap gap-4 items-center">
                                 <button
                                     onClick={() => handleQuote('Reunión Técnica Alianza')}
                                     className="bg-[#4CAF50] hover:bg-white text-julmar-dark px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all shadow-xl shadow-[#4CAF50]/20 flex items-center gap-3"
@@ -187,6 +187,13 @@ const MixerFleet = () => {
                                     Solicitar Reunión Técnica
                                     <ArrowRight size={20} />
                                 </button>
+                                <div className="flex items-center gap-3 bg-white/5 border border-white/15 backdrop-blur-md px-5 py-3 rounded-2xl">
+                                    <img src="/sicep.png" alt="Certificado SICEP" className="h-8 w-auto object-contain" />
+                                    <div>
+                                        <p className="text-white font-black text-xs uppercase tracking-widest leading-none">Proveedor Certificado</p>
+                                        <p className="text-[#4CAF50] font-black text-xs uppercase tracking-widest leading-none mt-0.5">SICEP</p>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
@@ -414,14 +421,14 @@ const MixerFleet = () => {
                         {[
                             {
                                 title: 'Camión Mixer 8-10m³',
-                                subtitle: 'FAW J6 Jiefang • McNeilus Global',
+                                subtitle: 'FAW J6 Jiefang 420HP',
                                 image: '/machinery/attachments/machinery2/image copy 14.png',
-                                features: ['Chasis FAW Jiefang 420HP', 'Betonera McNeilus 10m³', 'Tracción 8x4 estabilidad total'],
+                                features: ['Chasis FAW Jiefang 420HP', 'Betonera 10m³ de alta capacidad', 'Tracción 8x4 para terrenos exigentes'],
                                 badge: 'Flota Activa'
                             },
                             {
                                 title: 'Mixer BSA High Stability',
-                                subtitle: 'Freightliner • Concrete Unit',
+                                subtitle: 'Unidad Concreto— IV Región',
                                 image: '/machinery/attachments/machinery2/image.png',
                                 features: ['Optimizado para BSA Hormigones', 'Kit Minero incorporado', 'Motorización alto torque'],
                                 badge: 'Premium'
@@ -430,14 +437,14 @@ const MixerFleet = () => {
                                 title: 'Servicio de Overhaul',
                                 subtitle: 'Mantenimiento en Terreno',
                                 image: '/machinery/attachments/machinery2/image copy 15.png',
-                                features: ['Técnicos certificados SICEP', 'Repuestos McNeilus Originales', 'Garantía 1000 horas operativas'],
+                                features: ['Técnicos certificados y acreditados', 'Repuestos industriales originales', 'Intervención en faena sin traslado'],
                                 badge: 'Soporte 24/7'
                             },
                             {
                                 title: 'Ingeniería de Betonera',
                                 subtitle: 'Intercambio y Reemplazo',
                                 image: '/machinery/attachments/machinery2/image copy 6.png',
-                                features: ['Compatibilidad chasis global', 'Ajuste de aspas automático', 'Seguridad ROPS/FOPS'],
+                                features: ['Compatibilidad con chasis de distintas marcas', 'Reemplazo de tambor y sistema hidráulico', 'Diagnóstico técnico especializado'],
                                 badge: 'Certificado'
                             }
                         ].map((card, idx) => (
