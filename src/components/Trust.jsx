@@ -15,7 +15,7 @@ const Trust = () => {
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS SU SOCIO ESTRATÉGICO EN LA REGIÓN</h2>
                     <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10 space-y-6">
                         <p>
-                            JulMar SpA se posiciona como el socio estratégico definitivo para la industria en la Región Metropolitana y la IV Región (Coquimbo). Especialistas en el arriendo de maquinaria pesada, transporte de agua y nuestra prestigiosa <strong>Unidad de Concreto</strong>, ofrecemos un servicio de excelencia respaldado por un mantenimiento riguroso y certificación SICEP garantizada.
+                            JulMar SpA se posiciona como el socio estratégico definitivo para la industria en la Región de Coquimbo. Especialistas en el arriendo de maquinaria pesada, transporte de agua y nuestra prestigiosa <strong>Unidad de Concreto</strong>, ofrecemos una flota moderna respaldada por un mantenimiento riguroso y certificación SICEP garantizada.
                         </p>
                         <p>
                             Entendemos la criticidad de sus operaciones. Por ello, combinamos la agilidad de una gestión local con los estándares de seguridad y eficiencia exigidos por la Gran Minería, Obras Civiles y Plantas de Hormigón. Nuestro compromiso es absoluto: asegurar la continuidad operacional mediante equipos confiables y un soporte técnico 24/7 de respuesta inmediata en faena.
