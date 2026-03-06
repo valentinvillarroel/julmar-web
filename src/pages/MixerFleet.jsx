@@ -56,12 +56,10 @@ const MixerFleet = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 
     const galleryImages = [
-
         { src: "/machinery/attachments/machinery2/image copy 6.png", title: "McNeilus Global Details" },
         { src: "/machinery/attachments/machinery2/image copy 14.png", title: "Flota FAW J6" },
-        { src: "/machinery/attachments/machinery2/image copy 15.png", title: "Soporte Técnico Terreno" },
-        { src: "/machinery/attachments/machinery2/image copy 7.png", title: "Sistema de Tambor" },
-        { src: "/machinery/attachments/machinery2/image copy 10.png", title: "Detalle Motores Hidráulicos" }
+        { src: "/machinery/attachments/machinery2/image copy 5.png", title: "Soporte Técnico Terreno" },
+        { src: "/machinery/attachments/machinery2/image copy 4.png", title: "Sistema de Tambor" },
     ];
 
     const nextImage = () => setActiveImageIndex((prev) => (prev + 1) % galleryImages.length);
@@ -422,7 +420,7 @@ const MixerFleet = () => {
                             {
                                 title: 'Servicio de Overhaul',
                                 subtitle: 'Mantenimiento en Terreno',
-                                image: '/machinery/attachments/machinery2/image copy 12.png',
+                                image: '/machinery/attachments/machinery2/image copy 14.png',
                                 features: ['Técnicos certificados y acreditados', 'Repuestos industriales originales', 'Intervención en faena sin traslado'],
                                 badge: 'Soporte 24/7'
                             },
