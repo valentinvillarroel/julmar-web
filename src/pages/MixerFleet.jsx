@@ -243,7 +243,7 @@ const MixerFleet = () => {
                                 <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.3em] mb-4 block">Experiencia en Terreno</span>
                                 <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight leading-tight">Capacidad Logística sin Precedentes</h2>
                                 <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed">
-                                    Operamos con flota propia de camiones FAW J6 Jiefang equipados con betoneras de 8m³ y 10m³, garantizando el suministro constante en proyectos de gran envergadura.
+                                    Operamos con flota propia de camiones FAW J6 Jiefang con betoneras de alta capacidad, garantizando el suministro constante en proyectos de gran envergadura.
                                 </p>
                             </motion.div>
                         </div>
@@ -420,17 +420,9 @@ const MixerFleet = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {[
                             {
-                                title: 'Camión Mixer 8-10m³',
-                                subtitle: 'FAW J6 Jiefang 420HP',
-                                image: '/machinery/attachments/machinery2/image copy 14.png',
-                                features: ['Chasis FAW Jiefang 420HP', 'Betonera 10m³ de alta capacidad', 'Tracción 8x4 para terrenos exigentes'],
-                                badge: 'Flota Activa'
-                            },
-
-                            {
                                 title: 'Servicio de Overhaul',
                                 subtitle: 'Mantenimiento en Terreno',
-                                image: '/machinery/attachments/machinery2/image copy 15.png',
+                                image: '/machinery/attachments/machinery2/image copy 12.png',
                                 features: ['Técnicos certificados y acreditados', 'Repuestos industriales originales', 'Intervención en faena sin traslado'],
                                 badge: 'Soporte 24/7'
                             },
