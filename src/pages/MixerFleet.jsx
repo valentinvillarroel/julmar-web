@@ -56,7 +56,7 @@ const MixerFleet = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 
     const galleryImages = [
-        { src: "/machinery/attachments/machinery2/image.png", title: "Mixer BSA en Faena" },
+
         { src: "/machinery/attachments/machinery2/image copy 6.png", title: "McNeilus Global Details" },
         { src: "/machinery/attachments/machinery2/image copy 14.png", title: "Flota FAW J6" },
         { src: "/machinery/attachments/machinery2/image copy 15.png", title: "Soporte Técnico Terreno" },
@@ -255,7 +255,7 @@ const MixerFleet = () => {
             <section className="container mx-auto px-6 mb-32">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { title: 'Reemplazo Betoneras', icon: <Zap />, desc: 'Especialistas en la sustitución y montaje de tambores y sistemas de revoltura para camiones mixer.', border: 'border-[#4CAF50]' },
+                        { title: 'Reemplazo Betoneras', icon: <Zap />, desc: 'Especialistas en sustitución de betoneras y accesorios funcionales de Mixer.', border: 'border-[#4CAF50]' },
                         { title: 'Overhaul Mixers', icon: <Truck />, desc: 'Reacondicionamiento integral de sistemas hidráulicos y motores de giro para toda la flota.', border: 'border-slate-300' },
                         { title: 'Soporte Técnico', icon: <ShieldCheck />, desc: 'Soporte oficial de componentes y repuestos montados sobre chasis de alta capacidad.', border: 'border-[#4CAF50]' },
                         { title: 'Renovación de Flota', icon: <Settings />, desc: 'Alternativas de ensamble y renovación para extender la vida útil de su inversión.', border: 'border-slate-300' },
@@ -413,7 +413,7 @@ const MixerFleet = () => {
                         <div className="bg-white border border-slate-200 px-8 py-5 rounded-[32px] shadow-sm flex items-center gap-6">
                             <img src="/logo-julmar.webp" className="h-10 grayscale opacity-30" />
                             <div className="w-px h-10 bg-slate-200"></div>
-                            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">BSA / Polpaico / Melon / Cbb</p>
+                            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Polpaico / Melon / Cbb</p>
                         </div>
                     </div>
 
@@ -426,13 +426,7 @@ const MixerFleet = () => {
                                 features: ['Chasis FAW Jiefang 420HP', 'Betonera 10m³ de alta capacidad', 'Tracción 8x4 para terrenos exigentes'],
                                 badge: 'Flota Activa'
                             },
-                            {
-                                title: 'Mixer BSA High Stability',
-                                subtitle: 'Unidad Concreto— IV Región',
-                                image: '/machinery/attachments/machinery2/image.png',
-                                features: ['Optimizado para BSA Hormigones', 'Kit Minero incorporado', 'Motorización alto torque'],
-                                badge: 'Premium'
-                            },
+
                             {
                                 title: 'Servicio de Overhaul',
                                 subtitle: 'Mantenimiento en Terreno',
@@ -500,7 +494,7 @@ const MixerFleet = () => {
                 <div className="container mx-auto px-6 text-center">
                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-16">Estratégicamente posicionados con</p>
                     <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-                        {['UNITED', 'MELÓN', 'POLPAICO', 'BSA', 'CBB', 'UNICON', 'HY TECH', 'VIVELO'].map((client, idx) => (
+                        {['UNITED', 'MELÓN', 'POLPAICO', 'CBB', 'UNICON', 'HY TECH', 'VIVELO'].map((client, idx) => (
                             <span key={idx} className="font-black text-3xl md:text-4xl text-slate-900 tracking-tighter hover:text-[#4CAF50] transition-colors cursor-default">
                                 {client}
                             </span>
