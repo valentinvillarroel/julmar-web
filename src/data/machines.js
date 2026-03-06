@@ -133,5 +133,35 @@ export const machines = [
         ],
         fit: "contain",
         specs: { "Compatibilidad": "20-25 Ton", "Aplicación": "Demolición" }
+    },
+    {
+        id: 14,
+        name: "Camión Mixer 8m³ McNeilus",
+        category: "Hormigón",
+        capacity: "8 m³ | Chasis Reforzado",
+        description: "Equipamiento premium para transporte de hormigón en faena.",
+        image: "/machinery/mixer-8m3.jpg",
+        features: ["Chasis FAW Jiefang 420HP", "Betonera McNeilus 8m³"],
+        specs: { "Capacidad": "8 m³", "Potencia": "420 HP" }
+    },
+    {
+        id: 15,
+        name: "Camión Mixer 10m³ McNeilus",
+        category: "Hormigón",
+        capacity: "10 m³ | Alta Capacidad",
+        description: "Mayor volumen de carga con la fiabilidad McNeilus.",
+        image: "/machinery/mixer-10m3.jpg",
+        features: ["Betonera McNeilus 10m³", "Tracción 8x4"],
+        specs: { "Capacidad": "10 m³", "Tracción": "8x4" }
+    },
+    {
+        id: 16,
+        name: "Reemplazo de Betoneras",
+        category: "Servicios",
+        capacity: "Overhaul Técnico",
+        description: "Sustitución de tambores y mantenimiento mayor a mixers.",
+        image: "/machinery/betonera.jpg",
+        features: ["Certificado SICEP", "Repuestos Originales"],
+        specs: { "Servicio": "Overhaul", "Soporte": "24/7" }
     }
 ];

@@ -45,6 +45,11 @@ const Navbar = () => {
     const handleNavClick = (sectionId, mobile = false) => {
         if (mobile) setMobileMenuOpen(false);
 
+        if (sectionId === 'mixer') {
+            navigate('/mixer');
+            return;
+        }
+
         // Allow menu layout to update/close before scrolling on mobile
         setTimeout(() => {
             if (isHome) {
@@ -99,20 +104,23 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-8">
-                        {['Inicio', 'Flota', 'Servicios', 'Nosotros'].map((item) => {
+                        {['Inicio', 'Flota', 'Flota Mixer', 'Servicios', 'Nosotros'].map((item) => {
                             // Map generic names to specific IDs if needed
-                            let targetId = item.toLowerCase();
+                            let targetId = item.toLowerCase().replace(' ', '-');
                             if (item === 'Inicio') targetId = 'hero';
-                            if (item === 'Nosotros') targetId = 'nosotros'; // Assuming id="nosotros" exists
+                            if (item === 'Nosotros') targetId = 'nosotros';
+                            if (item === 'Flota Mixer') targetId = 'mixer';
+
+                            const isActive = isHome ? activeSection === item : (item === 'Flota Mixer' && location.pathname === '/mixer');
 
                             return (
                                 <button
                                     key={item}
                                     onClick={() => handleNavClick(targetId)}
-                                    className={`text-sm font-medium uppercase tracking-wider transition-colors relative group ${activeSection === item ? 'text-white' : 'text-gray-300 hover:text-white'}`}
+                                    className={`text-sm font-medium uppercase tracking-wider transition-colors relative group ${isActive ? 'text-white' : 'text-gray-300 hover:text-white'}`}
                                 >
                                     {item}
-                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-julmar-green transition-all duration-300 ${activeSection === item ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-julmar-green transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                                 </button>
                             );
                         })}
@@ -147,17 +155,20 @@ const Navbar = () => {
                         className="md:hidden bg-julmar-dark/95 backdrop-blur-xl border-t border-gray-800 overflow-hidden"
                     >
                         <div className="px-4 py-8 space-y-4">
-                            {['Inicio', 'Flota', 'Servicios', 'Nosotros', 'Contacto'].map((item) => {
-                                let targetId = item.toLowerCase();
+                            {['Inicio', 'Flota', 'Flota Mixer', 'Servicios', 'Nosotros', 'Contacto'].map((item) => {
+                                let targetId = item.toLowerCase().replace(' ', '-');
                                 if (item === 'Inicio') targetId = 'hero';
                                 if (item === 'Nosotros') targetId = 'nosotros';
                                 if (item === 'Contacto') targetId = 'contacto';
+                                if (item === 'Flota Mixer') targetId = 'mixer';
+
+                                const isActive = isHome ? activeSection === item : (item === 'Flota Mixer' && location.pathname === '/mixer');
 
                                 return (
                                     <button
                                         key={item}
                                         onClick={() => handleNavClick(targetId, true)}
-                                        className={`block w-full text-left text-lg font-bold py-2 border-b border-gray-800 transition-colors ${activeSection === item ? 'text-julmar-green pl-2' : 'text-white hover:text-julmar-green'}`}
+                                        className={`block w-full text-left text-lg font-bold py-2 border-b border-gray-800 transition-colors ${isActive ? 'text-julmar-green pl-2' : 'text-white hover:text-julmar-green'}`}
                                     >
                                         {item}
                                     </button>

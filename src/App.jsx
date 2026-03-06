@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import MachineDetail from './pages/MachineDetail';
+import MixerFleet from './pages/MixerFleet';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/flota/:slug" element={<MachineDetail />} />
+        <Route path="/mixer" element={<MixerFleet />} />
       </Routes>
 
       {/* Floating WhatsApp Button - Global */}

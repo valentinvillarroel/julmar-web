@@ -11,6 +11,7 @@ import Quality from '../components/Quality';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import MixerBanner from '../components/MixerBanner';
 
 const LandingPage = () => {
     const [selectedMachineForQuote, setSelectedMachineForQuote] = useState('');
@@ -86,6 +87,7 @@ const LandingPage = () => {
                 <Trust />
                 <Quality />
                 <Fleet onQuote={setSelectedMachineForQuote} />
+                <MixerBanner />
                 <Services />
                 {/* <Portfolio /> */}
                 <Contact preselectedMachine={selectedMachineForQuote} />
