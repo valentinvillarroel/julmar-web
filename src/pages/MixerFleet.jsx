@@ -183,14 +183,6 @@ const MixerFleet = () => {
                                     Cotizar Servicio
                                     <ArrowRight size={20} />
                                 </button>
-                                <a
-                                    href="/Brochure_julmar2024.pdf"
-                                    download
-                                    className="bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all flex items-center gap-3"
-                                >
-                                    Ver Portafolio PDF
-                                    <Download size={20} />
-                                </a>
                                 <div className="flex items-center gap-3 bg-white/5 border border-white/15 backdrop-blur-md px-5 py-5 rounded-2xl h-full">
                                     <img src="/sicep.png" alt="Certificado SICEP" className="h-8 w-auto object-contain" />
                                     <div>
@@ -250,11 +242,7 @@ const MixerFleet = () => {
                                     Prestamos servicio especializado de instalación y reparación de betoneras directamente en terreno, asegurando la máxima fiabilidad.
                                 </p>
 
-                                <div className="grid grid-cols-2 gap-8">
-                                    <div className="border-l-2 border-julmar-green pl-6 py-2">
-                                        <p className="text-3xl font-black text-white leading-none mb-2">60%</p>
-                                        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Market Share</p>
-                                    </div>
+                                <div className="grid grid-cols-1 gap-8">
                                     <div className="border-l-2 border-julmar-green pl-6 py-2">
                                         <p className="text-3xl font-black text-white leading-none mb-2">SICEP</p>
                                         <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Certificación Clase A</p>
@@ -270,7 +258,7 @@ const MixerFleet = () => {
             <section className="container mx-auto px-6 mb-32">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { title: 'Reemplazo Betoneras', icon: <Zap />, desc: 'Sustitución y montaje de tambores para camiones mixer en faena.', border: 'border-julmar-green' },
+                        { title: 'Reemplazo Betoneras', icon: <Zap />, desc: 'Especialistas en sustitución de betoneras y accesorios de funcionales de Mixer.', border: 'border-julmar-green' },
                         { title: 'Overhaul Técnico', icon: <Truck />, desc: 'Mantenimiento integral de sistemas hidráulicos y motores de giro.', border: 'border-slate-300' },
                         { title: 'Soporte Especializado', icon: <Lightbulb />, desc: 'Soporte técnico y reparación para componentes de alta capacidad.', border: 'border-julmar-green' },
                         { title: 'Servicio 24/7', icon: <Settings />, desc: 'Taller móvil acreditado para asegurar la continuidad en faena.', border: 'border-slate-300' },
@@ -293,90 +281,7 @@ const MixerFleet = () => {
                 </div>
             </section>
 
-            {/* Analytics Section */}
-            <section className="bg-white py-32 border-y border-slate-200 overflow-hidden">
-                <div className="container mx-auto px-6">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                        <div className="max-w-3xl">
-                            <div className="bg-julmar-green text-julmar-dark p-4 rounded-3xl w-fit mb-8 shadow-2xl shadow-julmar-green/20">
-                                <BarChart3 size={32} />
-                            </div>
-                            <h2 className="text-5xl md:text-6xl font-black text-slate-800 tracking-tighter leading-none mb-6 uppercase">Analíticas del Mercado</h2>
-                            <p className="text-slate-500 font-medium text-lg italic">Liderazgo indiscutido en la industria de mixers.</p>
-                        </div>
-                        <div className="text-right">
-                            <div className="bg-slate-100 px-8 py-4 rounded-3xl border border-slate-200">
-                                <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Informe Comercial</p>
-                                <p className="text-julmar-dark font-black">Periodo 2018 - 2026</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            className="bg-white border border-slate-100 rounded-[48px] p-10 shadow-2xl"
-                        >
-                            <h3 className="text-center font-black text-julmar-dark text-xl uppercase tracking-widest mb-10">Betoneras Vendidas Oficiales</h3>
-                            <div className="h-[400px]">
-                                <Bar data={betonerasData} options={chartOptions} />
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            className="bg-white border border-slate-100 rounded-[48px] p-10 shadow-2xl"
-                        >
-                            <h3 className="text-center font-black text-julmar-dark text-xl uppercase tracking-widest mb-10">Participación de Mercado</h3>
-                            <div className="h-[400px] flex justify-center">
-                                <Pie
-                                    data={participacionData}
-                                    options={{
-                                        ...chartOptions,
-                                        plugins: {
-                                            ...chartOptions.plugins,
-                                            legend: { position: 'bottom', labels: { usePointStyle: true, padding: 30 } }
-                                        }
-                                    }}
-                                />
-                            </div>
-                        </motion.div>
-                    </div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className="bg-julmar-dark border border-slate-800 rounded-[48px] p-12 shadow-3xl overflow-hidden relative"
-                    >
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-julmar-green/10 blur-[100px]"></div>
-                        <h3 className="text-center font-black text-white text-xl uppercase tracking-widest mb-10">Inversión y Crecimiento (CLP)</h3>
-                        <div className="h-[350px]">
-                            <Line
-                                data={ventasData}
-                                options={{
-                                    ...chartOptions,
-                                    plugins: {
-                                        ...chartOptions.plugins,
-                                        legend: { display: false },
-                                        tooltip: {
-                                            callbacks: { label: (context) => `$ ${context.parsed.y.toLocaleString('es-CL')}` }
-                                        }
-                                    },
-                                    scales: {
-                                        y: {
-                                            grid: { color: 'rgba(255,255,255,0.05)' },
-                                            ticks: { color: '#64748b', callback: (value) => `$${(value / 1000000).toFixed(0)}M` }
-                                        },
-                                        x: { grid: { display: false }, ticks: { color: '#64748b' } }
-                                    }
-                                }}
-                            />
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
 
             {/* Services Cards */}
             <section className="py-32 bg-slate-50">
@@ -479,13 +384,29 @@ const MixerFleet = () => {
                             <div className="space-y-6">
                                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-julmar-green/40 transition-colors">
                                     <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Gerencia Comercial</p>
-                                    <div className="flex items-center gap-4 mb-3">
-                                        <Mail size={18} className="text-julmar-green" />
-                                        <a href="mailto:jgalvez@julmarspa.com" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">jgalvez@julmarspa.com</a>
+
+                                    <div className="mb-6">
+                                        <p className="text-white font-bold mb-2">Juan Luis Gálvez Fuica</p>
+                                        <div className="flex items-center gap-4 mb-2">
+                                            <Mail size={16} className="text-julmar-green" />
+                                            <a href="mailto:jgalvez@julmarspa.com" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">jgalvez@julmarspa.com</a>
+                                        </div>
+                                        <div className="flex items-center gap-4">
+                                            <Phone size={16} className="text-julmar-green" />
+                                            <a href="https://wa.me/56931052727" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">+56 9 3105 2727</a>
+                                        </div>
                                     </div>
-                                    <div className="flex items-center gap-4">
-                                        <Phone size={18} className="text-julmar-green" />
-                                        <a href="https://wa.me/56931052727" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">+56 9 3105 2727</a>
+
+                                    <div className="pt-4 border-t border-white/10">
+                                        <p className="text-white font-bold mb-2">Rodolfo Serrano San Martín</p>
+                                        <div className="flex items-center gap-4 mb-2">
+                                            <Mail size={16} className="text-julmar-green" />
+                                            <a href="mailto:Rodolfo@ingenieriaserrano.cl" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">Rodolfo@ingenieriaserrano.cl</a>
+                                        </div>
+                                        <div className="flex items-center gap-4">
+                                            <Phone size={16} className="text-julmar-green" />
+                                            <a href="https://wa.me/56998793145" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">+56 9 9879 3145</a>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -511,15 +432,26 @@ const MixerFleet = () => {
                             <h3 className="text-slate-800 text-3xl font-black mb-4 uppercase tracking-tighter">Atención Inmediata</h3>
                             <p className="text-slate-500 mb-10 font-medium">Contáctenos vía WhatsApp para una respuesta rápida sobre disponibilidad de flota y servicios de mantenimiento.</p>
 
-                            <a
-                                href={`https://wa.me/56931052727?text=Hola,%20me%20interesa%20una%20cotización%20para%20${selectedMachineForQuote || 'servicio%20Mixer'}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full bg-julmar-green hover:bg-julmar-dark text-julmar-dark hover:text-white py-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all shadow-xl shadow-julmar-green/20 flex items-center justify-center gap-4"
-                            >
-                                WhatsApp Comercial
-                                <ArrowRight size={20} />
-                            </a>
+                            <div className="flex flex-col gap-3 w-full">
+                                <a
+                                    href={`https://wa.me/56931052727?text=Hola,%20me%20interesa%20una%20cotización%20para%20${selectedMachineForQuote || 'servicio%20Mixer'}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full bg-julmar-green hover:bg-julmar-dark text-julmar-dark hover:text-white py-4 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all shadow-xl shadow-julmar-green/20 flex items-center justify-center gap-4"
+                                >
+                                    WhatsApp Juan Luis
+                                    <ArrowRight size={20} />
+                                </a>
+                                <a
+                                    href={`https://wa.me/56998793145?text=Hola,%20me%20interesa%20una%20cotización%20para%20${selectedMachineForQuote || 'servicio%20Mixer'}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full bg-julmar-green hover:bg-julmar-dark text-julmar-dark hover:text-white py-4 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all shadow-xl shadow-julmar-green/20 flex items-center justify-center gap-4"
+                                >
+                                    WhatsApp Rodolfo
+                                    <ArrowRight size={20} />
+                                </a>
+                            </div>
                         </motion.div>
                     </div>
                 </div>
