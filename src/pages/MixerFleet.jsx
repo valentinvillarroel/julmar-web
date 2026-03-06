@@ -53,9 +53,10 @@ const MixerFleet = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 
     const galleryImages = [
-        { src: "/machinery/mantencion-vanguardia.webp", title: "Capacidad Operativa de Vanguardia" }, // Asegurarme de que este source exista o usar uno de los adjuntos que se haya renombrado
-        { src: "/machinery/betonera-reemplazo.webp", title: "Reemplazo de Betoneras" }, // Asumo que se renombrará el adjunto a esto
-        { src: "/machinery/soporte-terreno.webp", title: "Soporte Técnico Terreno" } // Asumo que se renombrará el adjunto a esto
+        { src: "/machinery/mixer-8m3.jpg", title: "Capacidad Operativa de Vanguardia" },
+        { src: "/machinery/mixer-10m3.jpg", title: "Instalación en Terreno" },
+        { src: "/machinery/betonera.jpg", title: "Reemplazo de Betoneras" },
+        { src: "/machinery/mantencion.jpg", title: "Soporte Técnico Terreno" }
     ];
 
     const nextImage = () => setActiveImageIndex((prev) => (prev + 1) % galleryImages.length);
@@ -398,14 +399,14 @@ const MixerFleet = () => {
                             {
                                 title: 'Servicio de Overhaul',
                                 subtitle: 'Reparación de Betoneras',
-                                image: '/machinery/soporte-terreno.webp',
+                                image: '/machinery/betonera.jpg',
                                 features: ['Intervención mecánica integral', 'Sustitución de tambores y aspas', 'Certificación de operatividad post-arreglo'],
                                 badge: 'Taller Faena'
                             },
                             {
                                 title: 'Ingeniería de Betonera',
                                 subtitle: 'Fabricación y Montaje',
-                                image: '/machinery/mantencion-vanguardia.webp',
+                                image: '/machinery/mantencion.jpg',
                                 features: ['Sustitución e instalación de cuerpos', 'Reparación de sistemas hidráulicos', 'Pruebas de rotación y calibración'],
                                 badge: 'Certificación'
                             }
