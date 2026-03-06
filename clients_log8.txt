@@ -1,0 +1,264 @@
+﻿commit 8095b8b218b7a5767a8399d85a581ace859e9f2e
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Fri Mar 6 18:48:34 2026 -0300
+
+    fix: remover menciones antiguas tipo 'Flota FAW J6', agregar Regi├│n Metropolitana
+
+diff --git a/src/components/Clients.jsx b/src/components/Clients.jsx
+index be402c7..7032353 100644
+--- a/src/components/Clients.jsx
++++ b/src/components/Clients.jsx
+@@ -2,13 +2,15 @@ import React from 'react';
+ 
+ const clients = [
+     { name: "UNITED", id: 1 },
+-    { name: "HY TECH DRILLING", id: 2 },
+-    { name: "VIVELO LTDA.", id: 3 },
+-    { name: "ISASER SpA", id: 4 },
+-    { name: "TOLEDO GIANZO", id: 5 },
+-    { name: "COMERCIAL TRAGAL", id: 6 },
+-    { name: "CMP", id: 7 },
+-    { name: "WOLF DRILLING", id: 8 }
++    { name: "MEL├ôN", id: 2 },
++    { name: "POLPAICO", id: 3 },
++    { name: "CBB", id: 4 },
++    { name: "UNICON", id: 5 },
++    { name: "HY TECH DRILLING", id: 6 },
++    { name: "VIVELO LTDA.", id: 7 },
++    { name: "ISASER SpA", id: 8 },
++    { name: "CMP", id: 9 },
++    { name: "WOLF DRILLING", id: 10 }
+ ];
+ 
+ const LogoPlaceholder = ({ name }) => (
+
+commit c2899709b15f90d5f4202e731c58f0e39d505a84
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Thu Feb 5 13:05:12 2026 -0300
+
+    Mejoras generales: Navegacion, Footer profesional, Clientes animados y limpieza de Flota
+
+diff --git a/src/components/Clients.jsx b/src/components/Clients.jsx
+index 3fa6eeb..be402c7 100644
+--- a/src/components/Clients.jsx
++++ b/src/components/Clients.jsx
+@@ -1,35 +1,69 @@
+ import React from 'react';
+ 
+ const clients = [
+-    "UNITED",
+-    "HY TECH DRILLING",
+-    "VIVELO LTDA.",
+-    "ISASER SpA",
+-    "TOLEDO GIANZO",
+-    "COMERCIAL TRAGAL",
+-    "CMP",
+-    "WOLF DRILLING"
++    { name: "UNITED", id: 1 },
++    { name: "HY TECH DRILLING", id: 2 },
++    { name: "VIVELO LTDA.", id: 3 },
++    { name: "ISASER SpA", id: 4 },
++    { name: "TOLEDO GIANZO", id: 5 },
++    { name: "COMERCIAL TRAGAL", id: 6 },
++    { name: "CMP", id: 7 },
++    { name: "WOLF DRILLING", id: 8 }
+ ];
+ 
++const LogoPlaceholder = ({ name }) => (
++    <div className="mx-8 flex items-center justify-center group">
++        <div className="px-8 py-4 bg-gray-50 rounded-xl border-2 border-gray-100 group-hover:border-julmar-green/30 group-hover:bg-white transition-all duration-300 shadow-sm group-hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] min-w-[200px] text-center">
++            <span className="text-xl md:text-2xl font-black text-gray-300 group-hover:text-gray-700 transition-colors uppercase tracking-tight flex items-center justify-center h-full">
++                {name}
++            </span>
++        </div>
++    </div>
++);
++
+ const Clients = () => {
+     return (
+-        <section className="py-12 md:py-16 bg-white border-b border-gray-100">
+-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+-                <h3 className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-8 md:mb-12">
+-                    Conf├¡an en Nuestra Calidad
++        <section className="py-16 bg-white border-b border-gray-100 overflow-hidden relative">
++            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
++            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
++
++            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
++                <span className="text-julmar-green font-bold uppercase tracking-widest text-xs md:text-sm">Confianza Industrial</span>
++                <h3 className="text-gray-900 text-2xl md:text-3xl font-black mt-2">
++                    EMPRESAS QUE NOS ELIGEN
+                 </h3>
++            </div>
+ 
+-                {/* Responsive Layout: 2 Columns on Mobile, Flex/Grid on Desktop */}
+-                <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center items-center gap-4 md:gap-x-16 md:gap-y-10">
+-                    {clients.map((client, index) => (
+-                        <div key={index} className="flex justify-center items-center p-2">
+-                            <span className="text-lg sm:text-xl md:text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default uppercase text-center">
+-                                {client}
+-                            </span>
+-                        </div>
++            <div className="relative flex overflow-x-hidden group">
++                <div className="animate-marquee whitespace-nowrap flex items-center">
++                    {clients.map((client) => (
++                        <LogoPlaceholder key={client.id} name={client.name} />
++                    ))}
++                </div>
++
++                <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center">
++                    {clients.map((client) => (
++                        <LogoPlaceholder key={`${client.id}-duplicate`} name={client.name} />
+                     ))}
+                 </div>
+             </div>
++
++            <style jsx>{`
++                .animate-marquee {
++                    animation: marquee 25s linear infinite;
++                }
++                .animate-marquee2 {
++                    animation: marquee2 25s linear infinite;
++                }
++                @keyframes marquee {
++                    0% { transform: translateX(0%); }
++                    100% { transform: translateX(-100%); }
++                }
++                @keyframes marquee2 {
++                    0% { transform: translateX(100%); }
++                    100% { transform: translateX(0%); }
++                }
++            `}</style>
+         </section>
+     );
+ };
+
+commit 13c3baba61195b32410ce10880964e27ec5ff5dd
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Wed Jan 14 11:50:54 2026 -0300
+
+    Update Clients section design for mobile and add machinery images
+
+diff --git a/src/components/Clients.jsx b/src/components/Clients.jsx
+index 147a4cd..3fa6eeb 100644
+--- a/src/components/Clients.jsx
++++ b/src/components/Clients.jsx
+@@ -1,21 +1,33 @@
+ import React from 'react';
+ 
++const clients = [
++    "UNITED",
++    "HY TECH DRILLING",
++    "VIVELO LTDA.",
++    "ISASER SpA",
++    "TOLEDO GIANZO",
++    "COMERCIAL TRAGAL",
++    "CMP",
++    "WOLF DRILLING"
++];
++
+ const Clients = () => {
+     return (
+-        <section className="py-16 bg-white border-b border-gray-100">
++        <section className="py-12 md:py-16 bg-white border-b border-gray-100">
+             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+-                <h3 className="text-gray-400 text-sm font-bold uppercase tracking-[0.2em] mb-10">
++                <h3 className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-8 md:mb-12">
+                     Conf├¡an en Nuestra Calidad
+                 </h3>
+-                <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10">
+-                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">UNITED</div>
+-                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">HY TECH DRILLING</div>
+-                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">VIVELO LTDA.</div>
+-                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">ISASER SpA</div>
+-                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">TOLEDO GIANZO</div>
+-                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">COMERCIAL TRAGAL</div>
+-                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">CMP</div>
+-                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">WOLF DRILLING</div>
++
++                {/* Responsive Layout: 2 Columns on Mobile, Flex/Grid on Desktop */}
++                <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center items-center gap-4 md:gap-x-16 md:gap-y-10">
++                    {clients.map((client, index) => (
++                        <div key={index} className="flex justify-center items-center p-2">
++                            <span className="text-lg sm:text-xl md:text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default uppercase text-center">
++                                {client}
++                            </span>
++                        </div>
++                    ))}
+                 </div>
+             </div>
+         </section>
+
+commit 4097f0a3cbd56831276c76659c26b887bac792ab
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Tue Jan 13 23:11:16 2026 -0300
+
+    Fix client list contrast and add dedicated mobile hero image
+
+diff --git a/src/components/Clients.jsx b/src/components/Clients.jsx
+index 85a1ae8..147a4cd 100644
+--- a/src/components/Clients.jsx
++++ b/src/components/Clients.jsx
+@@ -7,15 +7,15 @@ const Clients = () => {
+                 <h3 className="text-gray-400 text-sm font-bold uppercase tracking-[0.2em] mb-10">
+                     Conf├¡an en Nuestra Calidad
+                 </h3>
+-                <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-70">
+-                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">UNITED</div>
+-                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">HY TECH DRILLING</div>
+-                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">VIVELO LTDA.</div>
+-                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">ISASER SpA</div>
+-                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">TOLEDO GIANZO</div>
+-                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">COMERCIAL TRAGAL</div>
+-                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">CMP</div>
+-                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">WOLF DRILLING</div>
++                <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10">
++                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">UNITED</div>
++                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">HY TECH DRILLING</div>
++                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">VIVELO LTDA.</div>
++                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">ISASER SpA</div>
++                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">TOLEDO GIANZO</div>
++                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">COMERCIAL TRAGAL</div>
++                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">CMP</div>
++                    <div className="text-3xl font-black text-gray-400 hover:text-julmar-dark transition-colors duration-300 cursor-default">WOLF DRILLING</div>
+                 </div>
+             </div>
+         </section>
+
+commit ee8e50babc5460853128b50893ff5be4e499fb75
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Tue Jan 13 22:15:13 2026 -0300
+
+    Primera version lista para Vercel
+
+diff --git a/src/components/Clients.jsx b/src/components/Clients.jsx
+new file mode 100644
+index 0000000..85a1ae8
+--- /dev/null
++++ b/src/components/Clients.jsx
+@@ -0,0 +1,25 @@
++import React from 'react';
++
++const Clients = () => {
++    return (
++        <section className="py-16 bg-white border-b border-gray-100">
++            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
++                <h3 className="text-gray-400 text-sm font-bold uppercase tracking-[0.2em] mb-10">
++                    Conf├¡an en Nuestra Calidad
++                </h3>
++                <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-70">
++                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">UNITED</div>
++                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">HY TECH DRILLING</div>
++                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">VIVELO LTDA.</div>
++                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">ISASER SpA</div>
++                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">TOLEDO GIANZO</div>
++                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">COMERCIAL TRAGAL</div>
++                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">CMP</div>
++                    <div className="text-3xl font-black text-gray-300 hover:text-julmar-dark transition-colors duration-300 cursor-default">WOLF DRILLING</div>
++                </div>
++            </div>
++        </section>
++    );
++};
++
++export default Clients;

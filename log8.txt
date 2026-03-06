@@ -1,0 +1,259 @@
+﻿commit 218ab5932392cf375af699f06fa375d537f17993
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Fri Mar 6 18:56:14 2026 -0300
+
+    fix: revertir landing text a original y quitar mixers del catalogo general
+
+diff --git a/src/components/Trust.jsx b/src/components/Trust.jsx
+index 1777ec0..adf102e 100644
+--- a/src/components/Trust.jsx
++++ b/src/components/Trust.jsx
+@@ -15,7 +15,7 @@ const Trust = () => {
+                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS SU SOCIO ESTRAT├ëGICO EN LA REGI├ôN</h2>
+                     <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10 space-y-6">
+                         <p>
+-                            JulMar SpA se posiciona como el socio estrat├®gico definitivo para la industria en la Regi├│n Metropolitana y la IV Regi├│n (Coquimbo). Especialistas en el arriendo de maquinaria pesada, transporte de agua y nuestra prestigiosa <strong>Unidad de Concreto</strong>, ofrecemos un servicio de excelencia respaldado por un mantenimiento riguroso y certificaci├│n SICEP garantizada.
++                            JulMar SpA se posiciona como el socio estrat├®gico definitivo para la industria en la Regi├│n de Coquimbo. Especialistas en el arriendo de maquinaria pesada, transporte de agua y nuestra prestigiosa <strong>Unidad de Concreto</strong>, ofrecemos una flota moderna respaldada por un mantenimiento riguroso y certificaci├│n SICEP garantizada.
+                         </p>
+                         <p>
+                             Entendemos la criticidad de sus operaciones. Por ello, combinamos la agilidad de una gesti├│n local con los est├índares de seguridad y eficiencia exigidos por la Gran Miner├¡a, Obras Civiles y Plantas de Hormig├│n. Nuestro compromiso es absoluto: asegurar la continuidad operacional mediante equipos confiables y un soporte t├®cnico 24/7 de respuesta inmediata en faena.
+
+commit 8095b8b218b7a5767a8399d85a581ace859e9f2e
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Fri Mar 6 18:48:34 2026 -0300
+
+    fix: remover menciones antiguas tipo 'Flota FAW J6', agregar Regi├│n Metropolitana
+
+diff --git a/src/components/Trust.jsx b/src/components/Trust.jsx
+index 1778211..1777ec0 100644
+--- a/src/components/Trust.jsx
++++ b/src/components/Trust.jsx
+@@ -15,30 +15,30 @@ const Trust = () => {
+                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS SU SOCIO ESTRAT├ëGICO EN LA REGI├ôN</h2>
+                     <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10 space-y-6">
+                         <p>
+-                            JulMar SpA se posiciona como el socio estrat├®gico definitivo para la industria en la Regi├│n de Coquimbo. Especialistas en el arriendo de maquinaria pesada de alto tonelaje y soluciones de transporte de agua, ofrecemos una flota moderna respaldada por un mantenimiento riguroso y certificaci├│n garantizada.
++                            JulMar SpA se posiciona como el socio estrat├®gico definitivo para la industria en la Regi├│n Metropolitana y la IV Regi├│n (Coquimbo). Especialistas en el arriendo de maquinaria pesada, transporte de agua y nuestra prestigiosa <strong>Unidad de Concreto</strong>, ofrecemos un servicio de excelencia respaldado por un mantenimiento riguroso y certificaci├│n SICEP garantizada.
+                         </p>
+                         <p>
+-                            Entendemos la criticidad de sus operaciones. Por ello, combinamos la agilidad de una gesti├│n local con los est├índares de seguridad y eficiencia exigidos por la Gran Miner├¡a y Obras Civiles. Nuestro compromiso es absoluto: asegurar la continuidad operacional de sus proyectos mediante equipos confiables y un soporte t├®cnico 24/7 de respuesta inmediata.
++                            Entendemos la criticidad de sus operaciones. Por ello, combinamos la agilidad de una gesti├│n local con los est├índares de seguridad y eficiencia exigidos por la Gran Miner├¡a, Obras Civiles y Plantas de Hormig├│n. Nuestro compromiso es absoluto: asegurar la continuidad operacional mediante equipos confiables y un soporte t├®cnico 24/7 de respuesta inmediata en faena.
+                         </p>
+                     </div>
+ 
+                     {/* Stats / Counters */}
+                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-gray-800 pt-8">
+                         <div>
+-                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+5</span>
+-                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">A├▒os Exp.</span>
++                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+24</span>
++                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">A├▒os Trayector├¡a</span>
+                         </div>
+                         <div>
+-                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+15</span>
+-                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Equipos</span>
++                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+3.000</span>
++                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Mixers Atendidos</span>
+                         </div>
+                         <div>
+-                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+20</span>
+-                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Clientes</span>
++                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">SICEP</span>
++                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Certificaci├│n</span>
+                         </div>
+                         <div>
+-                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">24/7</span>
+-                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Soporte</span>
++                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">100%</span>
++                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Disponibilidad</span>
+                         </div>
+                     </div>
+                 </div>
+
+commit e7ab12f4660e1f463ac2ab8090e6a40717b126c9
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Tue Feb 17 13:08:17 2026 -0300
+
+    chore: update SEO meta tags and add google verification
+
+diff --git a/src/components/Trust.jsx b/src/components/Trust.jsx
+index 7badc24..1778211 100644
+--- a/src/components/Trust.jsx
++++ b/src/components/Trust.jsx
+@@ -13,12 +13,12 @@ const Trust = () => {
+                 <div className="text-center mb-16">
+                     <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Nuestra Esencia</span>
+                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS SU SOCIO ESTRAT├ëGICO EN LA REGI├ôN</h2>
+-                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10">
+-                        <p className="mb-4">
+-                            JulMar SPA es una empresa especializada ubicada en la cuarta regi├│n, dedicada al alquiler de camiones y maquinaria para empresas en los sectores de vialidad, miner├¡a y agropecuario.
++                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10 space-y-6">
++                        <p>
++                            JulMar SpA se posiciona como el socio estrat├®gico definitivo para la industria en la Regi├│n de Coquimbo. Especialistas en el arriendo de maquinaria pesada de alto tonelaje y soluciones de transporte de agua, ofrecemos una flota moderna respaldada por un mantenimiento riguroso y certificaci├│n garantizada.
+                         </p>
+                         <p>
+-                            Con una trayectoria de 5 a├▒os en el rubro, nuestro compromiso radica en situar al cliente en el centro de nuestras operaciones, brind├índole una atenci├│n ├ígil y personalizada. Nos esforzamos por proporcionar equipos de calidad que satisfagan las necesidades de nuestros clientes, manteniendo un enfoque ├ígil tanto en el cumplimiento de plazos como en la gesti├│n de costos.
++                            Entendemos la criticidad de sus operaciones. Por ello, combinamos la agilidad de una gesti├│n local con los est├índares de seguridad y eficiencia exigidos por la Gran Miner├¡a y Obras Civiles. Nuestro compromiso es absoluto: asegurar la continuidad operacional de sus proyectos mediante equipos confiables y un soporte t├®cnico 24/7 de respuesta inmediata.
+                         </p>
+                     </div>
+ 
+
+commit 20e746bc64aeeebf4f7fed8712fa989bbe32ee26
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Wed Feb 11 10:14:12 2026 -0300
+
+    Mejoras SEO: Google Schema, Open Graph para redes, Sitemap automatico y tono corporativo
+
+diff --git a/src/components/Trust.jsx b/src/components/Trust.jsx
+index fc44569..7badc24 100644
+--- a/src/components/Trust.jsx
++++ b/src/components/Trust.jsx
+@@ -12,10 +12,10 @@ const Trust = () => {
+             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                 <div className="text-center mb-16">
+                     <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Nuestra Esencia</span>
+-                    <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS UNA EMPRESA FAMILIAR Y REGIONAL</h2>
++                    <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS SU SOCIO ESTRAT├ëGICO EN LA REGI├ôN</h2>
+                     <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10">
+                         <p className="mb-4">
+-                            JulMar SPA es una empresa familiar ubicada en la cuarta regi├│n, dedicada al alquiler de camiones y maquinaria para empresas en los sectores de vialidad, miner├¡a y agropecuario.
++                            JulMar SPA es una empresa especializada ubicada en la cuarta regi├│n, dedicada al alquiler de camiones y maquinaria para empresas en los sectores de vialidad, miner├¡a y agropecuario.
+                         </p>
+                         <p>
+                             Con una trayectoria de 5 a├▒os en el rubro, nuestro compromiso radica en situar al cliente en el centro de nuestras operaciones, brind├índole una atenci├│n ├ígil y personalizada. Nos esforzamos por proporcionar equipos de calidad que satisfagan las necesidades de nuestros clientes, manteniendo un enfoque ├ígil tanto en el cumplimiento de plazos como en la gesti├│n de costos.
+
+commit c2899709b15f90d5f4202e731c58f0e39d505a84
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Thu Feb 5 13:05:12 2026 -0300
+
+    Mejoras generales: Navegacion, Footer profesional, Clientes animados y limpieza de Flota
+
+diff --git a/src/components/Trust.jsx b/src/components/Trust.jsx
+index 3d593b6..fc44569 100644
+--- a/src/components/Trust.jsx
++++ b/src/components/Trust.jsx
+@@ -13,7 +13,7 @@ const Trust = () => {
+                 <div className="text-center mb-16">
+                     <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Nuestra Esencia</span>
+                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS UNA EMPRESA FAMILIAR Y REGIONAL</h2>
+-                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify">
++                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10">
+                         <p className="mb-4">
+                             JulMar SPA es una empresa familiar ubicada en la cuarta regi├│n, dedicada al alquiler de camiones y maquinaria para empresas en los sectores de vialidad, miner├¡a y agropecuario.
+                         </p>
+@@ -21,6 +21,26 @@ const Trust = () => {
+                             Con una trayectoria de 5 a├▒os en el rubro, nuestro compromiso radica en situar al cliente en el centro de nuestras operaciones, brind├índole una atenci├│n ├ígil y personalizada. Nos esforzamos por proporcionar equipos de calidad que satisfagan las necesidades de nuestros clientes, manteniendo un enfoque ├ígil tanto en el cumplimiento de plazos como en la gesti├│n de costos.
+                         </p>
+                     </div>
++
++                    {/* Stats / Counters */}
++                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-gray-800 pt-8">
++                        <div>
++                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+5</span>
++                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">A├▒os Exp.</span>
++                        </div>
++                        <div>
++                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+15</span>
++                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Equipos</span>
++                        </div>
++                        <div>
++                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+20</span>
++                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Clientes</span>
++                        </div>
++                        <div>
++                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">24/7</span>
++                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Soporte</span>
++                        </div>
++                    </div>
+                 </div>
+ 
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+
+commit 4935fcf737bdf0527d864509070296bda81af916
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Thu Jan 15 12:40:57 2026 -0300
+
+    Fix: Update values description and optimize Fleet header for mobile
+
+diff --git a/src/components/Trust.jsx b/src/components/Trust.jsx
+index 5055120..3d593b6 100644
+--- a/src/components/Trust.jsx
++++ b/src/components/Trust.jsx
+@@ -45,7 +45,7 @@ const Trust = () => {
+                             <li>ÔÇó <strong>Compromiso:</strong> Situamos al cliente en el centro.</li>
+                             <li>ÔÇó <strong>Agilidad:</strong> Atenci├│n r├ípida y cumplimiento de plazos.</li>
+                             <li>ÔÇó <strong>Calidad:</strong> Equipos que satisfacen altos est├índares.</li>
+-                            <li>ÔÇó <strong>Cercan├¡a:</strong> Atenci├│n personalizada y familiar.</li>
++                            <li>ÔÇó <strong>Cercan├¡a:</strong> Atenci├│n personalizada.</li>
+                         </ul>
+                     </div>
+                 </div>
+
+commit ee8e50babc5460853128b50893ff5be4e499fb75
+Author: Valentin Villarroel <villarroelv87@gmail.com>
+Date:   Tue Jan 13 22:15:13 2026 -0300
+
+    Primera version lista para Vercel
+
+diff --git a/src/components/Trust.jsx b/src/components/Trust.jsx
+new file mode 100644
+index 0000000..5055120
+--- /dev/null
++++ b/src/components/Trust.jsx
+@@ -0,0 +1,56 @@
++import React from 'react';
++import { Shield, Clock, MapPin } from 'lucide-react';
++
++const Trust = () => {
++    return (
++        <section id="nosotros" className="py-24 bg-julmar-dark text-white relative overflow-hidden">
++            {/* Background Pattern */}
++            <div className="absolute inset-0 opacity-5 pointer-events-none">
++                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-julmar-green/20 via-transparent to-transparent" />
++            </div>
++
++            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
++                <div className="text-center mb-16">
++                    <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Nuestra Esencia</span>
++                    <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS UNA EMPRESA FAMILIAR Y REGIONAL</h2>
++                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify">
++                        <p className="mb-4">
++                            JulMar SPA es una empresa familiar ubicada en la cuarta regi├│n, dedicada al alquiler de camiones y maquinaria para empresas en los sectores de vialidad, miner├¡a y agropecuario.
++                        </p>
++                        <p>
++                            Con una trayectoria de 5 a├▒os en el rubro, nuestro compromiso radica en situar al cliente en el centro de nuestras operaciones, brind├índole una atenci├│n ├ígil y personalizada. Nos esforzamos por proporcionar equipos de calidad que satisfagan las necesidades de nuestros clientes, manteniendo un enfoque ├ígil tanto en el cumplimiento de plazos como en la gesti├│n de costos.
++                        </p>
++                    </div>
++                </div>
++
++                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
++                    {/* Vision */}
++                    <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-julmar-green/50 transition-all duration-300 group">
++                        <div className="w-14 h-14 bg-julmar-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-julmar-green transition-colors duration-300">
++                            <Shield className="text-julmar-green group-hover:text-julmar-dark transition-colors duration-300" size={32} />
++                        </div>
++                        <h3 className="text-2xl font-bold text-white mb-4">VISI├ôN</h3>
++                        <p className="text-gray-400 text-lg">
++                            Nuestra visi├│n consiste en desafiarnos continuamente para contribuir al progreso de nuestros clientes, adapt├índonos a sus necesidades y promoviendo un crecimiento sostenido a lo largo del tiempo.
++                        </p>
++                    </div>
++
++                    {/* Values (Inferred from context) */}
++                    <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-julmar-green/50 transition-all duration-300 group">
++                        <div className="w-14 h-14 bg-julmar-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-julmar-green transition-colors duration-300">
++                            <Clock className="text-julmar-green group-hover:text-julmar-dark transition-colors duration-300" size={32} />
++                        </div>
++                        <h3 className="text-2xl font-bold text-white mb-4">NUESTROS VALORES</h3>
++                        <ul className="text-gray-400 text-lg space-y-2">
++                            <li>ÔÇó <strong>Compromiso:</strong> Situamos al cliente en el centro.</li>
++                            <li>ÔÇó <strong>Agilidad:</strong> Atenci├│n r├ípida y cumplimiento de plazos.</li>
++                            <li>ÔÇó <strong>Calidad:</strong> Equipos que satisfacen altos est├índares.</li>
++                            <li>ÔÇó <strong>Cercan├¡a:</strong> Atenci├│n personalizada y familiar.</li>
++                        </ul>
++                    </div>
++                </div>
++            </div>
++        </section>
++    );
++};
++export default Trust;

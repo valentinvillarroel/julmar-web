@@ -12,33 +12,33 @@ const Trust = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Nuestra Esencia</span>
-                    <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS SU SOCIO ESTRATÉGICO EN LA REGIÓN</h2>
-                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10 space-y-6">
-                        <p>
-                            JulMar SpA se posiciona como el socio estratégico definitivo para la industria en la Región de Coquimbo. Especialistas en el arriendo de maquinaria pesada, transporte de agua y nuestra prestigiosa <strong>Unidad de Concreto</strong>, ofrecemos una flota moderna respaldada por un mantenimiento riguroso y certificación SICEP garantizada.
+                    <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS UNA EMPRESA FAMILIAR Y REGIONAL</h2>
+                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10">
+                        <p className="mb-4">
+                            JulMar SPA es una empresa familiar ubicada en la cuarta región, dedicada al alquiler de camiones y maquinaria para empresas en los sectores de vialidad, minería y agropecuario.
                         </p>
                         <p>
-                            Entendemos la criticidad de sus operaciones. Por ello, combinamos la agilidad de una gestión local con los estándares de seguridad y eficiencia exigidos por la Gran Minería, Obras Civiles y Plantas de Hormigón. Nuestro compromiso es absoluto: asegurar la continuidad operacional mediante equipos confiables y un soporte técnico 24/7 de respuesta inmediata en faena.
+                            Con una trayectoria de 5 años en el rubro, nuestro compromiso radica en situar al cliente en el centro de nuestras operaciones, brindándole una atención ágil y personalizada. Nos esforzamos por proporcionar equipos de calidad que satisfagan las necesidades de nuestros clientes, manteniendo un enfoque ágil tanto en el cumplimiento de plazos como en la gestión de costos.
                         </p>
                     </div>
 
                     {/* Stats / Counters */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-gray-800 pt-8">
                         <div>
-                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+24</span>
-                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Años Trayectoría</span>
+                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+5</span>
+                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Años Exp.</span>
                         </div>
                         <div>
-                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+3.000</span>
-                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Mixers Atendidos</span>
+                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+15</span>
+                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Equipos</span>
                         </div>
                         <div>
-                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">SICEP</span>
-                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Certificación</span>
+                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">+20</span>
+                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Clientes</span>
                         </div>
                         <div>
-                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">100%</span>
-                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Disponibilidad</span>
+                            <span className="block text-4xl md:text-5xl font-black text-julmar-green mb-1">24/7</span>
+                            <span className="text-gray-400 text-sm font-bold uppercase tracking-wider">Soporte</span>
                         </div>
                     </div>
                 </div>
