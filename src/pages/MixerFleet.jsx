@@ -403,8 +403,8 @@ const MixerFleet = () => {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
                         <div className="max-w-3xl">
-                            <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.4em] mb-4 block">Catálogo 2026</span>
-                            <h2 className="text-5xl md:text-7xl font-black text-slate-800 tracking-tighter leading-none mb-8">Nuestra Flota</h2>
+                            <span className="text-[#4CAF50] font-black uppercase text-xs tracking-[0.4em] mb-4 block">Lo que ofrecemos</span>
+                            <h2 className="text-5xl md:text-7xl font-black text-slate-800 tracking-tighter leading-none mb-8">Nuestros Servicios</h2>
                         </div>
                         <div className="bg-white border border-slate-200 px-8 py-5 rounded-[32px] shadow-sm flex items-center gap-6">
                             <img src="/logo-julmar.webp" className="h-10 grayscale opacity-30" />
