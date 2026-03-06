@@ -522,9 +522,8 @@ const MixerFleet = () => {
                             </h2>
 
                             <div className="space-y-6">
-                                {/* Juan Luis */}
                                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-julmar-green/40 transition-colors">
-                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Juan Luis Gálvez Fuica — Gerencia</p>
+                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Juan Luis Gálvez Fuica</p>
                                     <div className="flex items-center gap-4 mb-3">
                                         <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
                                             <Mail size={18} className="text-julmar-green" />
@@ -541,7 +540,7 @@ const MixerFleet = () => {
 
                                 {/* Rodolfo */}
                                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-julmar-green/40 transition-colors">
-                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Rodolfo Serrano San Martín — Ingeniería</p>
+                                    <p className="text-xs font-black text-julmar-green uppercase tracking-widest mb-4">Rodolfo Serrano San Martín</p>
                                     <div className="flex items-center gap-4 mb-3">
                                         <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
                                             <Mail size={18} className="text-julmar-green" />
@@ -581,15 +580,26 @@ const MixerFleet = () => {
                                 <p className="text-slate-400 text-base leading-relaxed mb-8">
                                     Coordinamos una reunión para presentar nuestra capacidad operativa, certificaciones y la propuesta de alianza formal. Sin compromiso.
                                 </p>
-                                <a
-                                    href="https://wa.me/56998793145?text=Hola%20Rodolfo%2C%20me%20interesa%20conocer%20la%20propuesta%20de%20alianza%20JulMar%20para%20flota%20Mixer."
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-full bg-[#4CAF50] hover:bg-white text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-[#4CAF50]/20 text-sm uppercase tracking-widest"
-                                >
-                                    Iniciar Conversación por WhatsApp
-                                    <ArrowRight size={18} />
-                                </a>
+                                <div className="flex flex-col gap-4">
+                                    <a
+                                        href="https://wa.me/56931052727?text=Hola%20Juan%20Luis%2C%20me%20interesa%20conocer%20la%20propuesta%20de%20alianza%20JulMar%20para%20flota%20Mixer."
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full bg-[#4CAF50] hover:bg-white text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-[#4CAF50]/20 text-sm uppercase tracking-widest"
+                                    >
+                                        WhatsApp Juan Luis
+                                        <ArrowRight size={18} />
+                                    </a>
+                                    <a
+                                        href="https://wa.me/56998793145?text=Hola%20Rodolfo%2C%20me%20interesa%20conocer%20la%20propuesta%20de%20alianza%20JulMar%20para%20flota%20Mixer."
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full bg-white/10 hover:bg-white hover:text-julmar-dark text-white font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all border border-white/20 text-sm uppercase tracking-widest"
+                                    >
+                                        WhatsApp Rodolfo
+                                        <ArrowRight size={18} />
+                                    </a>
+                                </div>
                             </div>
                             <div className="bg-white/5 border border-white/10 rounded-3xl p-8 text-white">
                                 <p className="text-slate-400 text-sm leading-relaxed">
