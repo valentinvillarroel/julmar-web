@@ -35,10 +35,15 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="text-5xl md:text-7xl font-black mb-6 leading-tight"
+                    className="flex flex-col mb-6"
                 >
-                    <span className="text-white">JULMAR</span>
-                    <span className="block text-2xl md:text-3xl mt-2 text-gray-300 font-bold uppercase tracking-widest">Arriendo de Maquinaria Pesada</span>
+                    <span className="text-2xl md:text-3xl font-bold uppercase tracking-widest text-julmar-green mb-2">
+                        Arriendo de Maquinaria Pesada
+                    </span>
+                    <span className="text-5xl md:text-7xl font-black text-white leading-tight">
+                        EN COQUIMBO Y ATACAMA
+                    </span>
+                    <span className="sr-only"> | Julmar SpA</span>
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}

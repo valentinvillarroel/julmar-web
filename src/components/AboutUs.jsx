@@ -24,8 +24,8 @@ const AboutUs = () => {
                         </div>
                         
                         <h2 className="text-4xl md:text-5xl font-black text-slate-800 tracking-tight leading-tight mb-6">
-                            SOCIOS ESTRATÉGICOS <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green to-emerald-500">EN TERRENO</span>
+                            ESPECIALISTAS EN MOVIMIENTO DE TIERRAS <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green to-emerald-500">EN LA IV REGIÓN</span>
                         </h2>
                         
                         <p className="text-lg text-slate-600 mb-8 leading-relaxed">

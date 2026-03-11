@@ -29,8 +29,8 @@ const Services = () => {
         <section id="servicios" className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <span className="text-julmar-green-light font-bold uppercase tracking-widest mb-2 block text-sm">Nuestras Especialidades</span>
-                    <h2 className="text-4xl md:text-5xl font-black text-julmar-dark mb-6">SERVICIOS INTEGRALES</h2>
+                    <span className="text-julmar-green-light font-bold uppercase tracking-widest mb-2 block text-sm">Especialistas en la IV y III Región</span>
+                    <h2 className="text-4xl md:text-5xl font-black text-julmar-dark mb-6">SERVICIOS MINEROS Y OBRAS VIALES</h2>
                     <p className="max-w-2xl mx-auto text-gray-600 text-lg">
                         Ofrecemos maquinaria y personal calificado para los sectores clave de la región.
                     </p>
