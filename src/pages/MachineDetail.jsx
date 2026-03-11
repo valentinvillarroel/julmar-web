@@ -140,11 +140,17 @@ const MachineDetail = () => {
                     <div className="flex items-center text-sm text-gray-400 mb-4 space-x-2">
                         <Link to="/" className="hover:text-white transition-colors"><Home size={14} /></Link>
                         <span>/</span>
-                        <Link to="/" className="hover:text-white transition-colors">Flota</Link>
+                        <Link to="/#flota" className="hover:text-white transition-colors">Flota</Link>
+                        <span>/</span>
+                        <Link to={`/?categoria=${slugify(machine.category)}#flota`} className="hover:text-white transition-colors">
+                            {machine.category}
+                        </Link>
                         <span>/</span>
                         <span className="text-julmar-green truncate">{machine.name}</span>
                     </div>
-                    <span className="text-julmar-green font-bold uppercase tracking-widest text-xs md:text-sm block mb-2">{machine.category}</span>
+                    <Link to={`/?categoria=${slugify(machine.category)}#flota`} className="text-julmar-green hover:text-white font-bold uppercase tracking-widest text-xs md:text-sm block mb-2 transition-colors inline-block w-fit">
+                        {machine.category}
+                    </Link>
                     <h1 className="text-3xl md:text-5xl font-black">{machine.name}</h1>
                 </div>
             </div>

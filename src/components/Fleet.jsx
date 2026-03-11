@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { slugify } from '../utils/stringUtils';
 
 import { machines } from '../data/machines';
@@ -22,9 +22,36 @@ const item = {
 
 const Fleet = ({ onQuote = () => { } }) => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const [searchParams, setSearchParams] = useSearchParams();
     const [filter, setFilter] = useState('Todos');
 
     const categories = ['Todos', ...new Set(machines.map(m => m.category))];
+
+    useEffect(() => {
+        const categoryQuery = searchParams.get('categoria');
+        if (categoryQuery) {
+            const matchedCategory = categories.find(c => slugify(c) === categoryQuery || c.toLowerCase() === categoryQuery.toLowerCase());
+            if (matchedCategory) {
+                setFilter(matchedCategory);
+            }
+        } else {
+            setFilter('Todos');
+        }
+    }, [searchParams, categories]);
+
+    const handleFilterChange = (cat) => {
+        const newParams = new URLSearchParams(searchParams);
+        if (cat === 'Todos') {
+            newParams.delete('categoria');
+        } else {
+            newParams.set('categoria', slugify(cat));
+        }
+        // Update URL and state
+        setSearchParams(newParams, { replace: true });
+        setFilter(cat);
+    };
+
     const filteredMachines = filter === 'Todos' ? machines : machines.filter(m => m.category === filter);
 
     const handleQuote = (machineName, e) => {
@@ -53,7 +80,7 @@ const Fleet = ({ onQuote = () => { } }) => {
                         {categories.map(cat => (
                             <button
                                 key={cat}
-                                onClick={() => setFilter(cat)}
+                                onClick={() => handleFilterChange(cat)}
                                 className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${filter === cat
                                     ? 'bg-julmar-green text-julmar-dark shadow-lg scale-105'
                                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}

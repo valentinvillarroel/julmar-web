@@ -48,22 +48,6 @@ const Clients = () => {
                 </div>
             </div>
 
-            <style jsx>{`
-                .animate-marquee {
-                    animation: marquee 25s linear infinite;
-                }
-                .animate-marquee2 {
-                    animation: marquee2 25s linear infinite;
-                }
-                @keyframes marquee {
-                    0% { transform: translateX(0%); }
-                    100% { transform: translateX(-100%); }
-                }
-                @keyframes marquee2 {
-                    0% { transform: translateX(100%); }
-                    100% { transform: translateX(0%); }
-                }
-            `}</style>
         </section>
     );
 };

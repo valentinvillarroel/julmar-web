@@ -51,7 +51,7 @@ const Hero = () => {
                     transition={{ delay: 0.4 }}
                     className="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-300 font-light"
                 >
-                    Arriendo de maquinaria pesada, excavadoras y camiones aljibe para la Gran Minería en Coquimbo, La Serena y Atacama.
+                    Arriendo de maquinaria pesada, excavadoras Komatsu, retroexcavadoras y camiones aljibe para construcción y Gran Minería en Coquimbo, La Serena y Atacama.
                 </motion.p>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

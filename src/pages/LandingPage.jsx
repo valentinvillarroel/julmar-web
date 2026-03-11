@@ -19,12 +19,23 @@ const LandingPage = () => {
     const location = useLocation();
 
     useEffect(() => {
+        const queryParams = new URLSearchParams(location.search);
+        const hasCategory = queryParams.has('categoria');
+
         if (location.hash) {
             const sectionId = location.hash.replace('#', '');
             const element = document.getElementById(sectionId);
             if (element) {
                 setTimeout(() => {
                     element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        } else if (hasCategory) {
+            // Si hay categoría, bajamos automáticamente a la flota
+            const fleetElement = document.getElementById('flota');
+            if (fleetElement) {
+                setTimeout(() => {
+                    fleetElement.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
             }
         } else {
@@ -36,7 +47,7 @@ const LandingPage = () => {
         <>
             <Helmet>
                 <title>Maquinarias Julmar SpA | Arriendo Maquinaria Pesada Coquimbo y Atacama</title>
-                <meta name="description" content="Especialistas en arriendo de maquinaria pesada, transporte de agua y servicios para minería, vialidad y agropecuario en la Región de Coquimbo y Atacama. Excavadoras, Retroexcavadoras, Camiones Aljibe." />
+                <meta name="description" content="Especialistas en arriendo de maquinaria pesada, transporte de agua y servicios para minería y vialidad en Coquimbo, La Serena y Atacama. Equipos Komatsu, Excavadoras, Retroexcavadoras y Camiones Aljibe." />
                 <link rel="canonical" href="https://julmar.cl/" />
 
                 {/* Open Graph / Facebook / WhatsApp */}
@@ -137,7 +148,7 @@ const LandingPage = () => {
                                     "name": "¿Qué tipo de maquinaria arrienda Julmar SpA?",
                                     "acceptedAnswer": {
                                         "@type": "Answer",
-                                        "text": "Julmar SpA arrienda excavadoras, retroexcavadoras, camiones aljibe, cargadores frontales y martillos hidráulicos para la Gran Minería, construcción y obras viales en la Región de Coquimbo y Atacama."
+                                        "text": "Julmar SpA arrienda maquinaria pesada incluyendo equipos Komatsu, retroexcavadoras, excavadoras, camiones aljibe y cargadores frontales para la Gran Minería, construcción y obras viales en La Serena, Coquimbo y Atacama."
                                     }
                                 },
                                 {
