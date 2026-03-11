@@ -4,24 +4,24 @@ import { motion } from 'framer-motion';
 const projects = [
     {
         id: 1,
-        title: "Movimiento de Tierras",
-        location: "Minera del Norte",
-        description: "Apoyo en faena con maquinaria pesada de alta capacidad.",
-        image: "/machinery/jd-744l/main-v2.webp"
+        title: "Construcción de Camino de Acceso",
+        location: "Faena Minera, Atacama",
+        description: "Movimiento de tierras masivo y perfilado de rutas industriales de alto tonelaje utilizando nuestras Excavadoras Komatsu PC210LC.",
+        image: "/hero-movil.webp"
     },
     {
         id: 2,
-        title: "Mejoramiento Vial",
-        location: "Ruta D-43",
-        description: "Perfilado y compactación de caminos con equipos John Deere.",
-        image: "/machinery/jd-310l/main-site-v3.webp"
+        title: "Supresión de Polvo y Riego",
+        location: "Ruta D-43, Coquimbo",
+        description: "Abastecimiento hídrico ininterrumpido para control de emisiones con nuestra flota de Camiones Aljibe (hasta 30.000 Litros).",
+        image: "/machinery/renault-k480/main-new.webp"
     },
     {
         id: 3,
-        title: "Demolición Industrial",
-        location: "Barrio Industrial, Coquimbo",
-        description: "Demolición controlada de estructuras de concreto.",
-        image: "/machinery/attachments/martillo-user-2.webp"
+        title: "Excavación de Zanjas",
+        location: "Sector Industrial, La Serena",
+        description: "Zanjeo de precisión para tendido eléctrico y tuberías operado por personal certificado con Retroexcavadoras John Deere 4x4.",
+        image: "/machinery/jd-310l/main-site-v3.webp"
     }
 ];
 
@@ -30,10 +30,10 @@ const Portfolio = () => {
         <section id="proyectos" className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Nuestra Experiencia</span>
-                    <h2 className="text-4xl md:text-5xl font-black text-julmar-dark mb-4">PROYECTOS EN TERRENO</h2>
+                    <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Respaldo E-E-A-T</span>
+                    <h2 className="text-4xl md:text-5xl font-black text-julmar-dark mb-4">PROYECTOS DESTACADOS</h2>
                     <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-                        Más de 5 años aportando eficiencia y potencia a las obras más exigentes de la IV Región.
+                        Evidencia operacional de nuestros servicios de arriendo de maquinaria y movimiento de tierras en el norte de Chile.
                     </p>
                 </div>
 

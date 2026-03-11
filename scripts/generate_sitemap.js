@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { machines } from '../src/data/machines.js';
+import { seoLocations, seoServices } from '../src/data/seoMatrix.js';
 
 const slugify = (text) => {
     return text
@@ -49,11 +50,26 @@ const generateSitemap = () => {
     </url>`;
     });
 
+    // Páginas Satélite (SEO Silo Local)
+    let localPagesCount = 0;
+    seoServices.forEach(service => {
+        seoLocations.forEach(location => {
+            localPagesCount++;
+            sitemap += `
+    <url>
+        <loc>${DOMAIN}/arriendo/${service.slug}/en/${location.slug}</loc>
+        <lastmod>${TODAY}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>`;
+        });
+    });
+
     sitemap += `
 </urlset>`;
 
     fs.writeFileSync('./public/sitemap.xml', sitemap);
-    console.log(`✅ Sitemap generado con ${staticPages.length + machines.length} URLs en public/sitemap.xml`);
+    console.log(`✅ Sitemap generado con ${staticPages.length + machines.length + localPagesCount} URLs en public/sitemap.xml`);
 };
 
 generateSitemap();

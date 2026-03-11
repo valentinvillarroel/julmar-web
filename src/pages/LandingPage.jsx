@@ -178,9 +178,8 @@ const LandingPage = () => {
                 <Trust />
                 <Quality />
                 <Fleet onQuote={setSelectedMachineForQuote} />
-                {/* <MixerBanner /> */}
                 <Services />
-                {/* <Portfolio /> */}
+                <Portfolio />
                 <Contact preselectedMachine={selectedMachineForQuote} />
                 <Footer />
             </div>

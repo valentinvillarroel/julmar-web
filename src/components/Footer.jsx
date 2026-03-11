@@ -21,12 +21,13 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold text-white mb-6 flex items-center">
                             <span className="w-1 h-6 bg-julmar-green mr-3 rounded-full"></span>
-                            Navegación Rápida
+                            Destacados
                         </h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
                             <li><a href="#flota" aria-label="Ir a la sección de arriendo de maquinaria y flota" className="hover:text-julmar-green transition-colors">Arriendo de Maquinaria</a></li>
-                            <li><a href="#servicios" aria-label="Ver detalles de nuestros servicios mineros y viales" className="hover:text-julmar-green transition-colors">Servicios Mineros y Viales</a></li>
-                            <li><a href="#contacto" aria-label="Formulario para cotizar alquiler de equipos" className="hover:text-julmar-green transition-colors">Cotizar Equipos</a></li>
+                            <li><a href="/arriendo/arriendo-excavadoras/en/coquimbo" aria-label="Excavadoras en Coquimbo" className="hover:text-julmar-green transition-colors text-julmar-green/80">Oruga en Coquimbo</a></li>
+                            <li><a href="/arriendo/arriendo-camiones-aljibe/en/la-serena" aria-label="Aljibes en La Serena" className="hover:text-julmar-green transition-colors text-julmar-green/80">Aljibes en La Serena</a></li>
+                            <li><a href="/arriendo/arriendo-retroexcavadoras/en/copiapo" aria-label="Retroexcavadoras en Copiapó" className="hover:text-julmar-green transition-colors text-julmar-green/80">Retros Atacama</a></li>
                         </ul>
                     </div>
 
