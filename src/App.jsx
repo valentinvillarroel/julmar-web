@@ -3,10 +3,20 @@ import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import MachineDetail from './pages/MachineDetail';
 import MixerFleet from './pages/MixerFleet';
+import { Helmet } from 'react-helmet-async';
 
 function App() {
   return (
     <div className="relative">
+      <Helmet>
+        {/* Social Sharing Fallbacks Generales */}
+        <meta property="og:site_name" content="Maquinarias Julmar SpA" />
+        <meta property="og:locale" content="es_CL" />
+        <meta property="og:image:alt" content="Flota de Maquinaria Pesada en faena" />
+        <meta name="twitter:site" content="@julmarspa" />
+        <meta name="theme-color" content="#8dc63f" />
+      </Helmet>
+
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/flota/:slug" element={<MachineDetail />} />

@@ -5,6 +5,8 @@ const slugify = (text) => {
     return text
         .toString()
         .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
         .trim()
         .replace(/\s+/g, '-')
         .replace(/[^\w\-]+/g, '')
@@ -18,7 +20,7 @@ const generateSitemap = () => {
     // Solo URLs reales — sin anchors (#)
     const staticPages = [
         { path: '',        priority: '1.0', changefreq: 'weekly'  },
-        { path: '/mixer',  priority: '0.8', changefreq: 'monthly' },
+        // { path: '/mixer',  priority: '0.8', changefreq: 'monthly' },
     ];
 
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>

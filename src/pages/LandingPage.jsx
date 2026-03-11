@@ -12,6 +12,7 @@ import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import MixerBanner from '../components/MixerBanner';
+import AboutUs from '../components/AboutUs';
 
 const LandingPage = () => {
     const [selectedMachineForQuote, setSelectedMachineForQuote] = useState('');
@@ -36,7 +37,6 @@ const LandingPage = () => {
             <Helmet>
                 <title>Maquinarias Julmar SpA | Arriendo Maquinaria Pesada Coquimbo y Atacama</title>
                 <meta name="description" content="Especialistas en arriendo de maquinaria pesada, transporte de agua y servicios para minería, vialidad y agropecuario en la Región de Coquimbo y Atacama. Excavadoras, Retroexcavadoras, Camiones Aljibe." />
-                <meta name="keywords" content="arriendo maquinaria pesada, arriendo retroexcavadora coquimbo, camiones aljibe minería, movimiento de tierra, minería, vialidad, la serena, coquimbo, julmar" />
                 <link rel="canonical" href="https://julmar.cl/" />
 
                 {/* Open Graph / Facebook / WhatsApp */}
@@ -109,6 +109,61 @@ const LandingPage = () => {
                             },
                             "sameAs": [
                                 "https://www.linkedin.com/company/maquinarias-julmar/"
+                            ],
+                            "slogan": "Socio Estratégico en Terreno",
+                            "hasOfferCatalog": {
+                                "@type": "OfferCatalog",
+                                "name": "Flota de Maquinaria Pesada y Servicios",
+                                "itemListElement": [
+                                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arriendo de Excavadora" } },
+                                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arriendo de Retroexcavadora" } },
+                                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arriendo de Camión Aljibe" } },
+                                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arriendo de Cargador Frontal" } }
+                                ]
+                            }
+                        }
+                    `}
+                </script>
+
+                {/* Schema.org FAQPage - optimizado para búsquedas en IA (GEO/AEO) */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            "mainEntity": [
+                                {
+                                    "@type": "Question",
+                                    "name": "¿Qué tipo de maquinaria arrienda Julmar SpA?",
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "Julmar SpA arrienda excavadoras, retroexcavadoras, camiones aljibe, cargadores frontales y martillos hidráulicos para la Gran Minería, construcción y obras viales en la Región de Coquimbo y Atacama."
+                                    }
+                                },
+                                {
+                                    "@type": "Question",
+                                    "name": "¿En qué regiones opera Julmar SpA?",
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "Julmar SpA opera principalmente en la Región de Coquimbo (La Serena, Coquimbo, Ovalle, Andacollo, Vicuña) y la Región de Atacama (Copiapó, Vallenar). También tiene presencia en la Región Metropolitana para servicios de mixer."
+                                    }
+                                },
+                                {
+                                    "@type": "Question",
+                                    "name": "¿Cómo puedo solicitar una cotización de arriendo?",
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "Puede solicitar una cotización de arriendo de maquinaria pesada contactando directamente por WhatsApp al +56 9 3105 2727 o enviando un correo a jgalvez@julmarspa.com. También puede completar el formulario de contacto en esta página."
+                                    }
+                                },
+                                {
+                                    "@type": "Question",
+                                    "name": "¿La flota de Julmar está certificada para faenas mineras?",
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "Sí, Julmar SpA cuenta con flota certificada bajo estándares de seguridad para faenas mineras. La empresa está registrada como proveedor en SICEP y cumple con los protocolos de seguridad exigidos por la Gran Minería en Chile."
+                                    }
+                                }
                             ]
                         }
                     `}
@@ -119,10 +174,11 @@ const LandingPage = () => {
                 <Navbar />
                 <Hero />
                 <Clients />
+                <AboutUs />
                 <Trust />
                 <Quality />
                 <Fleet onQuote={setSelectedMachineForQuote} />
-                <MixerBanner />
+                {/* <MixerBanner /> */}
                 <Services />
                 {/* <Portfolio /> */}
                 <Contact preselectedMachine={selectedMachineForQuote} />

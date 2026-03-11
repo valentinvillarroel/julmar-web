@@ -24,9 +24,9 @@ const Footer = () => {
                             Navegación Rápida
                         </h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
-                            <li><a href="#flota" className="hover:text-julmar-green transition-colors">Arriendo de Maquinaria</a></li>
-                            <li><a href="#servicios" className="hover:text-julmar-green transition-colors">Servicios Mineros y Viales</a></li>
-                            <li><a href="#contacto" className="hover:text-julmar-green transition-colors">Cotizar Equipos</a></li>
+                            <li><a href="#flota" aria-label="Ir a la sección de arriendo de maquinaria y flota" className="hover:text-julmar-green transition-colors">Arriendo de Maquinaria</a></li>
+                            <li><a href="#servicios" aria-label="Ver detalles de nuestros servicios mineros y viales" className="hover:text-julmar-green transition-colors">Servicios Mineros y Viales</a></li>
+                            <li><a href="#contacto" aria-label="Formulario para cotizar alquiler de equipos" className="hover:text-julmar-green transition-colors">Cotizar Equipos</a></li>
                         </ul>
                     </div>
 

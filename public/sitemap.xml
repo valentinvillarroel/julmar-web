@@ -7,12 +7,6 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://julmar.cl/mixer</loc>
-        <lastmod>2026-03-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://julmar.cl/flota/retroexcavadora-john-deere-310l</loc>
         <lastmod>2026-03-11</lastmod>
         <changefreq>monthly</changefreq>
@@ -25,13 +19,13 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://julmar.cl/flota/camin-aljibe-renault-k480-8x4</loc>
+        <loc>https://julmar.cl/flota/camion-aljibe-renault-k480-8x4</loc>
         <lastmod>2026-03-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://julmar.cl/flota/camin-aljibe-renault-k460-6x4</loc>
+        <loc>https://julmar.cl/flota/camion-aljibe-renault-k460-6x4</loc>
         <lastmod>2026-03-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -49,7 +43,7 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://julmar.cl/flota/camin-aljibe-renault-c440</loc>
+        <loc>https://julmar.cl/flota/camion-aljibe-renault-c440</loc>
         <lastmod>2026-03-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -67,7 +61,7 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://julmar.cl/flota/martillo-hidrulico-mtm50t</loc>
+        <loc>https://julmar.cl/flota/martillo-hidraulico-mtm50t</loc>
         <lastmod>2026-03-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>

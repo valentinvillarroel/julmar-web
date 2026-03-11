@@ -140,8 +140,43 @@ const MixerFleet = () => {
     return (
         <div className="min-h-screen bg-slate-50 font-sans selection:bg-julmar-green selection:text-julmar-dark">
             <Helmet>
-                <title>Flota Mixer & Betoneras | Maquinarias JulMar SPA</title>
-                <meta name="description" content="Especialistas en instalación, reparación y mantenimiento de betoneras para camiones mixer en la Región Metropolitana y IV Región." />
+                <title>Servicio Mixer y Betoneras | Maquinarias Julmar SpA - Coquimbo y RM</title>
+                <meta name="description" content="Especialistas en instalación, reparación y mantenimiento de betoneras para camiones mixer. Servicio certificado SICEP en la Región Metropolitana y IV Región (Coquimbo). Cotiza por WhatsApp." />
+                <link rel="canonical" href="https://julmar.cl/mixer" />
+
+                {/* Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://julmar.cl/mixer" />
+                <meta property="og:title" content="Servicio Mixer y Betoneras | Julmar SpA" />
+                <meta property="og:description" content="Instalación, reparación y overhaul de betoneras en camiones mixer. Proveedor certificado SICEP. Región Metropolitana y Coquimbo." />
+                <meta property="og:image" content="https://julmar.cl/machinery/mixer-8m3.jpg" />
+                <meta property="og:locale" content="es_CL" />
+                <meta property="og:site_name" content="Maquinarias Julmar SpA" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Servicio Mixer y Betoneras | Julmar SpA" />
+                <meta name="twitter:description" content="Instalación, reparación y overhaul de betoneras. Proveedor certificado SICEP. Coquimbo y RM." />
+                <meta name="twitter:image" content="https://julmar.cl/machinery/mixer-8m3.jpg" />
+
+                {/* Schema.org Service */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": "Servicio de Betoneras para Mixer",
+                        "description": "Instalación, reparación y overhaul de betoneras para camiones mixer. Servicio técnico certificado SICEP en faena.",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Maquinarias Julmar SpA",
+                            "url": "https://julmar.cl",
+                            "telephone": "+56931052727"
+                        },
+                        "areaServed": ["Región Metropolitana", "Región de Coquimbo", "Región de Atacama"],
+                        "serviceType": "Reparación de Maquinaria Industrial",
+                        "url": "https://julmar.cl/mixer"
+                    })}
+                </script>
             </Helmet>
 
             <Navbar />

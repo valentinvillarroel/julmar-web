@@ -16,6 +16,7 @@ const Hero = () => {
                         src="/hero-bg-final.webp"
                         alt="Arriendo de Maquinaria Pesada en Coquimbo"
                         className="w-full h-full object-cover"
+                        fetchpriority="high"
                     />
                 </picture>
             </div>
@@ -47,6 +48,27 @@ const Hero = () => {
                 >
                     Arriendo de maquinaria pesada, excavadoras y camiones aljibe para la Gran Minería en Coquimbo, La Serena y Atacama.
                 </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="flex flex-col sm:flex-row gap-4 justify-center"
+                >
+                    <a
+                        href="#flota"
+                        className="inline-block bg-julmar-green hover:bg-white text-julmar-dark font-black px-8 py-4 rounded-xl text-sm uppercase tracking-widest transition-all shadow-xl shadow-julmar-green/20"
+                    >
+                        Ver Flota Disponible
+                    </a>
+                    <a
+                        href="https://wa.me/56931052727?text=Hola%2C%20quiero%20cotizar%20arriendo%20de%20maquinaria"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-white/10 hover:bg-white/20 border border-white/30 text-white font-black px-8 py-4 rounded-xl text-sm uppercase tracking-widest transition-all backdrop-blur-sm"
+                    >
+                        Cotizar por WhatsApp
+                    </a>
+                </motion.div>
             </div>
         </section>
     );

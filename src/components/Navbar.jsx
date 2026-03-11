@@ -104,7 +104,7 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-8">
-                        {['Inicio', 'Flota', 'Flota Mixer', 'Servicios', 'Nosotros'].map((item) => {
+                        {['Inicio', 'Flota', 'Servicios', 'Nosotros'].map((item) => {
                             // Map generic names to specific IDs if needed
                             let targetId = item.toLowerCase().replace(' ', '-');
                             if (item === 'Inicio') targetId = 'hero';
@@ -155,7 +155,7 @@ const Navbar = () => {
                         className="md:hidden bg-julmar-dark/95 backdrop-blur-xl border-t border-gray-800 overflow-hidden"
                     >
                         <div className="px-4 py-8 space-y-4">
-                            {['Inicio', 'Flota', 'Flota Mixer', 'Servicios', 'Nosotros', 'Contacto'].map((item) => {
+                            {['Inicio', 'Flota', 'Servicios', 'Nosotros', 'Contacto'].map((item) => {
                                 let targetId = item.toLowerCase().replace(' ', '-');
                                 if (item === 'Inicio') targetId = 'hero';
                                 if (item === 'Nosotros') targetId = 'nosotros';
