@@ -68,6 +68,53 @@ const MachineDetail = () => {
 
     const displayImage = machine.gallery ? machine.gallery[currentImageIndex] : machine.image;
 
+    // Schemas generados con JSON.stringify para garantizar JSON válido
+    const breadcrumbSchema = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://julmar.cl/" },
+            { "@type": "ListItem", "position": 2, "name": "Flota", "item": "https://julmar.cl/#flota" },
+            { "@type": "ListItem", "position": 3, "name": machine.name, "item": `https://julmar.cl/flota/${slug}` }
+        ]
+    });
+
+    const productSchema = JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": machine.name,
+        "sku": slug,
+        "description": machine.seoDescription || machine.description,
+        "image": [
+            `https://julmar.cl${machine.image}`,
+            ...(machine.gallery ? machine.gallery.map(img => `https://julmar.cl${img}`) : [])
+        ],
+        "brand": {
+            "@type": "Brand",
+            "name": machine.name.split(' ').slice(0, 2).join(' ')
+        },
+        "additionalProperty": machine.specs
+            ? Object.entries(machine.specs).map(([name, value]) => ({
+                "@type": "PropertyValue",
+                "name": name,
+                "value": value
+            }))
+            : [],
+        "offers": {
+            "@type": "Offer",
+            "url": `https://julmar.cl/flota/${slug}`,
+            "priceCurrency": "CLP",
+            "price": "1",
+            "description": "Precio a cotizar según duración y condiciones de faena",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "Maquinarias Julmar SpA",
+                "url": "https://julmar.cl"
+            }
+        }
+    });
+
     return (
         <div className="min-h-screen bg-white font-sans">
             <Helmet>
@@ -91,74 +138,10 @@ const MachineDetail = () => {
                 <meta name="twitter:image" content={`https://julmar.cl${machine.image}`} />
 
                 {/* Schema.org BreadcrumbList */}
-                <script type="application/ld+json">
-                    {`
-                        {
-                            "@context": "https://schema.org",
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
-                                {
-                                    "@type": "ListItem",
-                                    "position": 1,
-                                    "name": "Inicio",
-                                    "item": "https://julmar.cl/"
-                                },
-                                {
-                                    "@type": "ListItem",
-                                    "position": 2,
-                                    "name": "Flota",
-                                    "item": "https://julmar.cl/#flota"
-                                },
-                                {
-                                    "@type": "ListItem",
-                                    "position": 3,
-                                    "name": "${machine.name}",
-                                    "item": "https://julmar.cl/flota/${slug}"
-                                }
-                            ]
-                        }
-                    `}
-                </script>
+                <script type="application/ld+json">{breadcrumbSchema}</script>
 
                 {/* Schema.org Product */}
-                <script type="application/ld+json">
-                    {`
-                        {
-                            "@context": "https://schema.org/",
-                            "@type": "Product",
-                            "name": "${machine.name}",
-                            "sku": "${slug}",
-                            "description": "${machine.seoDescription || machine.description}",
-                            "image": [
-                                "https://julmar.cl${machine.image}"
-                                ${machine.gallery ? machine.gallery.map(img => `,"https://julmar.cl${img}"`).join('') : ''}
-                            ],
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "${machine.name.split(' ').slice(0, 2).join(' ')}"
-                            },
-                            "additionalProperty": [
-                                ${machine.specs ? Object.entries(machine.specs).map(([key, value]) => `
-                                {
-                                    "@type": "PropertyValue",
-                                    "name": "${key}",
-                                    "value": "${value}"
-                                }`).join(',') : ''}
-                            ],
-                            "offers": {
-                                "@type": "Offer",
-                                "url": "https://julmar.cl/flota/${slug}",
-                                "priceCurrency": "CLP",
-                                "availability": "https://schema.org/InStock",
-                                "seller": {
-                                    "@type": "Organization",
-                                    "name": "Maquinarias Julmar SpA",
-                                    "url": "https://julmar.cl"
-                                }
-                            }
-                        }
-                    `}
-                </script>
+                <script type="application/ld+json">{productSchema}</script>
             </Helmet>
 
             <Navbar />
