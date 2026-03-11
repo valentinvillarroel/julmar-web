@@ -34,17 +34,25 @@ const LandingPage = () => {
     return (
         <>
             <Helmet>
-                <title>Maquinarias Julmar SpA | Arriendo de Maquinaria Pesada IV Región</title>
-                <meta name="description" content="Especialistas en arriendo de maquinaria pesada, transporte de agua y servicios para minería, vialidad y agropecuario en la IV Región (Coquimbo, La Serena)." />
-                <meta name="keywords" content="maquinaria pesada, arriendo retroexcavadora, camiones aljibe, movimiento de tierra, minería, vialidad, agropecuario, la serena, coquimbo, julmar" />
+                <title>Maquinarias Julmar SpA | Arriendo Maquinaria Pesada Coquimbo y Atacama</title>
+                <meta name="description" content="Especialistas en arriendo de maquinaria pesada, transporte de agua y servicios para minería, vialidad y agropecuario en la Región de Coquimbo y Atacama. Excavadoras, Retroexcavadoras, Camiones Aljibe." />
+                <meta name="keywords" content="arriendo maquinaria pesada, arriendo retroexcavadora coquimbo, camiones aljibe minería, movimiento de tierra, minería, vialidad, la serena, coquimbo, julmar" />
                 <link rel="canonical" href="https://julmar.cl/" />
 
                 {/* Open Graph / Facebook / WhatsApp */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://julmar.cl/" />
-                <meta property="og:title" content="Maquinarias Julmar SpA - Soluciones Integrales en IV Región" />
-                <meta property="og:description" content="Flota moderna y servicio experto para faenas mineras, viales y agrícolas. Cotiza con nosotros." />
+                <meta property="og:title" content="Maquinarias Julmar SpA | Arriendo Maquinaria Pesada en Coquimbo" />
+                <meta property="og:description" content="Flota certificada para faenas mineras, viales y agrícolas en la Región de Coquimbo y Atacama. Excavadoras, Retroexcavadoras y Camiones Aljibe disponibles." />
                 <meta property="og:image" content="https://julmar.cl/hero-bg-final.webp" />
+                <meta property="og:locale" content="es_CL" />
+                <meta property="og:site_name" content="Maquinarias Julmar SpA" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Maquinarias Julmar SpA | Arriendo Maquinaria Pesada en Coquimbo" />
+                <meta name="twitter:description" content="Flota certificada para faenas mineras, viales y agrícolas en la Región de Coquimbo y Atacama." />
+                <meta name="twitter:image" content="https://julmar.cl/hero-bg-final.webp" />
 
                 {/* Schema.org Structured Data */}
                 <script type="application/ld+json">
@@ -52,20 +60,47 @@ const LandingPage = () => {
                         {
                             "@context": "https://schema.org",
                             "@type": "LocalBusiness",
+                            "@id": "https://julmar.cl",
                             "name": "Maquinarias Julmar SpA",
                             "image": "https://julmar.cl/logo-julmar.webp",
+                            "logo": "https://julmar.cl/logo-julmar.webp",
                             "telephone": "+56931052727",
                             "email": "jgalvez@julmarspa.com",
+                            "url": "https://julmar.cl",
                             "address": {
                                 "@type": "PostalAddress",
+                                "streetAddress": "Coquimbo",
                                 "addressLocality": "Coquimbo",
-                                "addressRegion": "Coquimbo",
+                                "addressRegion": "Región de Coquimbo",
                                 "addressCountry": "CL"
                             },
-                            "url": "https://julmar.cl",
+                            "geo": {
+                                "@type": "GeoCoordinates",
+                                "latitude": -29.9533,
+                                "longitude": -71.3436
+                            },
                             "priceRange": "$$$",
-                            "areaServed": ["Coquimbo", "La Serena", "Vicuña", "Ovalle", "Andacollo", "Copiapó", "Vallenar"],
-                            "knowsAbout": ["Arriendo de Maquinaria", "Servicios Mineros", "Movimiento de Tierras"],
+                            "foundingDate": "2019",
+                            "description": "Arriendo de maquinaria pesada, excavadoras y camiones aljibe para la Gran Minería y proyectos viales en la Región de Coquimbo y Atacama. Flota certificada y continuidad operacional.",
+                            "areaServed": [
+                                "Coquimbo",
+                                "La Serena",
+                                "Vicuña",
+                                "Ovalle",
+                                "Andacollo",
+                                "Salamanca",
+                                "Illapel",
+                                "Copiapó",
+                                "Vallenar",
+                                "Región de Coquimbo",
+                                "Región de Atacama"
+                            ],
+                            "knowsAbout": [
+                                "Arriendo de Maquinaria Pesada",
+                                "Servicios Mineros",
+                                "Movimiento de Tierras",
+                                "Transporte de Agua en Camión Aljibe"
+                            ],
                             "openingHoursSpecification": {
                                 "@type": "OpeningHoursSpecification",
                                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

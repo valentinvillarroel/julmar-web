@@ -48,4 +48,26 @@ describe('Machines Data Integrity', () => {
             expect(allowedCategories).toContain(machine.category);
         });
     });
+
+    it('should have seoDescription with at least 80 characters per machine', () => {
+        machines.forEach(machine => {
+            expect(machine.seoDescription).toBeTruthy();
+            expect(machine.seoDescription.length).toBeGreaterThanOrEqual(80);
+        });
+    });
+
+    it('should generate URL-safe slugs for each machine name', () => {
+        const slugify = (text) => text
+            .toString().toLowerCase().trim()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w\-]+/g, '')
+            .replace(/\-\-+/g, '-');
+
+        machines.forEach(machine => {
+            const slug = slugify(machine.name);
+            // Must not contain spaces, accented chars, or special chars
+            expect(slug).toMatch(/^[a-z0-9\-]+$/);
+            expect(slug).not.toContain(' ');
+        });
+    });
 });

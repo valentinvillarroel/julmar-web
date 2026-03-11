@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { machines } from '../src/data/machines.js';
 
-// Utility for slug matching (copied from stringUtils to avoid import issues in pure node script if not using modules)
 const slugify = (text) => {
     return text
         .toString()
@@ -13,34 +12,36 @@ const slugify = (text) => {
 };
 
 const DOMAIN = 'https://julmar.cl';
+const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
 const generateSitemap = () => {
+    // Solo URLs reales — sin anchors (#)
     const staticPages = [
-        '',
-        '/#flota',
-        '/#servicios',
-        '/#nosotros',
-        '/#contacto'
+        { path: '',        priority: '1.0', changefreq: 'weekly'  },
+        { path: '/mixer',  priority: '0.8', changefreq: 'monthly' },
     ];
 
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-    // Static Pages
-    staticPages.forEach(page => {
+    // Páginas estáticas
+    staticPages.forEach(({ path, priority, changefreq }) => {
         sitemap += `
     <url>
-        <loc>${DOMAIN}${page}</loc>
-        <changefreq>weekly</changefreq>
-        <priority>${page === '' ? '1.0' : '0.8'}</priority>
+        <loc>${DOMAIN}${path}</loc>
+        <lastmod>${TODAY}</lastmod>
+        <changefreq>${changefreq}</changefreq>
+        <priority>${priority}</priority>
     </url>`;
     });
 
-    // Dynamic Machine Pages
+    // Páginas dinámicas de flota
     machines.forEach(machine => {
+        const slug = slugify(machine.name);
         sitemap += `
     <url>
-        <loc>${DOMAIN}/flota/${slugify(machine.name)}</loc>
+        <loc>${DOMAIN}/flota/${slug}</loc>
+        <lastmod>${TODAY}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>`;
@@ -50,7 +51,7 @@ const generateSitemap = () => {
 </urlset>`;
 
     fs.writeFileSync('./public/sitemap.xml', sitemap);
-    console.log('✅ Sitemap generado en public/sitemap.xml');
+    console.log(`✅ Sitemap generado con ${staticPages.length + machines.length} URLs en public/sitemap.xml`);
 };
 
 generateSitemap();

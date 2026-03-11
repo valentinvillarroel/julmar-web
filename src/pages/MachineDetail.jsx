@@ -72,38 +72,89 @@ const MachineDetail = () => {
         <div className="min-h-screen bg-white font-sans">
             <Helmet>
                 <title>{`${machine.name} | Arriendo en Coquimbo - Julmar SpA`}</title>
-                <meta name="description" content={`Arriendo de ${machine.name} en Coquimbo y La Serena. ${machine.capacity}. ${machine.description}`} />
+                <meta name="description" content={machine.seoDescription || `Arriendo de ${machine.name} en Coquimbo, La Serena y Región de Atacama. ${machine.capacity}. ${machine.description} Disponibilidad inmediata con soporte 24/7.`} />
                 <link rel="canonical" href={`https://julmar.cl/flota/${slug}`} />
 
                 {/* Open Graph */}
                 <meta property="og:type" content="product" />
                 <meta property="og:url" content={`https://julmar.cl/flota/${slug}`} />
-                <meta property="og:title" content={`${machine.name} | Maquinarias Julmar`} />
-                <meta property="og:description" content={`${machine.capacity}. Disponible para arriendo inmediato en IV Región.`} />
+                <meta property="og:title" content={`${machine.name} | Arriendo en Coquimbo - Julmar SpA`} />
+                <meta property="og:description" content={`${machine.name}. ${machine.capacity}. Disponible para arriendo inmediato en Coquimbo, La Serena y Región de Atacama. Cotiza por WhatsApp.`} />
                 <meta property="og:image" content={`https://julmar.cl${machine.image}`} />
+                <meta property="og:locale" content="es_CL" />
+                <meta property="og:site_name" content="Maquinarias Julmar SpA" />
 
-                {/* Schema.org Product Data */}
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={`${machine.name} | Julmar SpA`} />
+                <meta name="twitter:description" content={`${machine.capacity}. Arriendo disponible en Coquimbo y Atacama.`} />
+                <meta name="twitter:image" content={`https://julmar.cl${machine.image}`} />
+
+                {/* Schema.org BreadcrumbList */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Inicio",
+                                    "item": "https://julmar.cl/"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Flota",
+                                    "item": "https://julmar.cl/#flota"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "${machine.name}",
+                                    "item": "https://julmar.cl/flota/${slug}"
+                                }
+                            ]
+                        }
+                    `}
+                </script>
+
+                {/* Schema.org Product */}
                 <script type="application/ld+json">
                     {`
                         {
                             "@context": "https://schema.org/",
                             "@type": "Product",
                             "name": "${machine.name}",
+                            "sku": "${slug}",
+                            "description": "${machine.seoDescription || machine.description}",
                             "image": [
                                 "https://julmar.cl${machine.image}"
                                 ${machine.gallery ? machine.gallery.map(img => `,"https://julmar.cl${img}"`).join('') : ''}
                             ],
-                            "description": "${machine.description}",
                             "brand": {
                                 "@type": "Brand",
-                                "name": "${machine.category}" 
+                                "name": "${machine.name.split(' ').slice(0, 2).join(' ')}"
                             },
+                            "additionalProperty": [
+                                ${machine.specs ? Object.entries(machine.specs).map(([key, value]) => `
+                                {
+                                    "@type": "PropertyValue",
+                                    "name": "${key}",
+                                    "value": "${value}"
+                                }`).join(',') : ''}
+                            ],
                             "offers": {
                                 "@type": "Offer",
                                 "url": "https://julmar.cl/flota/${slug}",
                                 "priceCurrency": "CLP",
                                 "availability": "https://schema.org/InStock",
-                                "price": "0" 
+                                "seller": {
+                                    "@type": "Organization",
+                                    "name": "Maquinarias Julmar SpA",
+                                    "url": "https://julmar.cl"
+                                }
                             }
                         }
                     `}
