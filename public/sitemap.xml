@@ -1,237 +1,428 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://julmar.cl</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://julmar.cl/flota/retroexcavadora-john-deere-310l</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310l/main-site-v3.webp</image:loc>
+            <image:title>Retroexcavadora John Deere 310L - JulMar</image:title>
+            <image:caption>Arriendo de Retroexcavadora John Deere 310L para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/retroexcavadora-john-deere-310p</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310p/main-site-v2.webp</image:loc>
+            <image:title>Retroexcavadora John Deere 310P - JulMar</image:title>
+            <image:caption>Arriendo de Retroexcavadora John Deere 310P para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/camion-aljibe-renault-k480-8x4</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k480/main-new.webp</image:loc>
+            <image:title>Camión Aljibe Renault K480 8x4 - JulMar</image:title>
+            <image:caption>Arriendo de Camión Aljibe Renault K480 8x4 para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/camion-aljibe-renault-k460-6x4</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k460/main-user-new.webp</image:loc>
+            <image:title>Camión Aljibe Renault K460 6x4 - JulMar</image:title>
+            <image:caption>Arriendo de Camión Aljibe Renault K460 6x4 para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/excavadora-komatsu-pc210lc</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/komatsu-pc210lc/main-site-v2.webp</image:loc>
+            <image:title>Excavadora Komatsu PC210LC - JulMar</image:title>
+            <image:caption>Arriendo de Excavadora Komatsu PC210LC para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/excavadora-john-deere-210g-lc</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-210g/main-v3.webp</image:loc>
+            <image:title>Excavadora John Deere 210G LC - JulMar</image:title>
+            <image:caption>Arriendo de Excavadora John Deere 210G LC para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/camion-aljibe-renault-c440</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-c440/main-v2.webp</image:loc>
+            <image:title>Camión Aljibe Renault C440 - JulMar</image:title>
+            <image:caption>Arriendo de Camión Aljibe Renault C440 para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/cargador-frontal-caterpillar-962l</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/cat-962l/main-user.webp</image:loc>
+            <image:title>Cargador Frontal Caterpillar 962L - JulMar</image:title>
+            <image:caption>Arriendo de Cargador Frontal Caterpillar 962L para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/cargador-frontal-john-deere-744l</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-744l/main-v2.webp</image:loc>
+            <image:title>Cargador Frontal John Deere 744L - JulMar</image:title>
+            <image:caption>Arriendo de Cargador Frontal John Deere 744L para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/flota/martillo-hidraulico-mtm50t</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/attachments/martillo-user-2.webp</image:loc>
+            <image:title>Martillo Hidráulico MTM50T - JulMar</image:title>
+            <image:caption>Arriendo de Martillo Hidráulico MTM50T para Minería e Industria</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/coquimbo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/komatsu-pc210lc/main-site-v2.webp</image:loc>
+            <image:title>Arriendo de Excavadoras en Coquimbo</image:title>
+            <image:caption>Servicio de excavadoras oruga para faenas mineras, zanjas y movimiento de tierras masivo. en la zona de Coquimbo</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/la-serena</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/komatsu-pc210lc/main-site-v2.webp</image:loc>
+            <image:title>Arriendo de Excavadoras en La Serena</image:title>
+            <image:caption>Servicio de excavadoras oruga para faenas mineras, zanjas y movimiento de tierras masivo. en la zona de La Serena</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/ovalle</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/komatsu-pc210lc/main-site-v2.webp</image:loc>
+            <image:title>Arriendo de Excavadoras en Ovalle</image:title>
+            <image:caption>Servicio de excavadoras oruga para faenas mineras, zanjas y movimiento de tierras masivo. en la zona de Ovalle</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/andacollo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/komatsu-pc210lc/main-site-v2.webp</image:loc>
+            <image:title>Arriendo de Excavadoras en Andacollo</image:title>
+            <image:caption>Servicio de excavadoras oruga para faenas mineras, zanjas y movimiento de tierras masivo. en la zona de Andacollo</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/copiapo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/komatsu-pc210lc/main-site-v2.webp</image:loc>
+            <image:title>Arriendo de Excavadoras en Copiapó</image:title>
+            <image:caption>Servicio de excavadoras oruga para faenas mineras, zanjas y movimiento de tierras masivo. en la zona de Copiapó</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/vallenar</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/komatsu-pc210lc/main-site-v2.webp</image:loc>
+            <image:title>Arriendo de Excavadoras en Vallenar</image:title>
+            <image:caption>Servicio de excavadoras oruga para faenas mineras, zanjas y movimiento de tierras masivo. en la zona de Vallenar</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/illapel</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/komatsu-pc210lc/main-site-v2.webp</image:loc>
+            <image:title>Arriendo de Excavadoras en Illapel</image:title>
+            <image:caption>Servicio de excavadoras oruga para faenas mineras, zanjas y movimiento de tierras masivo. en la zona de Illapel</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/coquimbo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310l/main-site-v3.webp</image:loc>
+            <image:title>Arriendo de Retroexcavadoras en Coquimbo</image:title>
+            <image:caption>Retroexcavadoras 4x4 versátiles para obras viales, construcción civil y apoyo en minería. en la zona de Coquimbo</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/la-serena</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310l/main-site-v3.webp</image:loc>
+            <image:title>Arriendo de Retroexcavadoras en La Serena</image:title>
+            <image:caption>Retroexcavadoras 4x4 versátiles para obras viales, construcción civil y apoyo en minería. en la zona de La Serena</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/ovalle</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310l/main-site-v3.webp</image:loc>
+            <image:title>Arriendo de Retroexcavadoras en Ovalle</image:title>
+            <image:caption>Retroexcavadoras 4x4 versátiles para obras viales, construcción civil y apoyo en minería. en la zona de Ovalle</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/andacollo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310l/main-site-v3.webp</image:loc>
+            <image:title>Arriendo de Retroexcavadoras en Andacollo</image:title>
+            <image:caption>Retroexcavadoras 4x4 versátiles para obras viales, construcción civil y apoyo en minería. en la zona de Andacollo</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/copiapo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310l/main-site-v3.webp</image:loc>
+            <image:title>Arriendo de Retroexcavadoras en Copiapó</image:title>
+            <image:caption>Retroexcavadoras 4x4 versátiles para obras viales, construcción civil y apoyo en minería. en la zona de Copiapó</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/vallenar</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310l/main-site-v3.webp</image:loc>
+            <image:title>Arriendo de Retroexcavadoras en Vallenar</image:title>
+            <image:caption>Retroexcavadoras 4x4 versátiles para obras viales, construcción civil y apoyo en minería. en la zona de Vallenar</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/illapel</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/jd-310l/main-site-v3.webp</image:loc>
+            <image:title>Arriendo de Retroexcavadoras en Illapel</image:title>
+            <image:caption>Retroexcavadoras 4x4 versátiles para obras viales, construcción civil y apoyo en minería. en la zona de Illapel</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/coquimbo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k480/main-new.webp</image:loc>
+            <image:title>Arriendo de Camiones Aljibe en Coquimbo</image:title>
+            <image:caption>Distribución de agua, control de polvo y riego industrial con camiones de alta capacidad (hasta 30,000L). en la zona de Coquimbo</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/la-serena</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k480/main-new.webp</image:loc>
+            <image:title>Arriendo de Camiones Aljibe en La Serena</image:title>
+            <image:caption>Distribución de agua, control de polvo y riego industrial con camiones de alta capacidad (hasta 30,000L). en la zona de La Serena</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/ovalle</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k480/main-new.webp</image:loc>
+            <image:title>Arriendo de Camiones Aljibe en Ovalle</image:title>
+            <image:caption>Distribución de agua, control de polvo y riego industrial con camiones de alta capacidad (hasta 30,000L). en la zona de Ovalle</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/andacollo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k480/main-new.webp</image:loc>
+            <image:title>Arriendo de Camiones Aljibe en Andacollo</image:title>
+            <image:caption>Distribución de agua, control de polvo y riego industrial con camiones de alta capacidad (hasta 30,000L). en la zona de Andacollo</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/copiapo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k480/main-new.webp</image:loc>
+            <image:title>Arriendo de Camiones Aljibe en Copiapó</image:title>
+            <image:caption>Distribución de agua, control de polvo y riego industrial con camiones de alta capacidad (hasta 30,000L). en la zona de Copiapó</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/vallenar</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k480/main-new.webp</image:loc>
+            <image:title>Arriendo de Camiones Aljibe en Vallenar</image:title>
+            <image:caption>Distribución de agua, control de polvo y riego industrial con camiones de alta capacidad (hasta 30,000L). en la zona de Vallenar</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/illapel</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/renault-k480/main-new.webp</image:loc>
+            <image:title>Arriendo de Camiones Aljibe en Illapel</image:title>
+            <image:caption>Distribución de agua, control de polvo y riego industrial con camiones de alta capacidad (hasta 30,000L). en la zona de Illapel</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/coquimbo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/cat-962l/main-user.webp</image:loc>
+            <image:title>Arriendo de Cargadores Frontales en Coquimbo</image:title>
+            <image:caption>Equipos de carga frontal para acopio, abastecimiento de chancadoras y manejo de graneles. en la zona de Coquimbo</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/la-serena</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/cat-962l/main-user.webp</image:loc>
+            <image:title>Arriendo de Cargadores Frontales en La Serena</image:title>
+            <image:caption>Equipos de carga frontal para acopio, abastecimiento de chancadoras y manejo de graneles. en la zona de La Serena</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/ovalle</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/cat-962l/main-user.webp</image:loc>
+            <image:title>Arriendo de Cargadores Frontales en Ovalle</image:title>
+            <image:caption>Equipos de carga frontal para acopio, abastecimiento de chancadoras y manejo de graneles. en la zona de Ovalle</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/andacollo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/cat-962l/main-user.webp</image:loc>
+            <image:title>Arriendo de Cargadores Frontales en Andacollo</image:title>
+            <image:caption>Equipos de carga frontal para acopio, abastecimiento de chancadoras y manejo de graneles. en la zona de Andacollo</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/copiapo</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/cat-962l/main-user.webp</image:loc>
+            <image:title>Arriendo de Cargadores Frontales en Copiapó</image:title>
+            <image:caption>Equipos de carga frontal para acopio, abastecimiento de chancadoras y manejo de graneles. en la zona de Copiapó</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/vallenar</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/cat-962l/main-user.webp</image:loc>
+            <image:title>Arriendo de Cargadores Frontales en Vallenar</image:title>
+            <image:caption>Equipos de carga frontal para acopio, abastecimiento de chancadoras y manejo de graneles. en la zona de Vallenar</image:caption>
+        </image:image>
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/illapel</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://julmar.cl/machinery/cat-962l/main-user.webp</image:loc>
+            <image:title>Arriendo de Cargadores Frontales en Illapel</image:title>
+            <image:caption>Equipos de carga frontal para acopio, abastecimiento de chancadoras y manejo de graneles. en la zona de Illapel</image:caption>
+        </image:image>
     </url>
 </urlset>

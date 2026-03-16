@@ -57,10 +57,10 @@ const Contact = ({ preselectedMachine }) => {
                         transition={{ duration: 0.6 }}
                         className="text-white flex flex-col justify-center"
                     >
-                        <span className="text-julmar-green font-bold uppercase tracking-widest mb-4 block">Hablemos de tu Proyecto</span>
+                        <span className="text-julmar-green font-bold uppercase tracking-widest mb-4 block">Respaldo Regional en Faena</span>
                         <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
-                            ¿LISTO PARA <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green-light to-julmar-green">COMENZAR?</span>
+                            IMPULSA TU <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green-light to-julmar-green">OPERACIÓN</span>
                         </h2>
                         <div className="space-y-8">
                             <div className="flex items-start group">
@@ -100,7 +100,12 @@ const Contact = ({ preselectedMachine }) => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="bg-white rounded-3xl p-8 shadow-2xl relative"
                     >
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6">Solicita una Cotización</h3>
+                        <div className="flex justify-between items-center mb-6">
+                            <h3 className="text-2xl font-bold text-gray-800">Solicita una Cotización</h3>
+                            <div className="bg-julmar-green/10 text-julmar-green px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-tighter border border-julmar-green/20">
+                                Certificado SICEP
+                            </div>
+                        </div>
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
@@ -213,43 +218,49 @@ const Contact = ({ preselectedMachine }) => {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                <button
-                                    type="submit"
-                                    onClick={handleSubmit}
-                                    aria-label="Cotizar por WhatsApp"
-                                    className="w-full bg-julmar-green hover:bg-julmar-green-light text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl"
-                                >
-                                    COTIZAR POR WHATSAPP
-                                    <Send size={18} />
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        if (!formData.name || !formData.phone) {
-                                            alert('Por favor completa al menos tu nombre y teléfono.');
-                                            return;
-                                        }
-                                        const subject = `Solicitud de Cotización: ${formData.equipment || 'Maquinaria'}`;
-                                        const body = `Hola, me gustaría solicitar una cotización formal.%0D%0A%0D%0A` +
-                                            `*Cliente/Empresa:* ${formData.name}%0D%0A` +
-                                            `*RUT:* ${formData.rut || 'No indicado'}%0D%0A` +
-                                            `*Teléfono:* ${formData.phone}%0D%0A` +
-                                            `*Email:* ${formData.email || 'No indicado'}%0D%0A` +
-                                            `*Equipo:* ${formData.equipment || 'No especificado'}%0D%0A` +
-                                            `*Duración:* ${formData.duration || 'No especificada'}%0D%0A` +
-                                            `*Ubicación:* ${formData.location || 'No indicada'}%0D%0A` +
-                                            `*Detalles:* ${formData.details || 'Sin detalles adicionales'}%0D%0A%0D%0A` +
-                                            `Quedo atento a su respuesta.`;
+                                <div className="space-y-2">
+                                    <button
+                                        type="submit"
+                                        onClick={handleSubmit}
+                                        aria-label="Cotizar por WhatsApp"
+                                        className="w-full bg-julmar-green hover:bg-julmar-green-light text-julmar-dark font-black py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl"
+                                    >
+                                        COTIZAR POR WHATSAPP
+                                        <Send size={18} />
+                                    </button>
+                                    <p className="text-[10px] text-center text-gray-400 font-bold uppercase tracking-widest">Respuesta en menos de 1 Hora</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            if (!formData.name || !formData.phone) {
+                                                alert('Por favor completa al menos tu nombre y teléfono.');
+                                                return;
+                                            }
+                                            const subject = `Solicitud de Cotización: ${formData.equipment || 'Maquinaria'}`;
+                                            const body = `Hola, me gustaría solicitar una cotización formal.%0D%0A%0D%0A` +
+                                                `*Cliente/Empresa:* ${formData.name}%0D%0A` +
+                                                `*RUT:* ${formData.rut || 'No indicado'}%0D%0A` +
+                                                `*Teléfono:* ${formData.phone}%0D%0A` +
+                                                `*Email:* ${formData.email || 'No indicado'}%0D%0A` +
+                                                `*Equipo:* ${formData.equipment || 'No especificado'}%0D%0A` +
+                                                `*Duración:* ${formData.duration || 'No especificada'}%0D%0A` +
+                                                `*Ubicación:* ${formData.location || 'No indicada'}%0D%0A` +
+                                                `*Detalles:* ${formData.details || 'Sin detalles adicionales'}%0D%0A%0D%0A` +
+                                                `Quedo atento a su respuesta.`;
 
-                                        window.location.href = `mailto:jgalvez@julmarspa.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-                                    }}
-                                    aria-label="Cotizar por Correo Electrónico"
-                                    className="w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl border border-gray-600"
-                                >
-                                    COTIZAR POR CORREO
-                                    <Mail size={18} />
-                                </button>
+                                            window.location.href = `mailto:jgalvez@julmarspa.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                                        }}
+                                        aria-label="Cotizar por Correo Electrónico"
+                                        className="w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transform active:scale-95 transition-all shadow-lg hover:shadow-xl border border-gray-600"
+                                    >
+                                        COTIZAR POR CORREO
+                                        <Mail size={18} />
+                                    </button>
+                                    <p className="text-[10px] text-center text-gray-400 font-bold uppercase tracking-widest">Cotización Formal PDF</p>
+                                </div>
                             </div>
                         </form>
                     </motion.div>

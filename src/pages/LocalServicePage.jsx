@@ -27,8 +27,8 @@ const LocalServicePage = () => {
 
     const { service, location } = pageData;
     const pageTitle = `${service.name} en ${location.name} | Julmar`;
-    const pageDescription = `Especialistas en ${service.name.toLowerCase()} para la Gran Minería e industria en ${location.name}, ${location.region}. Flota operativa y personal calificado. Cotiza tu equipo.`;
-    const whatsappText = `Hola, me interesa solicitar una cotización para el servicio de ${service.name} en la zona de ${location.name}.`;
+    const pageDescription = `Líderes en ${service.name.toLowerCase()} en ${location.name}, ${location.region}. Servicio garantizado para minería y construcción con equipos certificados SICEP y operatividad 24/7. ¡Cotiza ahora!`;
+    const whatsappText = `Hola JulMar! Vi su página de ${service.name} en ${location.name}. Necesito cotizar disponibilidad para un proyecto en la zona de ${location.region}.`;
 
     return (
         <div className="min-h-screen bg-white font-sans">
@@ -51,19 +51,36 @@ const LocalServicePage = () => {
                         "provider": {
                             "@type": "LocalBusiness",
                             "name": "Maquinarias Julmar SpA",
-                            "image": "https://julmar.cl/logo-julmar.webp"
-                        },
-                        "areaServed": [
-                            {
-                                "@type": "City",
-                                "name": location.name
-                            },
-                            {
-                                "@type": "State",
-                                "name": location.region
+                            "image": "https://julmar.cl/logo-julmar.webp",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": location.name,
+                                "addressRegion": location.region,
+                                "addressCountry": "CL"
                             }
-                        ],
-                        "description": pageDescription
+                        },
+                        "areaServed": {
+                            "@type": "City",
+                            "name": location.name
+                        },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Arriendo de Maquinaria Pesada",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": service.name
+                                    }
+                                }
+                            ]
+                        },
+                        "description": pageDescription,
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "JulMar"
+                        }
                     })}
                 </script>
             </Helmet>
@@ -111,8 +128,8 @@ const LocalServicePage = () => {
                          </div>
                          <div className="p-4">
                              <ShieldCheck size={40} className="mx-auto text-julmar-green mb-4" />
-                             <h4 className="font-black text-xl text-slate-800 mb-2">Estándar Minero</h4>
-                             <p className="text-slate-600">Equipos de la categoría {service.machineType} bajo mantenimiento estricto cero fallas.</p>
+                             <h4 className="font-black text-xl text-slate-800 mb-2">Respaldo SICEP</h4>
+                             <p className="text-slate-600">Empresa registrada con certificación de confianza para la Gran Minería e Industria.</p>
                          </div>
                          <div className="p-4">
                              <Phone size={40} className="mx-auto text-julmar-green mb-4" />

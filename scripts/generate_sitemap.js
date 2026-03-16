@@ -25,7 +25,8 @@ const generateSitemap = () => {
     ];
 
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">`;
 
     // Páginas estáticas
     staticPages.forEach(({ path, priority, changefreq }) => {
@@ -47,6 +48,11 @@ const generateSitemap = () => {
         <lastmod>${TODAY}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>${DOMAIN}${machine.image}</image:loc>
+            <image:title>${machine.name} - JulMar</image:title>
+            <image:caption>Arriendo de ${machine.name} para Minería e Industria</image:caption>
+        </image:image>
     </url>`;
     });
 
@@ -60,7 +66,12 @@ const generateSitemap = () => {
         <loc>${DOMAIN}/arriendo/${service.slug}/en/${location.slug}</loc>
         <lastmod>${TODAY}</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>${DOMAIN}${service.imageUrl}</image:loc>
+            <image:title>${service.name} en ${location.name}</image:title>
+            <image:caption>${service.description} en la zona de ${location.name}</image:caption>
+        </image:image>
     </url>`;
         });
     });
@@ -69,7 +80,7 @@ const generateSitemap = () => {
 </urlset>`;
 
     fs.writeFileSync('./public/sitemap.xml', sitemap);
-    console.log(`✅ Sitemap generado con ${staticPages.length + machines.length + localPagesCount} URLs en public/sitemap.xml`);
+    console.log(`✅ Sitemap INALCANZABLE generado con ${staticPages.length + machines.length + localPagesCount} URLs e IMÁGENES en public/sitemap.xml`);
 };
 
 generateSitemap();
