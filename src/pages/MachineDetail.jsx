@@ -7,19 +7,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import { machines } from '../data/machines';
-
-// Utility for slug matching
-const slugify = (text) => {
-    return text
-        .toString()
-        .toLowerCase()
-        .normalize('NFD')              // descompone caracteres con tilde
-        .replace(/[\u0300-\u036f]/g, '') // elimina los diacríticos (tildes, ñ→n, etc.)
-        .trim()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w\-]+/g, '')
-        .replace(/\-\-+/g, '-');
-};
+import { slugify } from '../utils/stringUtils';
 
 const MachineDetail = () => {
     const { slug } = useParams();
@@ -48,6 +36,11 @@ const MachineDetail = () => {
     if (!machine) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <Helmet>
+                    <title>Equipo no encontrado | Maquinarias Julmar SpA</title>
+                    <meta name="robots" content="noindex, follow" />
+                    <link rel="canonical" href="https://julmar.cl/" />
+                </Helmet>
                 <div className="text-center">
                     <h2 className="text-3xl font-bold text-gray-800 mb-4">Máquina no encontrada</h2>
                     <Link to="/" className="text-julmar-green font-bold hover:underline">Volver al Inicio</Link>
@@ -89,7 +82,7 @@ const MachineDetail = () => {
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={`${machine.name} | Julmar SpA`} />
-                <meta name="twitter:description" content={`${machine.capacity}. Arriendo disponible en Coquimbo y Atacama.`} />
+                <meta name="twitter:description" content={`${machine.capacity}. Arriendo disponible en Coquimbo and Atacama.`} />
                 <meta name="twitter:image" content={`https://julmar.cl${machine.image}`} />
 
                 {/* Schema.org BreadcrumbList */}
@@ -217,6 +210,13 @@ const MachineDetail = () => {
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                 {machine.description}
                             </p>
+                            {machine.category === 'Retroexcavadoras' && (
+                                <p className="mb-8">
+                                    <Link to="/arriendo-retroexcavadora" className="text-julmar-green-dark font-bold hover:underline">
+                                        Ver página principal de arriendo retroexcavadora
+                                    </Link>
+                                </p>
+                            )}
 
                             <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                                 <span className="w-2 h-2 bg-julmar-green rounded-full mr-2"></span>

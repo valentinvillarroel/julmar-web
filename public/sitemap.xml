@@ -3,13 +3,19 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://julmar.cl</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://julmar.cl/arriendo-retroexcavadora</loc>
+        <lastmod>2026-03-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
         <loc>https://julmar.cl/flota/retroexcavadora-john-deere-310l</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -20,7 +26,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/retroexcavadora-john-deere-310p</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -31,7 +37,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/camion-aljibe-renault-k480-8x4</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -42,7 +48,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/camion-aljibe-renault-k460-6x4</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -53,7 +59,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/excavadora-komatsu-pc210lc</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -64,7 +70,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/excavadora-john-deere-210g-lc</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -75,7 +81,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/camion-aljibe-renault-c440</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -86,7 +92,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/cargador-frontal-caterpillar-962l</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -97,7 +103,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/cargador-frontal-john-deere-744l</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -108,7 +114,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/flota/martillo-hidraulico-mtm50t</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -119,7 +125,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/coquimbo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -130,7 +136,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/la-serena</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -141,7 +147,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/ovalle</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -152,7 +158,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/andacollo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -163,7 +169,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/copiapo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -174,7 +180,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/vallenar</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -185,7 +191,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-excavadoras/en/illapel</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -196,7 +202,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/coquimbo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -207,7 +213,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/la-serena</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -218,7 +224,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/ovalle</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -229,7 +235,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/andacollo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -240,7 +246,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/copiapo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -251,7 +257,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/vallenar</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -262,7 +268,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-retroexcavadoras/en/illapel</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -273,7 +279,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/coquimbo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -284,7 +290,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/la-serena</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -295,7 +301,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/ovalle</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -306,7 +312,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/andacollo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -317,7 +323,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/copiapo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -328,7 +334,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/vallenar</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -339,7 +345,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-camiones-aljibe/en/illapel</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -350,7 +356,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/coquimbo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -361,7 +367,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/la-serena</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -372,7 +378,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/ovalle</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -383,7 +389,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/andacollo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -394,7 +400,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/copiapo</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -405,7 +411,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/vallenar</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -416,7 +422,7 @@
     </url>
     <url>
         <loc>https://julmar.cl/arriendo/arriendo-cargadores-frontales/en/illapel</loc>
-        <lastmod>2026-03-16</lastmod>
+        <lastmod>2026-03-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <image:image>

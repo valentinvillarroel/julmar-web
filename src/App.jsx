@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import MachineDetail from './pages/MachineDetail';
 import MixerFleet from './pages/MixerFleet';
 import LocalServicePage from './pages/LocalServicePage';
+import RetroexcavadoraLanding from './pages/RetroexcavadoraLanding';
 import { Helmet } from 'react-helmet-async';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/arriendo-retroexcavadora" element={<RetroexcavadoraLanding />} />
         <Route path="/flota/:slug" element={<MachineDetail />} />
         <Route path="/mixer" element={<MixerFleet />} />
         {/* Rutas SEO de Silo Local (Ej: /arriendo/excavadoras/en/coquimbo) */}

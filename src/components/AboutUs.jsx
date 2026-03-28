@@ -23,9 +23,9 @@ const AboutUs = () => {
                             <span className="text-julmar-green font-black uppercase tracking-widest text-sm">Quiénes Somos</span>
                         </div>
                         
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-800 tracking-tight leading-tight mb-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-800 tracking-tight leading-tight mb-6">
                             ESPECIALISTAS EN MOVIMIENTO DE TIERRAS <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green to-emerald-500">EN LA IV REGIÓN</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-julmar-green to-emerald-500 uppercase">En la IV Región</span>
                         </h2>
                         
                         <p className="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -36,15 +36,15 @@ const AboutUs = () => {
                             Nuestra trayectoria en la Región de Coquimbo y Atacama nos permite entender las exigencias operacionales de cada faena, garantizando continuidad, seguridad y eficiencia mediante una flota certificada y soporte técnico 24/7.
                         </p>
 
-                        <div className="grid grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                             <div className="flex flex-col gap-2">
                                 <ShieldCheck size={32} className="text-julmar-green mb-2" />
-                                <h4 className="text-xl font-black text-slate-800">Certificación SICEP</h4>
+                                <h4 className="text-lg sm:text-xl font-black text-slate-800">Certificación SICEP</h4>
                                 <p className="text-sm text-slate-500">Categoría Proveedor A</p>
                             </div>
                             <div className="flex flex-col gap-2">
                                 <HardHat size={32} className="text-julmar-green mb-2" />
-                                <h4 className="text-xl font-black text-slate-800">Cero Daño</h4>
+                                <h4 className="text-lg sm:text-xl font-black text-slate-800">Cero Daño</h4>
                                 <p className="text-sm text-slate-500">Estándar Operacional Minero</p>
                             </div>
                         </div>
@@ -56,12 +56,12 @@ const AboutUs = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative"
+                        className="relative mt-12 lg:mt-0 pb-16 sm:pb-0"
                     >
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {/* Columna Izquierda (Antes Derecha) */}
                             <div className="space-y-4">
-                                <div className="bg-emerald-50 p-8 rounded-3xl border border-emerald-100 shadow-xl">
+                                <div className="bg-emerald-50 p-6 sm:p-8 rounded-3xl border border-emerald-100 shadow-xl">
                                     <Award size={32} className="text-julmar-green mb-4" />
                                     <p className="font-black text-4xl text-slate-800 mb-2">+150</p>
                                     <p className="text-slate-600 font-medium text-sm">Proyectos Exitosos en Faena</p>
@@ -74,13 +74,13 @@ const AboutUs = () => {
                             </div>
 
                             {/* Columna Derecha con padding-top (Antes Izquierda) */}
-                            <div className="space-y-4 pt-12">
+                            <div className="space-y-4 sm:pt-12">
                                 <img 
                                     src="/hero-movil.webp" 
                                     alt="Operaciones en faena minera" 
                                     className="w-full h-48 md:h-64 object-cover rounded-3xl shadow-xl shadow-julmar-green/10"
                                 />
-                                <div className="bg-julmar-dark p-8 rounded-3xl text-white shadow-xl">
+                                <div className="bg-julmar-dark p-6 sm:p-8 rounded-3xl text-white shadow-xl">
                                     <Target size={32} className="text-julmar-green mb-4" />
                                     <h4 className="font-black text-lg mb-2">Misión</h4>
                                     <p className="text-slate-400 text-sm">Asegurar la continuidad operacional de nuestros clientes.</p>
@@ -89,7 +89,7 @@ const AboutUs = () => {
                         </div>
                         
                         {/* Overlay Decorativo */}
-                        <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-2xl flex items-center gap-4 border border-slate-100">
+                        <div className="absolute -bottom-4 left-4 right-4 sm:-bottom-6 sm:-left-6 sm:right-auto bg-white p-4 rounded-2xl shadow-2xl flex items-center gap-4 border border-slate-100">
                             <img src="/logo-julmar.webp" alt="Julmar Logo" className="h-8 w-auto" />
                             <div>
                                 <p className="text-xs font-black text-slate-800 uppercase tracking-widest">Maquinarias Julmar SpA</p>

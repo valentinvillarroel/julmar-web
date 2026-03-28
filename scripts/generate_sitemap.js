@@ -21,7 +21,7 @@ const generateSitemap = () => {
     // Solo URLs reales — sin anchors (#)
     const staticPages = [
         { path: '',        priority: '1.0', changefreq: 'weekly'  },
-        // { path: '/mixer',  priority: '0.8', changefreq: 'monthly' },
+        { path: '/arriendo-retroexcavadora', priority: '0.95', changefreq: 'weekly' },
     ];
 
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>

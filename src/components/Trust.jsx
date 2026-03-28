@@ -12,8 +12,8 @@ const Trust = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <span className="text-julmar-green font-bold uppercase tracking-widest mb-2 block text-sm">Nuestra Esencia</span>
-                    <h2 className="text-4xl md:text-5xl font-black text-white mb-6">SOMOS UNA EMPRESA FAMILIAR Y REGIONAL</h2>
-                    <div className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed text-justify mb-10">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 uppercase">Somos una empresa familiar y regional</h2>
+                    <div className="max-w-4xl mx-auto text-gray-400 text-base sm:text-lg leading-relaxed text-center sm:text-justify mb-10">
                         <p className="mb-4">
                             JulMar SPA es una empresa familiar ubicada en la cuarta región, dedicada al alquiler de camiones y maquinaria para empresas en los sectores de vialidad, minería y agropecuario.
                         </p>
@@ -45,23 +45,23 @@ const Trust = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                     {/* Vision */}
-                    <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-julmar-green/50 transition-all duration-300 group">
+                    <div className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-julmar-green/50 transition-all duration-300 group">
                         <div className="w-14 h-14 bg-julmar-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-julmar-green transition-colors duration-300">
                             <Shield className="text-julmar-green group-hover:text-julmar-dark transition-colors duration-300" size={32} />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-4">VISIÓN</h3>
-                        <p className="text-gray-400 text-lg">
+                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 uppercase">Visión</h3>
+                        <p className="text-gray-400 text-base sm:text-lg">
                             Nuestra visión consiste en desafiarnos continuamente para contribuir al progreso de nuestros clientes, adaptándonos a sus necesidades y promoviendo un crecimiento sostenido a lo largo del tiempo.
                         </p>
                     </div>
 
                     {/* Values (Inferred from context) */}
-                    <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-julmar-green/50 transition-all duration-300 group">
+                    <div className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-julmar-green/50 transition-all duration-300 group">
                         <div className="w-14 h-14 bg-julmar-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-julmar-green transition-colors duration-300">
                             <Clock className="text-julmar-green group-hover:text-julmar-dark transition-colors duration-300" size={32} />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-4">NUESTROS VALORES</h3>
-                        <ul className="text-gray-400 text-lg space-y-2">
+                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 uppercase">Nuestros Valores</h3>
+                        <ul className="text-gray-400 text-base sm:text-lg space-y-2">
                             <li>• <strong>Compromiso:</strong> Situamos al cliente en el centro.</li>
                             <li>• <strong>Agilidad:</strong> Atención rápida y cumplimiento de plazos.</li>
                             <li>• <strong>Calidad:</strong> Equipos que satisfacen altos estándares.</li>

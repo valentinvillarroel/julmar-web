@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -59,6 +60,12 @@ const Hero = () => {
                     transition={{ delay: 0.6 }}
                     className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
+                    <Link
+                        to="/arriendo-retroexcavadora"
+                        className="inline-block bg-julmar-green-light hover:bg-julmar-green text-julmar-dark font-black px-8 py-4 rounded-xl text-sm uppercase tracking-widest transition-all shadow-xl"
+                    >
+                        Arriendo Retroexcavadora
+                    </Link>
                     <a
                         href="#flota"
                         className="inline-block bg-julmar-green hover:bg-white text-julmar-dark font-black px-8 py-4 rounded-xl text-sm uppercase tracking-widest transition-all shadow-xl shadow-julmar-green/20"

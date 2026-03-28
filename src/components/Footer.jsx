@@ -25,6 +25,7 @@ const Footer = () => {
                         </h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
                             <li><a href="#flota" aria-label="Ir a la sección de arriendo de maquinaria y flota" className="hover:text-julmar-green transition-colors">Arriendo de Maquinaria</a></li>
+                            <li><a href="/arriendo-retroexcavadora" aria-label="Arriendo retroexcavadora en Coquimbo y Atacama" className="hover:text-julmar-green transition-colors text-julmar-green/80">Arriendo retroexcavadora</a></li>
                             <li><a href="/arriendo/arriendo-excavadoras/en/coquimbo" aria-label="Excavadoras en Coquimbo" className="hover:text-julmar-green transition-colors text-julmar-green/80">Oruga en Coquimbo</a></li>
                             <li><a href="/arriendo/arriendo-camiones-aljibe/en/la-serena" aria-label="Aljibes en La Serena" className="hover:text-julmar-green transition-colors text-julmar-green/80">Aljibes en La Serena</a></li>
                             <li><a href="/arriendo/arriendo-retroexcavadoras/en/copiapo" aria-label="Retroexcavadoras en Copiapó" className="hover:text-julmar-green transition-colors text-julmar-green/80">Retros Atacama</a></li>
