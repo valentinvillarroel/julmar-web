@@ -98,7 +98,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <div onClick={() => handleNavClick('hero')} className="flex items-center gap-3 group cursor-pointer">
                         <div className="relative">
-                            <img src="/logo-julmar.webp" alt="Julmar Logo" className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 rounded-2xl shadow-lg border border-white/20" />
+                            <img src="/logo-julmar.webp" alt="Julmar Logo" className="h-12 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 rounded-2xl shadow-lg border border-white/20" />
                         </div>
                     </div>
 

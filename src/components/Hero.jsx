@@ -24,11 +24,11 @@ const Hero = () => {
 
             {/* Overlay oscuro para contraste (Gradiente profesional) */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80"></div>
-            <div className="relative z-10 text-center px-4">
+            <div className="relative z-10 text-center px-4 pt-44 md:pt-0">
                 <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-julmar-green font-bold text-xl md:text-2xl mb-4 block tracking-wider"
+                    className="text-julmar-green font-bold text-base md:text-2xl mb-4 block tracking-wider"
                 >
                     SOCIO ESTRATÉGICO EN TERRENO
                 </motion.span>
@@ -38,10 +38,10 @@ const Hero = () => {
                     transition={{ delay: 0.2 }}
                     className="flex flex-col mb-6"
                 >
-                    <span className="text-2xl md:text-3xl font-bold uppercase tracking-widest text-julmar-green mb-2">
+                    <span className="text-lg md:text-3xl font-bold uppercase tracking-widest text-julmar-green mb-2">
                         Arriendo de Maquinaria Pesada
                     </span>
-                    <span className="text-5xl md:text-7xl font-black text-white leading-tight">
+                    <span className="text-3xl md:text-7xl font-black text-white leading-tight">
                         EN COQUIMBO Y ATACAMA
                     </span>
                     <span className="sr-only"> | Julmar SpA</span>
@@ -50,7 +50,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
-                    className="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-300 font-light"
+                    className="text-lg md:text-2xl max-w-3xl mx-auto mb-10 text-gray-300 font-light px-2"
                 >
                     Arriendo de maquinaria pesada, excavadoras Komatsu, retroexcavadoras y camiones aljibe para construcción y Gran Minería en Coquimbo, La Serena y Atacama.
                 </motion.p>
